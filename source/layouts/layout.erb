@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title><%= current_page.data.title || "Boo" %></title>
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag 'html5' %>
+    <![endif]-->
+    <%= stylesheet_link_tag "styles" %>
+    <%= yield_content :style %>
+    <%= javascript_include_tag  "scripts" %>
+    <%#= favicon_link_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
+
+  </head>
+  
+  <body class="<%= page_classes %>">
+
+    <header id="site-header" role="banner">
+      <%= partial "layouts/header" %>
+    </header>
+
+    <main id="site-main" role="main">
+      <%= yield %>
+    </main>
+
+    <footer id="site-footer" role="contentinfo">
+      <%= partial "layouts/footer" %>
+    </footer>
+
+    <%= yield_content :script %>
+
+  </body>
+</html>
