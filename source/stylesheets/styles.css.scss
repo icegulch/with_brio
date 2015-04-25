@@ -184,6 +184,23 @@ a {
   }
 }
 
+.page-section-periodic {
+  position: relative;
+  padding-top: 150px;
+  &:before {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-left: -75px;
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    z-index: 2;
+    background: transparent image-url('jack.svg') no-repeat center bottom;
+  }
+}
+
 #site-footer {
   padding: 100px 0 200px;
   background: transparent image-url('trees.svg') no-repeat center bottom;
@@ -193,15 +210,23 @@ a {
   letter-spacing: 0.3em;
 }
 
-.poster-pic {
-  width: 500px;
-  margin: 0 auto;
-}
-
 .heading-primary {
   margin: 0 0 30px;
   font: 800 2.4rem/1.1 'Vitesse SSm A', 'Vitesse SSm B', serif;
   color: #222;
+}
+
+.faq {
+  // padding-right: 15%;
+}
+
+.faq-question {
+  margin: 50px 0 0;
+}
+
+.faq-graphic-caption {
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .teaser-text {
