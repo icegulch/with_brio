@@ -1,27 +1,29 @@
 
     <section class="page-section page-section-alt">
         <div class="container">
-          <div class="col-md-8 col-md-offset-2">
-            <article class="teaser-text text-centered">
-              <p>
-                <b>Hi! I'm Steve.</b> With Brio is my tiny home on the outskirts of tech town. Please, come in! Whether you're building a Rails app or a brochure website, I can take your idea from grayscale wires to vector graphics to git repos, or I can just jump in where you need me. I've had the good fortune of working with stellar clients big and small, a few of whom are featured below.
-              </p>
-            </article>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <article class="teaser-text text-centered">
+                <p>
+                  <b>Hi! I'm Steve.</b> With Brio is my tiny home on the outskirts of tech town. Please, come in! Whether you're building a Rails app or a brochure website, I can take your idea from grayscale wires to vector graphics to git repos, or I can just jump in where you need me. I've had the good fortune of working with stellar clients big and small, a few of whom are featured below.
+                </p>
+              </article>
+            </div>
+            <figure class="table-row table-row-brand">
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/cartalk.svg', :height => '80') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/big-boulder.svg', :height => '80') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/cfp.svg', :height => '80') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/gnip.svg', :height => '60') %>
+              </div>
+            </figure>
           </div>
-          <figure class="table-row table-row-brand">
-            <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/cartalk.svg', :height => '80') %>
-            </div>
-            <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/big-boulder.svg', :height => '80') %>
-            </div>
-            <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/cfp.svg', :height => '80') %>
-            </div>
-            <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/gnip.svg', :height => '60') %>
-            </div>
-          </figure>
         </div>
     </section>
 
@@ -54,7 +56,7 @@
           <h2 class="heading heading-primary">
             Contact
           </h2>
-          <form name="contact" action="thank-you.html">
+          <form name="contact" action="thank-you">
             <div class="row">
               <div class="col-md-5">
                 <div class="form-field">

@@ -1,0 +1,84 @@
+
+    <section class="page-section page-section-alt">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <article class="teaser-text text-centered">
+              <h2 class="heading heading-primary">
+                Periodic Table of 4000-Footers
+              </h2>
+              <%= simple_format(lorem.paragraph) %>
+            </article>
+          </div>
+        </div>
+    </section>
+
+    <section class="page-section page-section-decorative page-section-work">
+      <div class="container">
+        <div class="strings"></div>
+        <div class="bobbles"></div>
+        <%= simple_format(lorem.words(150)) %>
+        <figure class="poster-pic">
+          <%= image_tag('poster-pic.jpg', :class => 'img-responsive') %>
+        </figure>
+        <dl>
+          <% 5.times do %>
+            <dt>
+              <%= lorem.words(2) %>
+            </dt>
+            <dd>
+              <%= lorem.paragraph %>
+            </dd>
+          <% end %>
+        </dl>
+      </div>
+    </section>
+
+
+    <section class="page-section page-section-alt page-section-contact">
+      <div class="container">
+        <div class="contact-form">
+          <h2 class="heading heading-primary">
+            Contact
+          </h2>
+          <form name="contact" action="thank-you">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-field">
+                  <label class="form-label">
+                    First Name
+                  </label>
+                  <input type="text" name="first_name">
+                </div>
+                <div class="form-field">
+                  <label class="form-label">
+                    Last Name
+                  </label>
+                  <input type="text" name="last_name">
+                </div>
+                <div class="form-field">
+                  <label class="form-label">
+                    Email
+                  </label>
+                  <input type="email" name="email">
+                </div>
+              </div>
+              <div class="col-md-6 pull-right">
+                <div class="form-field">
+                  <label class="form-label">
+                    Your message
+                  </label>
+                  <textarea name="message"></textarea>
+                </div>
+                <div class="form-field form-field-submit">
+                  <button class="button-submit">
+                    Send
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+

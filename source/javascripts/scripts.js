@@ -2,6 +2,7 @@
 //= require "waypoints"
 
     $(function() {
+
       // waypoints
       jQuery('.page-section-work').waypoint(function() {
         jQuery('.bobbles').toggleClass('animated bounce');
