@@ -45,11 +45,7 @@
     <![endif]-->
 
     <header id="site-header">
-      <div class="container">
-        <figure class="logo logo-red">
-          <%= image_tag('logo.svg', :width => '320') %>
-        </figure>
-      </div>
+      <%= partial "layouts/header" %>
     </header>
 
     <main id="site-main" role="main">
@@ -57,11 +53,7 @@
     </main>
     
     <footer id="site-footer">
-      <div class="container">
-        <div class="text-centered">
-          Seattle • Boulder • Randolph
-        </div>
-      </div>
+      <%= partial "layouts/footer" %>
     </footer>
 
     <%= yield_content :script %>
