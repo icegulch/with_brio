@@ -13,14 +13,12 @@
         </div>
     </section>
 
-    <section class="page-section page-section-decorative page-section-work">
+    <section class="page-section">
+      <figure class="poster-pic">
+        <%= image_tag('poster-pic.jpg', :class => 'img-responsive') %>
+      </figure>
       <div class="container">
-        <div class="strings"></div>
-        <div class="bobbles"></div>
         <%= simple_format(lorem.words(150)) %>
-        <figure class="poster-pic">
-          <%= image_tag('poster-pic.jpg', :class => 'img-responsive') %>
-        </figure>
         <dl>
           <% 5.times do %>
             <dt>
