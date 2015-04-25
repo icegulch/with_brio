@@ -8,5 +8,12 @@
         jQuery('.bobbles').toggleClass('animated bounce');
       }, { offset: '70%' });
 
+
+      // waypoints
+      jQuery('.page-section-periodic-header').waypoint(function() {
+        jQuery('.jack').toggleClass('animated rotateIn');
+      }, { offset: '20%' });
+
+
     });
 
