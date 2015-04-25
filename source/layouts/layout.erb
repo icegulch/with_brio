@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title><%= current_page.data.title || "Boo" %></title>
+    <title><%= current_page.data.title || "Do it with brio!" %></title>
     <!--[if lt IE 9]>
       <%= javascript_include_tag 'html5' %>
     <![endif]-->
-    <%= stylesheet_link_tag "styles" %>
+    <%= stylesheet_link_tag "//cloud.typography.com/7164052/612566/css/fonts.css", "styles" %>
     <%= yield_content :style %>
     <%= javascript_include_tag  "scripts" %>
     <%#= favicon_link_tag 'favicon.ico', rel: 'icon', type: 'image/ico' %>
