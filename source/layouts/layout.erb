@@ -26,12 +26,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<%= asset_url('images/icons/favicon-16x16.png') %>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@designwithbrio">
-    <meta name="twitter:title" content="With Brio">
+    <meta name="twitter:title" content="<%= current_page.data.title || " With Brio" %>">
     <meta name="twitter:description" content="With Brio is a tiny creative studio specializing in design and frontend development for everything from Rails apps to brochure sites.">
     <meta name="twitter:image:src" content="https://withbr.io<%= asset_path(:images, 'icons/withbrio-og-image.png') %>">
     <meta property="og:site_name" content="With Brio">
     <meta property="og:url" content="https://withbr.io<%= current_page.url %>">
-    <meta property="og:title" content="<%= (content_for?(:title)) ? yield_content(:title) + " - With Brio" : "With Brio" %>">
+    <meta property="og:title" content="<%= current_page.data.title || " With Brio" %>">
     <meta property="og:description" content="With Brio is a tiny creative studio specializing in design and frontend development for everything from Rails apps to brochure sites.">
     <meta property="og:image" content="https://withbr.io<%= asset_path(:images, 'icons/withbrio-og-image.png') %>">
   </head>
