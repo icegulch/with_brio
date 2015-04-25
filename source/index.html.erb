@@ -1,45 +1,10 @@
 
-<% content_for :script do %>
-  <script>
-    $(function() {
-
-      // logo fun
-      setTimeout(function () {
-        $('.logo').addClass('logo-green');
-        $('.logo').removeClass('logo-red');
-        setTimeout(function () {
-          $('.logo').addClass('logo-blue');
-          $('.logo').removeClass('logo-green');
-          setTimeout(function () {
-            $('.logo').removeClass('logo-blue');
-           }, 1200)
-         }, 1200)
-       }, 1200)
-
-      // waypoints
-      jQuery('.page-section-work').waypoint(function() {
-        jQuery('.bobbles').toggleClass('animated shake');
-      }, { offset: '70%' });
-
-    });
-  </script>
-<% end %>
-
-
-    <header class="page-section page-section-header">
-      <div class="container">
-        <figure class="logo logo-red">
-          <%= image_tag('logo.png', :width => '325') %>
-        </figure>
-      </div>
-    </header>
-
     <section class="page-section page-section-alt">
         <div class="container">
           <div class="col-md-8 col-md-offset-2">
             <article class="teaser-text text-centered">
               <p>
-                <b>With Brio</b> is a tiny creative studio specializing in web interfaces. Whether you're building a Rails app or a brochure website, we're here to help! We can take your idea from grayscale wires to vector graphics to git repos, or we can just jump in where you need us. Some of the brands we've worked with are listed below. Our elves are building a real portfolio as we speak.
+                <b>Hi! I'm Steve.</b> With Brio is my tiny home on the outskirts of tech town. Please, come in! Whether you're building a Rails app or a brochure website, I can take your idea from grayscale wires to vector graphics to git repos, or I can just jump in where you need me. I've had the good fortune of working with stellar clients big and small, a few of whom are featured below.
               </p>
             </article>
           </div>
@@ -53,16 +18,8 @@
             <div class="table-cell table-cell-brand">
               <%= image_tag('brands/cfp.svg', :height => '80') %>
             </div>
-          </figure>
-          <figure class='table-row table-row-brand'>
             <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/twitter.svg', :height => '60') %>
-            </div>
-            <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/heavybit.svg', :height => '60') %>
-            </div>
-            <div class="table-cell table-cell-brand">
-              <%= image_tag('brands/su2c.svg', :height => '80') %>
+              <%= image_tag('brands/gnip.svg', :height => '60') %>
             </div>
           </figure>
         </div>
@@ -70,6 +27,7 @@
 
     <section class="page-section page-section-decorative page-section-work">
       <div class="container">
+        <div class="strings"></div>
         <div class="bobbles"></div>
         <div class="table-row">
           <article class="table-cell table-cell-article">
@@ -77,7 +35,7 @@
               Periodic Table of 4000-Footers
             </h2>
             <p>
-              A NH native, I started hiking in the White Mountains when I was four years old. Even immediately after finishing hikes, I remember poring over maps and guidebooks, scouting the next adventure. I was hooked...still am. A soon-to-be dad, I wanted to foster the same sense of anticipation in my little one. Since my wife is a scientist, I thought it would be fun to extend the periodic table paradigm to peak-bagging. People have extended it to alcohol, breakfast cereal, and hip-hop, so why not mountains?
+              A NH native, I started hiking in the White Mountains when I was four years old. Even immediately after finishing hikes, I remember poring over maps and guidebooks, scouting the next adventure. I was hooked...still am. A soon-to-be dad, I want to foster the same sense of anticipation in my little one. Since my wife is a scientist, I thought it would be fun to extend the periodic table paradigm to peak-bagging. Little did I know just how darned hard that would be!
             </p>
             <p>
               <%= link_to('» More', '/periodic-table-of-4000-footers/', :class => 'more-link') %>
@@ -90,7 +48,7 @@
       </div>
     </section>
 
-    <section class="page-section page-section-alt page-section-quaternary">
+    <section class="page-section page-section-alt page-section-contact">
       <div class="container">
         <div class="contact-form">
           <h2 class="heading heading-primary">
@@ -136,12 +94,3 @@
         </div>
       </div>
     </section>
-
-    <footer class="page-section page-section-footer">
-      <div class="container">
-        <div class="text-centered">
-          Seattle • Boulder • Randolph
-        </div>
-      </div>
-    </footer>
-
