@@ -48,8 +48,15 @@ b, strong, dt {
 
 a {
   color: $blue;
+}
+
+.link-standalone {
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.link-unadorned {
+  color: #808080;
 }
 
 .more-link {
@@ -227,7 +234,7 @@ a {
 }
 
 .faq-graphic {
-  margin: 30px 0;
+  margin: 40px 0;
 }
 
 .faq-graphic-caption {
