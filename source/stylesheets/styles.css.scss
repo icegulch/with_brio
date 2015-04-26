@@ -21,7 +21,7 @@ html {
 body {
   position: relative;
   padding-bottom: 15px;
-  color: #808080;
+  color: #777;
   font: 200 1.6rem/1.9 'Gotham SSm A', 'Gotham SSm B', gotham, sans-serif;
   &:before, &:after {
     content: "";
@@ -51,7 +51,7 @@ a {
 }
 
 .link-unadorned {
-  color: #808080;
+  color: #777;
 }
 
 .link-standalone {
