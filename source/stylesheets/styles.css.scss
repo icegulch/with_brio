@@ -231,6 +231,13 @@ a {
   color: #222;
 }
 
+.faq-q {
+  margin: 40px 0 5px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
 .faq-graphic {
   margin: 40px 0;
   padding: 10px 0;
@@ -239,6 +246,7 @@ a {
 
 .faq-graphic-caption {
   font-size: 1rem;
+  line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
