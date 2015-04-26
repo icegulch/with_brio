@@ -67,9 +67,12 @@ a {
 
 .logo {
   display: inline-block;
-  width: 100%;
   max-width: 320px;
-  @include transition();
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 991px) {
