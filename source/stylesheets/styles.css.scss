@@ -21,7 +21,7 @@ html {
 body {
   position: relative;
   padding-bottom: 15px;
-  color: #777;
+  color: #555;
   font: 200 1.6rem/1.9 'Gotham SSm A', 'Gotham SSm B', gotham, sans-serif;
   &:before, &:after {
     content: "";
@@ -51,7 +51,7 @@ a {
 }
 
 .link-unadorned {
-  color: #777;
+  color: #555;
 }
 
 .link-standalone {
@@ -270,9 +270,10 @@ a {
 
 .faq-q {
   margin: 40px 0 5px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.2;
+  color: #222;
 }
 
 .faq-graphic {
