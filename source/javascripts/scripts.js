@@ -6,7 +6,7 @@
       // waypoints
       jQuery('.page-section-work').waypoint(function() {
         jQuery('.bobbles').toggleClass('animated bounce');
-      }, { offset: '70%' });
+      }, { offset: '50%' });
 
 
       // waypoints

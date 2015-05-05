@@ -32,6 +32,9 @@
 # Helpers
 ###
 
+require 'libs/helpers'
+helpers SiteHelpers
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 

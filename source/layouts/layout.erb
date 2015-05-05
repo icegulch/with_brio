@@ -45,17 +45,21 @@
       </div>
     <![endif]-->
 
-    <header id="site-header">
-      <%= partial "layouts/header" %>
-    </header>
+    <div class="page-wrapper">
 
-    <main id="site-main" role="main">
-      <%= yield %>
-    </main>
-    
-    <footer id="site-footer">
-      <%= partial "layouts/footer" %>
-    </footer>
+      <header id="site-header">
+        <%= partial "layouts/header" %>
+      </header>
+
+      <main id="site-main" role="main">
+        <%= yield %>
+      </main>
+      
+      <footer id="site-footer">
+        <%= partial "layouts/footer" %>
+      </footer>
+
+    </div>
 
     <%= yield_content :script %>
 
