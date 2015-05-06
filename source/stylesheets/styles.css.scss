@@ -197,23 +197,25 @@ a {
   background-color: #f5f5f5;
 }
 
+.page-section-featured {
+  position: relative;
+  padding: 270px 0 150px;
+  background: image-url('diamond-dust.png'), image-url('snowcaps.svg');
+  background-repeat: repeat-x, repeat-x;
+  background-size: 300px auto, 600px auto;
+  background-position: left 0 top 20px, left -35px top 100px;
+}
+
 .page-section-topo {
   background: #f5f5f5 image-url('topo-texture.png') repeat 50% 50% fixed;
 }
 
-.page-section-decorative {
-  padding: 280px 0 150px;
+.page-section-work {
   @media screen and (max-width: 767px) {
     padding: 80px 0 100px;
   }
   @media screen and (min-width: 768px) {
-    padding: 280px 0 150px;
-  }
-}
-
-.page-section-work {
-  .container {
-    position: relative;
+    padding: 200px 0 150px;
   }
   @media screen and (min-width: 992px) {
     background: image-url('diamond-dust.png');
@@ -224,43 +226,8 @@ a {
   @media screen and (min-width: 1200px) {
     background-position: left 70% top 40px;
   }
-}
-
-.strings {
-  @media screen and (min-width: 768px) {
-    width: 300px;
-    height: 172px;
-    position: absolute;
-    top: -280px;
-    z-index: 2;
-    background: transparent image-url('strings.png') no-repeat 0 0;
-    background-size: 300px auto;
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    left: 50%;
-    margin-left: -150px;
-  }
-  @media screen and (min-width: 992px) {
-    left: 15px;
-  }
-}
-
-.bobbles {
-  @media screen and (min-width: 768px) {
-    width: 300px;
-    height: 172px;
-    position: absolute;
-    top: -280px;
-    z-index: 3;
-    background: transparent image-url('bobbles.png') no-repeat 0 0;
-    background-size: 300px auto;
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    left: 50%;
-    margin-left: -150px;
-  }
-  @media screen and (min-width: 992px) {
-    left: 15px;
+  .container {
+    position: relative;
   }
 }
 
@@ -287,6 +254,57 @@ a {
 .page-section-periodic-body {
   position: relative;
   padding-top: 120px;
+}
+
+.telepherique {
+  width: 80px;
+  margin-left: -40px;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  z-index: 2;
+  opacity: 0;
+  &.bounceInLeft {
+    opacity: 1;
+  }
+}
+
+.strings {
+  @media screen and (min-width: 768px) {
+    width: 300px;
+    height: 172px;
+    position: absolute;
+    top: -200px;
+    z-index: 2;
+    background: transparent image-url('strings.png') no-repeat 0 0;
+    background-size: 300px auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    left: 50%;
+    margin-left: -150px;
+  }
+  @media screen and (min-width: 992px) {
+    left: 15px;
+  }
+}
+
+.bobbles {
+  @media screen and (min-width: 768px) {
+    width: 300px;
+    height: 172px;
+    position: absolute;
+    top: -200px;
+    z-index: 3;
+    background: transparent image-url('bobbles.png') no-repeat 0 0;
+    background-size: 300px auto;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    left: 50%;
+    margin-left: -150px;
+  }
+  @media screen and (min-width: 992px) {
+    left: 15px;
+  }
 }
 
 .jack {
@@ -539,6 +557,79 @@ textarea {
 .rotateIn {
   -webkit-animation-name: rotateIn;
   animation-name: rotateIn;
+}
+
+@-webkit-keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes bounceInLeft {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-3000px, 0, 0);
+    transform: translate3d(-3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(5px, 0, 0);
+    transform: translate3d(5px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
 }
 
 

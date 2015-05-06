@@ -4,12 +4,21 @@
     $(function() {
 
       // waypoints
+
+
+      // Telepherique on Home
+      jQuery('.page-section-featured').waypoint(function() {
+        jQuery('.telepherique').toggleClass('animated bounceInLeft');
+      }, { offset: '70%' });
+
+
+      // Ornaments on Work Page
       jQuery('.page-section-work').waypoint(function() {
         jQuery('.bobbles').toggleClass('animated bounce');
       }, { offset: '50%' });
 
 
-      // waypoints
+      // Jack on Periodic Page
       jQuery('.page-section-periodic-header').waypoint(function() {
         jQuery('.jack').toggleClass('animated rotateIn');
       }, { offset: '20%' });
