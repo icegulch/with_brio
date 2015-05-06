@@ -1,50 +1,86 @@
 
     <section class="page-section page-section-intro">
       <div class="container">
-        <figure class="table-row table-row-brand">
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/cartalk.svg', :height => '80') %>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <figure class="table-row table-row-brand">
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/cartalk.svg', :class => 'img-responsive') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/heavybit.svg', :class => 'img-responsive') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/cfp.svg', :class => 'img-responsive') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/gnip.svg', :class => 'img-responsive') %>
+              </div>
+            </figure>
+            <figure class="table-row table-row-brand">
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/big-boulder.svg', :class => 'img-responsive') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/su2c.svg', :class => 'img-responsive') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/perpetual.svg', :class => 'img-responsive') %>
+              </div>
+              <div class="table-cell table-cell-brand">
+                <%= image_tag('brands/cfm.svg', :class => 'img-responsive') %>
+              </div>
+            </figure>
           </div>
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/big-boulder.svg', :height => '100') %>
-          </div>
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/cfp.svg', :height => '80') %>
-          </div>
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/gnip.svg', :height => '60') %>
-          </div>
-        </figure>
-        <figure class="table-row table-row-brand">
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/cfm.svg', :height => '80') %>
-          </div>
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/su2c.svg', :height => '100') %>
-          </div>
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/perpetual.svg', :height => '80') %>
-          </div>
-          <div class="table-cell table-cell-brand">
-            <%= image_tag('brands/heavybit.svg', :height => '60') %>
-          </div>
-        </figure>
+        </div>
       </div>
     </section>
 
     <section class="page-section page-section-work">
       <div class="container">
-        <div class="strings"></div>
-        <div class="bobbles"></div>
+        <%= image_tag('bobbles.svg', :class => 'bobbles') %>
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <article class="text-centered">
+              <%= simple_format(lorem.paragraph) %>
+            </article>
+          </div>
         </div>
-    </section>
-
-    <section class="page-section">
-      <div class="container">
-
+        <figure class="row">
+          <div class="col-md-4">
+            <%= image_tag('work/org-dev.png', :class => 'img-responsive') %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag('work/su2c.png', :class => 'img-responsive') %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag('work/fullers.jpg', :class => 'img-responsive') %>
+          </div>
+        </figure>
+        <figure class="row">
+          <div class="col-md-4">
+            <%= image_tag('work/fitness-together.png', :class => 'img-responsive') %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag('work/gnip.png', :class => 'img-responsive') %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag('work/org-dev.png', :class => 'img-responsive') %>
+          </div>
+        </figure>
+        <figure class="row">
+          <div class="col-md-4">
+            <%= image_tag('work/bigboulder.png', :class => 'img-responsive') %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag('work/mac.png', :class => 'img-responsive') %>
+          </div>
+          <div class="col-md-4">
+            <%= image_tag('work/great-minds.png', :class => 'img-responsive') %>
+          </div>
+        </figure>
       </div>
     </section>
-
 
     <section class="page-section page-section-contact">
       <div class="container">
