@@ -91,10 +91,18 @@ a {
 
 @media screen and (min-width: 768px) {
 
+  .showcase {
+    margin: 0 -30px;
+  }
+
   .table-row {
     display: table;
     table-layout: fixed;
     width: 100%;
+    .showcase & {
+      border-collapse: separate;
+      border-spacing: 30px 15px;
+    }
   }
 
   .table-row-brand {
@@ -107,6 +115,9 @@ a {
   .table-cell {
     display: table-cell;
     vertical-align: middle;
+    .showcase & {
+      vertical-align: top;
+    }
   }
 
   .table-cell-brand {
@@ -216,8 +227,11 @@ a {
 
 .page-section-work {
   padding: 250px 0 150px;
-  background: transparent image-url('strings.svg') no-repeat 50% 0;
-  background-size: 250px auto;
+  background-color: transparent;
+  background-image: image-url('strings.svg'), image-url('diamond-dust.png');
+  background-repeat: no-repeat, repeat-x;
+  background-position: 50% 0, 0 15px;
+  background-size: 250px auto, 300px auto;
   .container {
     position: relative;
   }
@@ -296,6 +310,12 @@ a {
   margin: 0 0 30px;
   font: 800 2.4rem/1.2 'Vitesse SSm A', 'Vitesse SSm B', serif;
   color: #222;
+}
+
+.showcase-row {
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .faq-q {
