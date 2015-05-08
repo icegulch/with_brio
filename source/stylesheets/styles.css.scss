@@ -45,6 +45,7 @@ b, strong, dt {
 
 a {
   color: $blue;
+  cursor: pointer;
 }
 
 .link-unadorned {
@@ -145,6 +146,13 @@ a {
     text-align: center;
     + .table-cell {
       margin-top: 40px;
+    }
+  }
+  .table-cell-brand {
+    img {
+      max-width: 150px;
+      max-height: 80px;
+      margin: 0 auto;
     }
   }
 }

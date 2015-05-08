@@ -5,30 +5,30 @@
           <div class="col-md-10 col-md-offset-1">
             <figure class="table-row table-row-brand">
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/cartalk.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/cartalk.svg', :class => 'table-cell-brand-img') %>
               </div>
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/heavybit.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/heavybit.svg', :class => 'table-cell-brand-img') %>
               </div>
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/cfp.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/cfp.svg', :class => 'table-cell-brand-img') %>
               </div>
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/gnip.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/gnip.svg', :class => 'table-cell-brand-img') %>
               </div>
             </figure>
             <figure class="table-row table-row-brand">
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/big-boulder.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/big-boulder.svg', :class => 'table-cell-brand-img') %>
               </div>
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/su2c.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/su2c.svg', :class => 'table-cell-brand-img') %>
               </div>
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/perpetual.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/perpetual.svg', :class => 'table-cell-brand-img') %>
               </div>
               <div class="table-cell table-cell-brand">
-                <%= image_tag('brands/cfm.svg', :class => 'img-responsive') %>
+                <%= image_tag('brands/cfm.svg', :class => 'table-cell-brand-img') %>
               </div>
             </figure>
           </div>
@@ -40,13 +40,13 @@
       <div class="container">
         <%= image_tag('bobbles.svg', :class => 'bobbles') %>
         <div class="showcase">
-          <article class="teaser-text text-centered">
-            <div class="row">
-              <div class="col-md-8 col-md-offset-2">
-                <%= simple_format(lorem.sentences(4)) %> 
-              </div>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <article class="text-centered">
+                
+              </article>
             </div>
-          </article>
+          </div>
           <% 
               clients = ['lagrange.jpg', 'su2c.png', 'fitness-together.png', 'fullers.jpg', 'gnip.png', 'heavybit.png', 'trelora.png', 'uscm.png', 'bigboulder.png', 'frenzy.png', 'su2c-2.png', 'cfp.png', 'org-dev.png', 'great-minds.png', 'periodic.jpg']
               clients.each.with_index do |client, i|
