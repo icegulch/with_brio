@@ -79,7 +79,7 @@ a {
 @media screen and (max-width: 991px) {
   [class^="col-"] {
     + [class^="col-"] {
-      margin-top: 60px;
+      margin-top: 30px;
     }
   }
 }
@@ -339,6 +339,10 @@ a {
   border-top: 1px solid #eee;
   margin-top: 80px;
   padding-top: 80px;
+  @media screen and (max-width: 767px) {
+    margin-top: 40px;
+    padding-top: 40px;
+  }
 }
 
 .showcase-header {
@@ -413,8 +417,10 @@ a {
   }
 }
 
-.pull-right {
-  float: right;
+@media screen and (min-width: 991px) {
+  .pull-right {
+    float: right;
+  }
 }
 
 .text-centered {
