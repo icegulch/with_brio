@@ -19,7 +19,7 @@
 
 
       // Jack on Periodic Page
-      jQuery('.page-section-periodic-header').waypoint(function() {
+      jQuery('.page-section-periodic').waypoint(function() {
         jQuery('.jack').toggleClass('animated rotateIn');
       }, { offset: '20%' });
 

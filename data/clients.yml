@@ -1,0 +1,156 @@
+
+-
+  slug: cfp
+  name: College Football Playoff
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url: http://www.collegefootballplayoff.com/
+  blurb: false
+
+-
+  slug: bigboulder
+  name: Big Boulder
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url: bbi.org
+  blurb: false
+
+-
+  slug: su2c-isuf
+  name: Stand Up To Cancer - I Stand Up For
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url: istandupfor.standuptocancer.org
+  blurb: false
+
+-
+  slug: su2c-wcy
+  name: Stand Up To Cancer - We're Calling You
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url: http://werecallingyou.org/
+  blurb: false
+
+-
+  slug: heavybit
+  name: Heavybit Library
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url: http://www.heavybit.com/library
+  blurb: true
+
+-
+  slug: fullers
+  name: Fuller's
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: jpg
+  url:   
+  blurb: false
+
+-
+  slug: fitness-together
+  name: Fitness Together
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url:   
+  blurb: false
+
+-
+  slug: org-dev
+  name: Org Dev
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url:   
+  blurb: false
+
+-
+  slug: periodic
+  name: Periodic Table of White Mountain 4000-Footers
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: jpg
+  url: '/periodic-table-of-white-mountain-4000-footers'
+  blurb: false
+
+-
+  slug: gnip_old
+  name: Gnip
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url:   
+  blurb: false
+
+-
+  slug: gnip_new
+  name: Gnip
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url:     
+  blurb: false
+
+-
+  slug: trelora
+  name: Trelora
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url:   
+  blurb: false
+
+-
+  slug: lagrange
+  name: Lagrange Systems
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: jpg
+  url:   
+  blurb: false
+
+-
+  slug: uscm
+  name: US Cycling Monument
+  tags: 
+    - foo
+    - bar
+    - baz
+  img_type: png
+  url: https://www.uscyclingmonument.com/
+  blurb: false
+
+
