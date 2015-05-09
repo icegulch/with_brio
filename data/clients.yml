@@ -24,6 +24,7 @@
   slug: su2c-isuf
   name: Stand Up To Cancer - I Stand Up For
   tags: 
+    - design
     - responsive web development
   img_type: png
   url: http://istandupfor.standup2cancer.org/
@@ -33,6 +34,7 @@
   slug: su2c-wcy
   name: Stand Up To Cancer - We're Calling You
   tags: 
+    - design
     - responsive web development
   img_type: png
   url: 
@@ -42,7 +44,7 @@
   slug: icebrg
   name: Icebrg IO
   tags: 
-    - dashboard design
+    - design
     - frontend development
   img_type: png
   url:   
