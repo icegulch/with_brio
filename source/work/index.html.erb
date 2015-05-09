@@ -62,7 +62,9 @@
                   <% if client.blurb == true %>
                     <%= partial 'work/blurbs/' + client.slug %>
                   <% else %>
-                    <%= simple_format(lorem.paragraph) %>
+                    <p>
+                      Full description of work coming soon.
+                    </p>
                   <% end %>
                   <div class="showcase-tags">
                     <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
@@ -86,7 +88,9 @@
                   <% if client.blurb == true %>
                     <%= partial 'work/blurbs/' + client.slug %>
                   <% else %>
-                    <%= simple_format(lorem.paragraph) %>
+                    <p>
+                      Full description of work coming soon.
+                    </p>
                   <% end %>
                   <div class="showcase-tags">
                     <b>Tasks Performed</b>: <%= client.tags.join(', ') %>

@@ -39,6 +39,16 @@
   blurb: false
 
 -
+  slug: icebrg
+  name: Icebrg IO
+  tags: 
+    - dashboard design
+    - frontend development
+  img_type: png
+  url:   
+  blurb: false
+
+-
   slug: heavybit
   name: Heavybit Library
   tags: 
@@ -55,6 +65,15 @@
     - design
     - facebook tab development
   img_type: jpg
+  url:   
+  blurb: false
+
+-
+  slug: cfm
+  name: Calgary Farmer's Market
+  tags: 
+    - frontend Expression Engine development
+  img_type: png
   url:   
   blurb: false
 
