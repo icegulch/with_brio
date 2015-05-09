@@ -1,0 +1,71 @@
+
+    <section class="page-section page-section-contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <h2 class="heading heading-primary">
+              Contact
+            </h2>
+            <form class="contact-form" name="contact" action="thank-you">
+              <div class="form-field">
+                <label class="form-label">
+                  First Name
+                </label>
+                <input type="text" name="first_name">
+              </div>
+              <div class="form-field">
+                <label class="form-label">
+                  Last Name
+                </label>
+                <input type="text" name="last_name">
+              </div>
+              <div class="form-field">
+                <label class="form-label">
+                  Email
+                </label>
+                <input type="email" name="email">
+              </div>
+              <div class="form-field">
+                <label class="form-label">
+                  Your message
+                </label>
+                <textarea name="message"></textarea>
+              </div>
+              <div class="form-field form-field-submit">
+                <button class="button-submit">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <article class="teaser-text text-centered">
+          <h2 class="heading-primary">
+            Email
+          </h2>
+          <p>
+            <%= mail_to('info@withbr.io') %>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page-section page-section-intro page-section-topo">
+      <div class="container">
+        <article class="teaser-text text-centered">
+          <h2 class="heading-primary">
+            Ye Oulde Postal Address
+          </h2>
+          <p>
+            With Brio<br>
+            6205 NE Radford Drive #2421<br>
+            Seattle, WA 98115
+          </p>
+        </article>
+      </div>
+    </section>

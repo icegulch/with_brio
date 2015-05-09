@@ -92,10 +92,6 @@ a {
 
 @media screen and (min-width: 768px) {
 
-  .showcase {
-    margin: 0 -30px;
-  }
-
   .table-row {
     display: table;
     table-layout: fixed;
@@ -177,26 +173,12 @@ a {
 }
 
 .site-nav-header {
-  position: relative;
   display: inline-block;
   margin: 30px 0 60px;
   padding: 0 0 15px;
   border-bottom: 1px solid #ccc;
   font-size: 11px;
   text-transform: uppercase;
-  &:after {
-    content: "/ /";
-    display: inline-block;
-    margin-left: -16px;
-    padding: 2px 8px;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    z-index: 2;
-    background-color: #fff;
-    color: #aaa;
-    font-size: 8px;
-  }
 }
 
 .site-nav-item {
@@ -336,6 +318,7 @@ a {
 }
 
 .showcase-row {
+  position: relative;
   border-top: 1px solid #eee;
   margin-top: 80px;
   padding-top: 80px;
@@ -343,11 +326,19 @@ a {
     margin-top: 40px;
     padding-top: 40px;
   }
-}
-
-.showcase-header {
-  padding: 10px;
-  background-color: #f5f5f5;
+  &:after {
+    content: "/ /";
+    display: inline-block;
+    margin-left: -16px;
+    padding: 2px 8px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    z-index: 2;
+    background-color: #fff;
+    color: #ccc;
+    font-size: 8px;
+  }
 }
 
 .showcase-heading {

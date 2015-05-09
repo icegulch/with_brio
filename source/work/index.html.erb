@@ -39,70 +39,68 @@
     <section class="page-section page-section-padded-lg page-section-work">
       <div class="container">
         <%= image_tag('bobbles.svg', :class => 'bobbles') %>
-        <div class="showcase">
-          <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-              <article class="text-centered">
-                
-              </article>
-            </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <article class="text-centered">
+              <%= simple_format(lorem.sentence()) %>
+            </article>
           </div>
-          <% 
-            data.clients.each.with_index do |client, i|
-          %>
-            <div class="showcase-row">
-              <% if i % 2 == 0 %>
-                <div class="row">
-                  <figure class="col-md-6 pull-right">
-                    <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
-                  </figure>
-                  <article class="col-md-5">
-                    <h5 class="showcase-heading">
-                      <%= client.name %>
-                    </h5>
-                    <% if client.blurb == true %>
-                      <%= partial 'work/blurbs/' + client.slug %>
-                    <% else %>
-                      <%= simple_format(lorem.paragraph) %>
-                    <% end %>
-                    <div class="showcase-tags">
-                      <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
-                    </div>
-                    <% if client.url %>
-                      <div class="cta">
-                        <%= link_to('» View Site', client.url, :class => 'cta-button', :target => '_blank') %>
-                      </div>
-                    <% end %>
-                  </article>
-                </div>
-              <% else %>
-                <div class="row">
-                  <figure class="col-md-6">
-                    <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
-                  </figure>
-                  <article class="col-md-5 pull-right">
-                    <h5 class="showcase-heading">
-                      <%= client.name %>
-                    </h5>
-                    <% if client.blurb == true %>
-                      <%= partial 'work/blurbs/' + client.slug %>
-                    <% else %>
-                      <%= simple_format(lorem.paragraph) %>
-                    <% end %>
-                    <div class="showcase-tags">
-                      <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
-                    </div>
-                    <% if client.url %>
-                      <div class="cta">
-                        <%= link_to('» View Site', client.url, :class => 'cta-button', :target => '_blank') %>
-                      </div>
-                    <% end %>
-                  </article>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
         </div>
+        <% 
+          data.clients.each.with_index do |client, i|
+        %>
+          <div class="showcase-row">
+            <% if i % 2 == 0 %>
+              <div class="row">
+                <figure class="col-md-6 pull-right">
+                  <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
+                </figure>
+                <article class="col-md-5">
+                  <h5 class="showcase-heading">
+                    <%= client.name %>
+                  </h5>
+                  <% if client.blurb == true %>
+                    <%= partial 'work/blurbs/' + client.slug %>
+                  <% else %>
+                    <%= simple_format(lorem.paragraph) %>
+                  <% end %>
+                  <div class="showcase-tags">
+                    <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
+                  </div>
+                  <% if client.url %>
+                    <div class="cta">
+                      <%= link_to('» View Site', client.url, :class => 'cta-button', :target => '_blank') %>
+                    </div>
+                  <% end %>
+                </article>
+              </div>
+            <% else %>
+              <div class="row">
+                <figure class="col-md-6">
+                  <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
+                </figure>
+                <article class="col-md-5 pull-right">
+                  <h5 class="showcase-heading">
+                    <%= client.name %>
+                  </h5>
+                  <% if client.blurb == true %>
+                    <%= partial 'work/blurbs/' + client.slug %>
+                  <% else %>
+                    <%= simple_format(lorem.paragraph) %>
+                  <% end %>
+                  <div class="showcase-tags">
+                    <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
+                  </div>
+                  <% if client.url %>
+                    <div class="cta">
+                      <%= link_to('» View Site', client.url, :class => 'cta-button', :target => '_blank') %>
+                    </div>
+                  <% end %>
+                </article>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
       </div>
     </section>
 

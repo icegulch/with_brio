@@ -46,7 +46,7 @@
     - design
   img_type: png
   url: http://www.heavybit.com/library
-  blurb: true
+  blurb: false
 
 -
   slug: fullers
