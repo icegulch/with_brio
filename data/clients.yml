@@ -92,6 +92,7 @@
   slug: org-dev
   name: Org Dev
   tags: 
+    - design
     - responsive web development
   img_type: png
   url: http://orgdev.com
