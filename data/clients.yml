@@ -2,6 +2,7 @@
 -
   slug: cfp
   name: College Football Playoff
+  type: rails app
   tags: 
     - responsive web development
   img_type: png
@@ -11,9 +12,10 @@
 -
   slug: bigboulder
   name: Big Boulder
+  type: website
   tags: 
-    - responsive web development
     - design
+    - responsive web development
     - wordpress.com skinning
     - html email
   img_type: png
@@ -23,6 +25,7 @@
 -
   slug: su2c-isuf
   name: Stand Up To Cancer - I Stand Up For
+  type: rails app
   tags: 
     - design
     - responsive web development
@@ -33,6 +36,7 @@
 -
   slug: su2c-wcy
   name: Stand Up To Cancer - We're Calling You
+  type: android app
   tags: 
     - design
     - responsive web development
@@ -41,31 +45,54 @@
   blurb: false
 
 -
-  slug: icebrg
-  name: Icebrg IO
-  tags: 
-    - design
-    - frontend development
-  img_type: png
-  url:   
-  blurb: false
-
--
   slug: heavybit
   name: Heavybit Library
+  type: sinatra app
   tags: 
-    - responsive web development
     - design
+    - responsive web development
   img_type: png
   url: http://www.heavybit.com/library
   blurb: false
 
 -
-  slug: fullers
-  name: Fuller's
+  slug: periodic
+  name: Periodic Table of White Mountain 4000-Footers
+  type: poster
+  tags: 
+    - print design
+  img_type: jpg
+  url: '/periodic-table-of-white-mountain-4000-footers'
+  blurb: true
+
+-
+  slug: gnip_new
+  name: Gnip
+  type: website
+  tags: 
+    - responsive web development
+  img_type: png
+  url: https://gnip.com
+  blurb: false
+
+-
+  slug: icebrg
+  name: Icebrg IO
+  type: rails app
   tags: 
     - design
-    - facebook tab development
+    - responsive web development
+  img_type: png
+  url:   
+  blurb: false
+
+-
+  slug: fullers
+  name: Fuller's
+  type: facebook tab
+  tags: 
+    - design
+    - frontend development
   img_type: jpg
   url:   
   blurb: false
@@ -73,8 +100,9 @@
 -
   slug: cfm
   name: Calgary Farmer's Market
+  type: Expression Engine site
   tags: 
-    - frontend Expression Engine development
+    - frontend development
   img_type: png
   url:   
   blurb: false
@@ -82,8 +110,9 @@
 -
   slug: fitness-together
   name: Fitness Together
+  type: mobile web app
   tags: 
-    - mobile web application frontend
+    - responsive web development
   img_type: png
   url:   
   blurb: false
@@ -91,6 +120,7 @@
 -
   slug: org-dev
   name: Org Dev
+  type: website
   tags: 
     - design
     - responsive web development
@@ -99,35 +129,9 @@
   blurb: false
 
 -
-  slug: periodic
-  name: Periodic Table of White Mountain 4000-Footers
-  tags: 
-    - print design
-  img_type: jpg
-  url: '/periodic-table-of-white-mountain-4000-footers'
-  blurb: false
-
--
-  slug: gnip_old
-  name: Gnip
-  tags: 
-    - design
-  img_type: png
-  url:   
-  blurb: false
-
--
-  slug: gnip_new
-  name: Gnip
-  tags: 
-    - responsive web development
-  img_type: png
-  url: https://gnip.com
-  blurb: false
-
--
   slug: trelora
   name: Trelora
+  type: rails app
   tags: 
     - design
     - responsive web development
@@ -138,8 +142,9 @@
 -
   slug: lagrange
   name: Lagrange Systems
+  type: presentation
   tags: 
-    - pitch deck design
+    - design
     - responsive web development
   img_type: jpg
   url:   
@@ -148,7 +153,9 @@
 -
   slug: uscm
   name: US Cycling Monument
+  type: rails app
   tags: 
+    - design
     - responsive web development
   img_type: png
   url: https://www.uscyclingmonument.com/

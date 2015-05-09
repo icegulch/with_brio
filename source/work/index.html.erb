@@ -69,11 +69,14 @@
                     </p>
                   <% end %>
                   <div class="showcase-tags">
+                    <b>Project Type</b>: <%= client.type %>
+                  </div>
+                  <div class="showcase-tags">
                     <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
                   </div>
                   <% if client.url %>
                     <div class="cta">
-                      <%= link_to('» View Site', client.url, :class => 'cta-button', :target => '_blank') %>
+                      <%= link_to('» View ' + client.type, client.url, :class => 'cta-button', :target => '_blank') %>
                     </div>
                   <% end %>
                 </article>
@@ -95,11 +98,14 @@
                     </p>
                   <% end %>
                   <div class="showcase-tags">
+                    <b>Project Type</b>: <%= client.type %>
+                  </div>
+                  <div class="showcase-tags">
                     <b>Tasks Performed</b>: <%= client.tags.join(', ') %>
                   </div>
                   <% if client.url %>
                     <div class="cta">
-                      <%= link_to('» View Site', client.url, :class => 'cta-button', :target => '_blank') %>
+                      <%= link_to('» View ' + client.type, client.url, :class => 'cta-button', :target => '_blank') %>
                     </div>
                   <% end %>
                 </article>
