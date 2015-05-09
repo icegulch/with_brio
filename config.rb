@@ -76,6 +76,7 @@ end
 
 activate :directory_indexes
 page "/404.html", :directory_index => false
+page '/corsica/*', :layout => false
 
 after_build do |builder|
   src = File.join(config[:source],"_redirects")

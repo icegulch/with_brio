@@ -7,7 +7,7 @@
     - responsive web development
   img_type: png
   url: http://www.collegefootballplayoff.com/
-  blurb: false
+  blurb: true
 
 -
   slug: bigboulder
@@ -104,7 +104,7 @@
   tags: 
     - frontend development
   img_type: png
-  url:   
+  url: http://www.calgaryfarmersmarket.ca
   blurb: false
 
 -
