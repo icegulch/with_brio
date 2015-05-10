@@ -84,7 +84,7 @@
     - responsive web development
   img_type: png
   url:   
-  blurb: false
+  blurb: true
 
 -
   slug: fullers
@@ -95,7 +95,7 @@
     - frontend development
   img_type: jpg
   url:   
-  blurb: false
+  blurb: true
 
 -
   slug: cfm
@@ -105,7 +105,7 @@
     - frontend development
   img_type: png
   url: http://www.calgaryfarmersmarket.ca
-  blurb: false
+  blurb: true
 
 -
   slug: fitness-together
