@@ -115,7 +115,7 @@
     - responsive web development
   img_type: png
   url:   
-  blurb: false
+  blurb: true
 
 -
   slug: org-dev
@@ -126,7 +126,7 @@
     - responsive web development
   img_type: png
   url: http://orgdev.com
-  blurb: false
+  blurb: true
 
 -
   slug: trelora
