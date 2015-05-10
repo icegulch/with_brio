@@ -53,7 +53,7 @@
     - responsive web development
   img_type: png
   url: http://www.heavybit.com/library
-  blurb: false
+  blurb: true
 
 -
   slug: periodic
