@@ -1,12 +1,12 @@
 
 -
-  slug: cfp
-  name: College Football Playoff
-  type: rails app
+  slug: periodic
+  name: Periodic Table of White Mountain 4000-Footers
+  type: poster
   tags: 
-    - responsive web development
-  img_type: png
-  url: http://www.collegefootballplayoff.com/
+    - print design
+  img_type: jpg
+  url: '/work/periodic-table-of-white-mountain-4000-footers'
   blurb: true
 
 -
@@ -23,28 +23,6 @@
   blurb: false
 
 -
-  slug: su2c-isuf
-  name: Stand Up To Cancer - I Stand Up For
-  type: rails app
-  tags: 
-    - design
-    - responsive web development
-  img_type: png
-  url: http://istandupfor.standup2cancer.org/
-  blurb: false
-
--
-  slug: su2c-wcy
-  name: Stand Up To Cancer - We're Calling You
-  type: android app
-  tags: 
-    - design
-    - responsive web development
-  img_type: png
-  url: 
-  blurb: false
-
--
   slug: heavybit
   name: Heavybit Library
   type: sinatra app
@@ -56,13 +34,35 @@
   blurb: true
 
 -
-  slug: periodic
-  name: Periodic Table of White Mountain 4000-Footers
-  type: poster
+  slug: cfp
+  name: College Football Playoff
+  type: rails app
   tags: 
-    - print design
-  img_type: jpg
-  url: '/work/periodic-table-of-white-mountain-4000-footers'
+    - responsive web development
+  img_type: png
+  url: http://www.collegefootballplayoff.com/
+  blurb: true
+
+-
+  slug: su2c-isuf
+  name: Stand Up To Cancer - I Stand Up For
+  type: rails app
+  tags: 
+    - design
+    - responsive web development
+  img_type: png
+  url: http://istandupfor.standup2cancer.org/
+  blurb: true
+
+-
+  slug: su2c-wcy
+  name: Stand Up To Cancer - We're Calling You
+  type: android app
+  tags: 
+    - design
+    - responsive web development
+  img_type: png
+  url: 
   blurb: true
 
 -
