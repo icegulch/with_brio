@@ -1,15 +1,5 @@
 
 -
-  slug: periodic
-  name: Periodic Table of White Mountain 4000-Footers
-  type: poster
-  tags: 
-    - print design
-  img_type: jpg
-  url: '/work/periodic-table-of-white-mountain-4000-footers'
-  blurb: true
-
--
   slug: bigboulder
   name: Big Boulder
   type: website
@@ -95,6 +85,16 @@
     - frontend development
   img_type: jpg
   url:   
+  blurb: true
+
+-
+  slug: periodic
+  name: Periodic Table of White Mountain 4000-Footers
+  type: poster
+  tags: 
+    - print design
+  img_type: jpg
+  url: '/work/periodic-table-of-white-mountain-4000-footers'
   blurb: true
 
 -
