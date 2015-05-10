@@ -137,7 +137,7 @@
     - responsive web development
   img_type: png
   url:   
-  blurb: false
+  blurb: true
 
 -
   slug: lagrange
@@ -148,7 +148,7 @@
     - responsive web development
   img_type: jpg
   url:   
-  blurb: false
+  blurb: true
 
 -
   slug: uscm
