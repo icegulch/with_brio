@@ -20,7 +20,7 @@
     - html email
   img_type: png
   url: http://bbi.org
-  blurb: false
+  blurb: true
 
 -
   slug: heavybit
@@ -66,14 +66,14 @@
   blurb: true
 
 -
-  slug: gnip_new
+  slug: gnip
   name: Gnip
   type: website
   tags: 
     - responsive web development
   img_type: png
   url: https://gnip.com
-  blurb: false
+  blurb: true
 
 -
   slug: icebrg
