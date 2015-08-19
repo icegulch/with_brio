@@ -76,7 +76,11 @@
                   </div>
                   <% if client.url %>
                     <div class="cta">
-                      <%= link_to('» View ' + client.type, client.url, :class => 'cta-button', :target => '_blank') %>
+                      <% if client.url_external == true %>
+                        <%= link_to('» View ' + client.type, client.url, :class => 'cta-button', :target => '_blank') %>
+                      <% else %>
+                        <%= link_to('» View ' + client.type, client.url, :class => 'cta-button') %>
+                      <% end %>
                     </div>
                   <% end %>
                 </article>

@@ -10,6 +10,7 @@
     - html email
   img_type: png
   url: http://bbi.org
+  url_external: true
   blurb: true
 
 -
@@ -21,6 +22,7 @@
     - responsive web development
   img_type: png
   url: http://www.heavybit.com/library
+  url_external: true
   blurb: true
 
 -
@@ -31,6 +33,7 @@
     - responsive web development
   img_type: png
   url: http://www.collegefootballplayoff.com/
+  url_external: true
   blurb: true
 
 -
@@ -42,6 +45,7 @@
     - responsive web development
   img_type: png
   url: http://istandupfor.standup2cancer.org/
+  url_external: true
   blurb: true
 
 -
@@ -52,6 +56,7 @@
     - print design
   img_type: jpg
   url: '/work/white-mountain-4000-footers-passport'
+  url_external: false
   blurb: true
 
 -
@@ -63,6 +68,7 @@
     - responsive web development
   img_type: png
   url: 
+  url_external: true
   blurb: true
 
 -
@@ -73,6 +79,7 @@
     - responsive web development
   img_type: png
   url: https://gnip.com
+  url_external: true
   blurb: true
 
 -
@@ -84,6 +91,7 @@
     - responsive web development
   img_type: png
   url:   
+  url_external: true
   blurb: true
 
 -
@@ -95,6 +103,7 @@
     - frontend development
   img_type: jpg
   url:   
+  url_external: true
   blurb: true
 
 -
@@ -105,6 +114,7 @@
     - print design
   img_type: jpg
   url: '/work/periodic-table-of-white-mountain-4000-footers'
+  url_external: false
   blurb: true
 
 -
@@ -115,6 +125,7 @@
     - frontend development
   img_type: png
   url: http://www.calgaryfarmersmarket.ca
+  url_external: true
   blurb: true
 
 -
@@ -125,6 +136,7 @@
     - responsive web development
   img_type: png
   url:   
+  url_external: true
   blurb: true
 
 -
@@ -136,6 +148,7 @@
     - responsive web development
   img_type: png
   url: http://orgdev.com
+  url_external: true
   blurb: true
 
 -
@@ -147,6 +160,7 @@
     - responsive web development
   img_type: png
   url:   
+  url_external: true
   blurb: true
 
 -
@@ -158,6 +172,7 @@
     - responsive web development
   img_type: jpg
   url:   
+  url_external: true
   blurb: true
 
 -
@@ -169,6 +184,7 @@
     - responsive web development
   img_type: png
   url: https://www.uscyclingmonument.com/
+  url_external: true
   blurb: true
 
 
