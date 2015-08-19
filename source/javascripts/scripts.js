@@ -24,5 +24,10 @@
       }, { offset: '20%' });
 
 
+      // Travel Tag on Passport Page
+      jQuery('.page-section-passport').waypoint(function() {
+        jQuery('.passport').toggleClass('animated swing');
+      }, { offset: '20%' });
+
     });
 

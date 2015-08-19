@@ -232,6 +232,13 @@ a {
   background-attachment: fixed;
 }
 
+.page-section-passport {
+  background-image: image-url('passport-texture.png');
+  background-repeat: repeat;
+  background-position: 50% 100%;
+  background-attachment: fixed;
+}
+
 .page-section-featured {
   background: image-url('snowcaps.svg');
   background-repeat: repeat-x;
@@ -303,6 +310,18 @@ a {
   z-index: 2;
   background: transparent image-url('jack.svg') no-repeat center bottom;
   background-size: 120px auto;
+}
+
+.passport {
+  width: 162px;
+  height: 222px;
+  margin-left: -81px;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  z-index: 2;
+  background: transparent image-url('passport.svg') no-repeat center bottom;
+  background-size: 162px auto;
 }
 
 #site-footer {
@@ -653,6 +672,67 @@ textarea {
 .bounceInLeft {
   -webkit-animation-name: bounceInLeft;
   animation-name: bounceInLeft;
+}
+
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+
+  100% {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
 }
 
 
