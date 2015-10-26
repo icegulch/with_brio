@@ -1,14 +1,15 @@
 
       <div class="container">
 
-        <nav class="site-nav site-nav-header">
-          <%= nav_link('Home', '/', :class => 'site-nav-item site-nav-item-header') %>
-          <%= nav_link('Work', '/work/', :class => 'site-nav-item site-nav-item-header') %>
-          <%= nav_link('Ping', '/contact/', :class => 'site-nav-item site-nav-item-header') %>
+        <nav class="header-nav">
+          <div class="table-row">
+            <div class="table-cell">
+              <%= link_to(image_tag('logo.svg', :height => '40'), '/') %>
+            </div>
+            <div class="table-cell text-right">
+              <%= link_to('Contact', '/contact', :class => 'link-unadorned') %>
+            </div>
+          </div>
         </nav>
-
-        <figure class="site-branding">
-          <%= link_to(image_tag('logo.svg'), '/') %>
-        </figure>
 
       </div>
