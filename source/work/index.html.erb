@@ -3,12 +3,11 @@
 ---
 
 
-    <section class="page-section">
-      <div class="container">
         <% 
           data.clients.each.with_index do |client, i|
         %>
-          <div class="showcase-row">
+        <section class="page-section page-section-work" id="<%= client.slug %>">
+          <div class="container">
             <div class="row">
               <div class="col-sm-3 col-md-3 col-lg-2">
                 <dl class="work-info">
@@ -48,7 +47,7 @@
                 <figure class="faq-graphic">
                   <div class="row">
                     <div class="col-md-8">
-                      <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive faq-graphic-img') %>
+                      <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
                     </div>
                     <figcaption class="col-md-4 col-lg-3 col-lg-offset-1">
                       <div class="faq-graphic-caption faq-graphic-caption-noborder">
@@ -66,8 +65,7 @@
               </div>
             </div>
           </div>
+        </section>
         <% end %>
-      </div>
-    </section>
 
 

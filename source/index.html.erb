@@ -1,7 +1,58 @@
 
 
-    <section class="page-section showcase">
+    <section class="page-section">
       <div class="container">
+        <h1 class="gallery-header-label">
+          Products
+        </h1>
+        <div class="table-reset">
+          <div class="table-row">
+            <a href="/work/periodic-table-of-white-mountain-4000-footers" class="table-cell table-cell-top graphic-frame">
+              <h2 class="graphic-link-heading">
+                Periodic Table of White Mountain 4000-Footers
+              </h2>
+              <h3 class="graphic-link-subheading">
+                Print
+              </h3>
+              <%= image_tag('periodic/poster-screenshot.jpg', :class => 'img-responsive') %>
+            </a>
+            <a href="/work/white-mountain-4000-footers-passport" class="table-cell table-cell-top graphic-frame">
+              <h2 class="graphic-link-heading">
+                White Mountain 4000-Footers Passport
+              </h2>
+              <h3 class="graphic-link-subheading">
+                Journal
+              </h3>
+              <%= image_tag('passport/wm48-passport-cover.png', :class => 'img-responsive') %>
+            </a>
+            <a href="/work/periodic-table-of-ski-resorts-colorado" class="table-cell table-cell-top graphic-frame">
+              <h2 class="graphic-link-heading">
+                Periodic Table of Ski Resorts: Colorado
+              </h2>
+              <h3 class="graphic-link-subheading">
+                Print
+              </h3>
+              <%= image_tag('ski/periodic-ski-v-final.png', :class => 'img-responsive') %>
+            </a>
+            <a href="/work/" class="table-cell table-cell-top graphic-frame">
+              <h2 class="graphic-link-heading">
+                New Hampshire<br> 52 With A View Passport
+              </h2>
+              <h3 class="graphic-link-subheading">
+                Journal
+              </h3>
+              <%= image_tag('passport/nh52wav-passport.png', :class => 'img-responsive') %>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <h1 class="gallery-header-label">
+          Digital Works
+        </h1>
         <div class="table-reset">
           <div class="table-row">
             <figure class="table-cell table-cell-top graphic-frame">
@@ -18,27 +69,40 @@
               <% end %>
             </figure>
             <figure class="table-cell table-cell-top graphic-frame">
-              <% link_to('/work/white-mountain-4000-footers-passport', :class => 'graphic-link') do %>
-                <%= image_tag('passport/passport-showcase.jpg', :class => 'img-responsive faq-graphic-img') %>
-                <figcaption class="graphic-link-blurb">
+              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-link') do %>
+              <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
+              <figcaption class="graphic-link-blurb">
                   <h2 class="graphic-link-heading">
-                    White Mountain 4000-Footers Passport
+                    Periodic Table of White Mountain 4000-Footers
                   </h2>
                   <div class="graphic-link-desc">
-                    A pocket-sized passport designed to help you track and commemorate your 48 Four-Thousand Footers adventure.
+                    A wealth of data on the 48 New Hampshire 4000-foot peaks presented in a visually compelling format.
                   </div>
                 </figcaption>
               <% end %>
             </figure>
             <figure class="table-cell table-cell-top graphic-frame">
-              <% link_to('/work/periodic-table-of-ski-resorts-colorado', :class => 'graphic-link') do %>
-              <%= image_tag('ski/periodic-table-of-colorado-resorts.jpg', :class => 'img-responsive faq-graphic-img') %>
+              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-link') do %>
+              <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
               <figcaption class="graphic-link-blurb">
                   <h2 class="graphic-link-heading">
-                    Periodic Table of Ski Resorts: Colorado
+                    Periodic Table of White Mountain 4000-Footers
                   </h2>
                   <div class="graphic-link-desc">
-                    Another print applying the periodic table paradigm to the dense yet structure data surrounding ski resorts.
+                    A wealth of data on the 48 New Hampshire 4000-foot peaks presented in a visually compelling format.
+                  </div>
+                </figcaption>
+              <% end %>
+            </figure>
+            <figure class="table-cell table-cell-top graphic-frame">
+              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-link') do %>
+              <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
+              <figcaption class="graphic-link-blurb">
+                  <h2 class="graphic-link-heading">
+                    Periodic Table of White Mountain 4000-Footers
+                  </h2>
+                  <div class="graphic-link-desc">
+                    A wealth of data on the 48 New Hampshire 4000-foot peaks presented in a visually compelling format.
                   </div>
                 </figcaption>
               <% end %>
@@ -47,3 +111,4 @@
         </div>
       </div>
     </section>
+

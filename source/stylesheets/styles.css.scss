@@ -8,6 +8,8 @@ $orange: #FF723C;
 $red: #F90039;
 $blue: #00A4B5;
 $green: #4BB25C;
+$light_gray: #fafafa;
+$rule_gray: #ddd;
 
 
 // target old versions of IE
@@ -21,7 +23,7 @@ html {
 
 body {
   background-color: #333;
-  font: 300 1.4rem/1.7 "Gotham SSm A", "Gotham SSm B", sans-serif;
+  font: 300 1.4rem/1.7 "Gotham SSm A", "Gotham SSm B", Gotham, sans-serif;
 }
 
 b, strong, dt {
@@ -90,101 +92,51 @@ p {
 }
 
 #site-header {
-  background-color: #fff;
+  position: relative;
   padding: 40px 0;
-}
-
-.header-nav a {
-  text-decoration: none;
-  color: #222;
-  &:hover, &:focus {
-    text-decoration: underline;
+  background-color: $light_gray;
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: $rule_gray;
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    right: 15px;
+    z-index: 2;
+    @media screen and (min-width: 768px) {
+      left: 50%;
+      right: 0;
+    }
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      width: 720px;
+      margin-left: -360px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+      width: 940px;
+      margin-left: -470px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 1140px;
+      margin-left: -570px;
+    }
   }
 }
 
-// .site-title {
-//   font: 800 5.2rem/0.7 "Vitesse SSm A", "Vitesse SSm B", serif;
-//   text-transform: uppercase;
-//   text-decoration: none;
-// }
-
-// .site-title-text {
-//   display: inline-block;
-//   margin-left: -0.2em;
-//   color: #222;
-//   text-decoration: none;
-// }
-
-// .site-title-plus {
-//   display: inline-block;
-//   width: 0.7em;
-//   height: 0.7em;
-//   color: #fff;
-//   text-align: center;
-//   background-color: $orange;
-//   .index & {
-//     -webkit-animation: color-change 2s 1;
-//     -moz-animation: color-change 2s 1;
-//     -o-animation: color-change 2s 1;
-//     -ms-animation: color-change 2s 1;
-//     animation: color-change 2s 1;
-//   }
-// }
-
-// @-webkit-keyframes color-change {
-//     0% { background-color: $red; }
-//     24% { background-color: $red; }
-//     25% { background-color: $blue; }
-//     49% { background-color: $blue; }
-//     50% { background-color: $green; }
-//     74% { background-color: $green; }
-//     75% { background-color: $orange; }
-//     100% { background-color: $orange; }
-// }
-// @-moz-keyframes color-change {
-//     0% { background-color: $red; }
-//     24% { background-color: $red; }
-//     25% { background-color: $blue; }
-//     49% { background-color: $blue; }
-//     50% { background-color: $green; }
-//     74% { background-color: $green; }
-//     75% { background-color: $orange; }
-//     100% { background-color: $orange; }
-// }
-// @-ms-keyframes color-change {
-//     0% { background-color: $red; }
-//     24% { background-color: $red; }
-//     25% { background-color: $blue; }
-//     49% { background-color: $blue; }
-//     50% { background-color: $green; }
-//     74% { background-color: $green; }
-//     75% { background-color: $orange; }
-//     100% { background-color: $orange; }
-// }
-// @-o-keyframes color-change {
-//     0% { background-color: $red; }
-//     24% { background-color: $red; }
-//     25% { background-color: $blue; }
-//     49% { background-color: $blue; }
-//     50% { background-color: $green; }
-//     74% { background-color: $green; }
-//     75% { background-color: $orange; }
-//     100% { background-color: $orange; }
-// }
-// @keyframes color-change {
-//     0% { background-color: $red; }
-//     24% { background-color: $red; }
-//     25% { background-color: $blue; }
-//     49% { background-color: $blue; }
-//     50% { background-color: $green; }
-//     74% { background-color: $green; }
-//     75% { background-color: $orange; }
-//     100% { background-color: $orange; }
-// }
+.header-nav {
+  a {
+    text-decoration: none;
+    color: #222;
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}
 
 #site-main {
   min-height: 76vh;
-  background-color: #f1f1f1;
+  background-color: $light_gray;
 }
 
 #site-footer {
@@ -195,7 +147,37 @@ p {
 }
 
 .page-section {
-  padding: 60px 0;
+  position: relative;
+  padding: 80px 0 120px;
+  + .page-section {
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      border-top: 1px dashed $rule_gray;
+      position: absolute;
+      top: 0;
+      left: 15px;
+      right: 15px;
+      z-index: 2;
+      @media screen and (min-width: 768px) {
+        left: 50%;
+        right: 0;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        width: 720px;
+        margin-left: -360px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1199px) {
+        width: 940px;
+        margin-left: -470px;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 1140px;
+        margin-left: -570px;
+      }
+    }
+  }
 }
 
 .heading {
@@ -208,8 +190,29 @@ p {
   font: 800 2.2rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
 }
 
+.heading-gallery {
+  margin: 0 0 30px;
+  font: 800 1.4rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
+}
+
+.gallery-header-label {
+  margin: 0 0 30px;
+  text-align: center;
+  background-color: $light_gray;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #555;
+}
+
 .graphic-frame {
+  border: 1px solid #eaeaea;
+  border-bottom-color: darken(#eaeaea, 15%);
+  padding: 30px 50px;
   background-color: #fff;
+  text-align: center;
+  text-decoration: none;
   @media screen and (max-width: 767px) {
     + .graphic-frame {
       margin-top: 40px;
@@ -217,31 +220,22 @@ p {
   }
 }
 
-.graphic-link {
-  display: block;
-  text-decoration: none;
-}
-
-.graphic-link-blurb {
-  margin: 0;
-  padding: 15px;
-}
-
 .graphic-link-heading {
-  margin: 0 0 10px;
-  font: 800 2rem/1.15 "Vitesse SSm A", "Vitesse SSm B", serif;
-  color: #222;
+  margin: 0 0 3px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #000;
 }
 
-.graphic-link-desc {
-  font-size: 1.4rem;
-  line-height: 1.45;
-  color: #777;
-}
-
-.showcase-row {
-  + .showcase-row {
-    margin-top: 40px  }
+.graphic-link-subheading {
+  margin: 0 0 20px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #999;
 }
 
 .showcase-heading {
@@ -269,22 +263,25 @@ p {
   }
   @media screen and (min-width: 992px) {
     margin: 40px 0;
+    .page-section-work & {
+      margin: 0;
+    }
   }
 }
 
 .faq-graphic-img {
-  box-shadow: 0 0 1px #ccc;
+  box-shadow: 0 0 1px $rule_gray;
 }
 
 .faq-graphic-caption {
   margin-bottom: 40px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $rule_gray;
   padding: 10px 0;
   font: italic 300 1.3rem/1.3 "Vitesse SSm A", "Vitesse SSm B", serif;
   @media screen and (min-width: 992px) {
     margin: 0;
     border-bottom: none;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $rule_gray;
   }
 }
 
