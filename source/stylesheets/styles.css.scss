@@ -126,8 +126,12 @@ p {
 
 .header-nav {
   a {
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: #999;
     text-decoration: none;
-    color: #222;
     &:hover, &:focus {
       text-decoration: underline;
     }
@@ -199,17 +203,16 @@ p {
   margin: 0 0 30px;
   text-align: center;
   background-color: $light_gray;
-  font-weight: 300;
-  font-size: 1.1rem;
-  text-transform: uppercase;
+  font: 300 1.4rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
   letter-spacing: 0.3rem;
-  color: #555;
+  color: #777;
 }
 
 .graphic-frame {
+  display: block;
   border: 1px solid #eaeaea;
   border-bottom-color: darken(#eaeaea, 15%);
-  padding: 30px 50px;
+  padding: 50px;
   background-color: #fff;
   text-align: center;
   text-decoration: none;
@@ -225,7 +228,7 @@ p {
   font-weight: 500;
   font-size: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.1rem;
   color: #000;
 }
 
