@@ -8,11 +8,18 @@ $orange: #FF723C;
 $red: #F90039;
 $blue: #00A4B5;
 $green: #4BB25C;
-$light_gray: #fafafa;
-$rule_gray: #ddd;
+$light_gray: #f1f1f1;
+$rule_gray: #ccc;
 
 
-// target old versions of IE
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+// hide whole site from IE9-
+// there is a warning in layout.erb informing IE9- users to update their browser
 #site-header, #site-footer, #site-main {
   display: none/9;
 }
@@ -22,7 +29,7 @@ html {
 }
 
 body {
-  background-color: #333;
+  background-color: $light_gray;
   font: 300 1.4rem/1.7 "Gotham SSm A", "Gotham SSm B", Gotham, sans-serif;
 }
 
@@ -43,7 +50,11 @@ p {
 }
 
 
-// GRID
+
+
+/* ==========================================================================
+   Grids (in addition to Bootstrap grid)
+   ========================================================================== */
 
 @media screen and (max-width: 767px) {
   [class^="col-"] {
@@ -84,81 +95,94 @@ p {
   vertical-align: top;
 }
 
-.link-unadorned {
-  color: #222;
-  &:hover, &:focus {
-    text-decoration: none;
-  }
+.table-cell-right {
+  text-align: right;
 }
+
+
+
+/* ==========================================================================
+   Site Structure
+   ========================================================================== */
 
 #site-header {
-  position: relative;
   padding: 40px 0;
-  background-color: $light_gray;
-  &:after {
-    content: "";
-    display: block;
-    height: 1px;
-    background-color: $rule_gray;
-    position: absolute;
-    bottom: 0;
-    left: 15px;
-    right: 15px;
-    z-index: 2;
-    @media screen and (min-width: 768px) {
-      left: 50%;
-      right: 0;
-    }
-    @media screen and (min-width: 768px) and (max-width: 991px) {
-      width: 720px;
-      margin-left: -360px;
-    }
-    @media screen and (min-width: 992px) and (max-width: 1199px) {
-      width: 940px;
-      margin-left: -470px;
-    }
-    @media screen and (min-width: 1200px) {
-      width: 1140px;
-      margin-left: -570px;
-    }
+  background: #666 image-url('topo-texture.png') repeat 0 0;
+  background-size: auto 250px;
+  text-align: center;
+}
+
+#site-nav {
+  background-color: #fff;
+  text-align: center;
+}
+
+.site-nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #999;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+  + .site-nav-link {
+    margin-left: 1.5em;
   }
 }
 
-.header-nav {
-  a {
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    color: #999;
-    text-decoration: none;
-    &:hover, &:focus {
-      text-decoration: underline;
+$pages: "index", "work", "blog", "contact";
+
+@each $page in $pages {
+  .site-nav-link-#{$page} {
+    .#{$page} & {
+      color: $orange;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: #ffffff transparent transparent transparent;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        z-index: 2;
+        margin-left: -10px;
+      }
     }
   }
 }
 
 #site-main {
-  min-height: 76vh;
-  background-color: $light_gray;
+  min-height: 82vh;
 }
 
 #site-footer {
   padding: 20px 0;
+  font-size: 1.2rem;
+  background-color: #666;
   text-align: center;
-  background-color: #333;
-  color: #999;
+  color: #ccc;
 }
 
 .page-section {
   position: relative;
-  padding: 80px 0 120px;
+  padding: 80px 0 40px;
   + .page-section {
     &:after {
       content: "";
       display: block;
       height: 1px;
-      border-top: 1px dashed $rule_gray;
+      border-top: 1px dotted $rule_gray;
       position: absolute;
       top: 0;
       left: 15px;
@@ -182,39 +206,123 @@ p {
       }
     }
   }
+  @media screen and (min-width: 600px) {
+    padding: 80px 0 120px;
+  }
 }
 
-.heading {
-  margin: 0;
-  line-height: 1;
-}
-
-.heading-primary {
-  margin: 0 0 30px;
-  font: 800 2.2rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
-}
-
-.heading-gallery {
-  margin: 0 0 30px;
-  font: 800 1.4rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
-}
-
-.gallery-header-label {
-  margin: 0 0 30px;
+.page-section-teaser {
+  font: 300 1.8rem/1.7 "Vitesse SSm A", "Vitesse SSm B", serif;
   text-align: center;
-  background-color: $light_gray;
-  font: 300 1.4rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
-  letter-spacing: 0.3rem;
-  color: #777;
+  padding-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  strong {
+    font-weight: 800;
+  }
+}
+
+
+
+
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+.grid {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+.grid-item, .grid-sizer {
+  position: relative;
+  width: 100%;
+  @media screen and (min-width: 600px) and (max-width: 991px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 33.33333333%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 25%;
+  }
+}
+
+.grid-item-doublewide {
+  width: 100%;
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    width: 66.67777777777%;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 50%;
+  }
+}
+
+.grid-item {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.grid-nav-wrapper {
+  text-align: center;
+}
+
+.grid-nav {
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 2px 20px 4px;
+    border-top: 3px double $rule_gray;
+    border-bottom: 1px solid $rule_gray;
+  }
+}
+
+.grid-nav-filter {
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  &:hover {
+    cursor: pointer;
+    color: #666;
+  }
+}
+
+.grid-nav-filter {
+  color: #999;
+  + .grid-nav-filter {
+    margin-left: 1.5em;
+  }
+  &.current {
+    font-weight: 700;
+    color: #666;
+  }
 }
 
 .graphic-frame {
   display: block;
-  border: 1px solid #eaeaea;
-  border-bottom-color: darken(#eaeaea, 15%);
-  padding: 50px;
-  background-color: #fff;
-  text-align: center;
+  // border-radius: 5px;
+  // border-bottom-color: darken(#eaeaea, 15%);
+  // padding: 30px;
+  // background-color: #fff;
+  // text-align: center;
   text-decoration: none;
   @media screen and (max-width: 767px) {
     + .graphic-frame {
@@ -224,32 +332,32 @@ p {
 }
 
 .graphic-link-heading {
-  margin: 0 0 3px;
+  margin: 0 0 1px;
   font-weight: 500;
   font-size: 1rem;
+  line-height: 1;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   color: #000;
 }
 
 .graphic-link-subheading {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   font-weight: 500;
   font-size: 0.9rem;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   color: #999;
 }
 
-.showcase-heading {
-  margin: 0 0 0.1em;
-  font: 800 2.2rem/1 "Vitesse SSm A", "Vitesse SSm B", serif;
-}
 
-.showcase-tags {
-  font-size: 12px;
-  text-transform: uppercase;
-}
+
+
+/* ==========================================================================
+   Work
+   ========================================================================== */
 
 .faq-q {
   margin: 40px 0 5px;
@@ -298,17 +406,6 @@ p {
   }  
 }
 
-.bville-amp {
-  font-family: baskerville, cochin, palatino, serif;
-  font-style: italic;
-}
-
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .work-info {
   margin: 0;
 }
@@ -326,43 +423,11 @@ p {
   font: 300 1.3rem/1.3 "Vitesse SSm A", "Vitesse SSm B", serif;
 }
 
-.cta {
-  margin-top: 40px;
-}
 
-.cta-button {
-  display: inline-block;
-  border: 1px solid #aaa;
-  padding: 0.45em 1.25em;
-  font-size: 11px;
-  color: #999;
-  text-decoration: none;
-  text-transform: uppercase;
-  &:hover, &:focus {
-    outline: none;
-    border-color: #555;
-    // color: #222;
-  }
-}
+/* ==========================================================================
+   Contact
+   ========================================================================== */
 
-@media screen and (min-width: 991px) {
-  .pull-right {
-    float: right;
-  }
-}
-
-.text-centered {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.contact-form {
-  position: relative;
-  z-index: 3;
-}
 
 .form-field {
   + .form-field {
@@ -381,7 +446,7 @@ p {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: $orange;
+  color: #666;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -413,4 +478,22 @@ textarea {
   }
 }
 
+
+
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.link-unadorned {
+  color: #222;
+  &:hover, &:focus {
+    text-decoration: none;
+  }
+}
 

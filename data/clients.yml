@@ -1,71 +1,105 @@
 
+
 -
-  slug: bigboulder
-  name: Big Boulder
-  type: website
+  slug: wm48-passport
+  name: White Mountain 4000-Footers Passport
   tags: 
-    - design
-    - responsive web development
-    - wordpress.com skinning
-    - html email
+    - print
   img_type: png
-  url: http://bbi.org
-  url_external: true
+  url: '/work/white-mountain-4000-footers-passport'
+  url_external: false
   blurb: true
 
 -
   slug: heavybit
   name: Heavybit Library
-  type: sinatra app
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url: http://www.heavybit.com/library
   url_external: true
   blurb: true
 
 -
+  slug: cartalk-podcast
+  name: Car Talk Podcast
+  tags: 
+    - digital
+  img_type: png
+  url: ''
+  url_external: false
+  blurb: false
+
+-
+  slug: bigboulder
+  name: Big Boulder
+  tags: 
+    - responsive
+    - digital
+  img_type: png
+  url: http://bbi.org
+  url_external: true
+  blurb: true
+
+-
+  slug: css-tables
+  name: CSS Tables Article Graphic
+  tags: 
+    - digital
+  img_type: gif
+  url: ''
+  url_external: false
+  blurb: false
+
+-
   slug: cfp
   name: College Football Playoff
-  type: rails app
   tags: 
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url: http://www.collegefootballplayoff.com/
   url_external: true
   blurb: true
 
 -
-  slug: su2c-isuf
-  name: Stand Up To Cancer - I Stand Up For
-  type: rails app
+  slug: nh52wav-passport
+  name: New Hampshire 52 With A View Passport
   tags: 
-    - design
-    - responsive web development
+    - print
+  img_type: png
+  url: '/work/white-mountain-4000-footers-passport'
+  url_external: false
+  blurb: false
+
+-
+  slug: periodic-ski
+  name: "Periodic Table of Ski Resorts: Colorado"
+  tags: 
+    - print
+  img_type: png
+  url: '/work/periodic-table-of-ski-resorts-colorado'
+  url_external: false
+  blurb: false
+
+-
+  slug: su2c-isuf
+  name: Stand Up To Cancer
+  tags: 
+    - responsive
+    - digital
   img_type: png
   url: http://istandupfor.standup2cancer.org/
   url_external: true
   blurb: true
 
 -
-  slug: passport
-  name: White Mountain 4000-Footers Passport
-  type: booklet
-  tags: 
-    - print design
-  img_type: jpg
-  url: '/work/white-mountain-4000-footers-passport'
-  url_external: false
-  blurb: true
-
--
   slug: su2c-wcy
   name: Stand Up To Cancer - We're Calling You
-  type: android app
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url: 
   url_external: true
@@ -74,9 +108,9 @@
 -
   slug: gnip
   name: Gnip
-  type: website
   tags: 
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url: https://gnip.com
   url_external: true
@@ -85,10 +119,9 @@
 -
   slug: icebrg
   name: Icebrg IO
-  type: rails app
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url:   
   url_external: true
@@ -97,22 +130,19 @@
 -
   slug: fullers
   name: Fuller's
-  type: facebook tab
   tags: 
-    - design
-    - frontend development
+    - digital
   img_type: jpg
   url:   
   url_external: true
   blurb: true
 
 -
-  slug: periodic
+  slug: periodic-4000
   name: Periodic Table of White Mountain 4000-Footers
-  type: poster
   tags: 
-    - print design
-  img_type: jpg
+    - print
+  img_type: png
   url: '/work/periodic-table-of-white-mountain-4000-footers'
   url_external: false
   blurb: true
@@ -120,9 +150,8 @@
 -
   slug: cfm
   name: Calgary Farmer's Market
-  type: Expression Engine site
   tags: 
-    - frontend development
+    - digital
   img_type: png
   url: http://www.calgaryfarmersmarket.ca
   url_external: true
@@ -131,9 +160,9 @@
 -
   slug: fitness-together
   name: Fitness Together
-  type: mobile web app
   tags: 
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url:   
   url_external: true
@@ -142,10 +171,9 @@
 -
   slug: org-dev
   name: Org Dev
-  type: website
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url: http://orgdev.com
   url_external: true
@@ -154,10 +182,9 @@
 -
   slug: trelora
   name: Trelora
-  type: rails app
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url:   
   url_external: true
@@ -166,10 +193,9 @@
 -
   slug: lagrange
   name: Lagrange Systems
-  type: presentation
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: jpg
   url:   
   url_external: true
@@ -178,10 +204,9 @@
 -
   slug: uscm
   name: US Cycling Monument
-  type: rails app
   tags: 
-    - design
-    - responsive web development
+    - responsive
+    - digital
   img_type: png
   url: https://www.uscyclingmonument.com/
   url_external: true

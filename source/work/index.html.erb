@@ -1,6 +1,7 @@
 ---
-  title: Portfolio
+  title: Work
 ---
+
 
 
         <% 
@@ -20,9 +21,6 @@
                   <dt class="work-info-dt">
                     Project Type
                   </dt>
-                  <dd class="work-info-dd">
-                    <%= client.type %>
-                  </dd>
                   <dt class="work-info-dt">
                     Tasks Performed
                   </dt>
@@ -35,9 +33,9 @@
                     </dt>
                     <dd class="work-info-dd">
                       <% if client.url_external == true %>
-                        <%= link_to('» View ' + client.type, client.url, :class => 'link-unadorned', :target => '_blank') %>
+                        <%= link_to('» View', client.url, :class => 'link-unadorned', :target => '_blank') %>
                       <% else %>
-                        <%= link_to('» View ' + client.type, client.url, :class => 'link-unadorned') %>
+                        <%= link_to('» View', client.url, :class => 'link-unadorned') %>
                       <% end %>
                     </dd>
                   <% end %>
@@ -67,5 +65,4 @@
           </div>
         </section>
         <% end %>
-
 

@@ -1,86 +1,30 @@
 
-
     <section class="page-section">
       <div class="container">
-        <h1 class="gallery-header-label">
-          Products
-        </h1>
-        <div class="row">
-          <figure class="col-md-3">
-            <a href="/work/periodic-table-of-white-mountain-4000-footers" class="graphic-frame">
-              <h2 class="graphic-link-heading">
-                Periodic Table of White Mountain 4000-Footers
-              </h2>
-              <h3 class="graphic-link-subheading">
-                Print
-              </h3>
-              <%= image_tag('periodic/poster-screenshot.jpg', :class => 'img-responsive') %>
-            </a>
-          </figure>
-          <figure class="col-md-3">
-            <a href="/work/white-mountain-4000-footers-passport" class="graphic-frame">
-              <h2 class="graphic-link-heading">
-                White Mountain 4000-Footers Passport
-              </h2>
-              <h3 class="graphic-link-subheading">
-                Journal
-              </h3>
-              <%= image_tag('passport/wm48-passport-cover.png', :class => 'img-responsive') %>
-            </a>
-          </figure>
-          <figure class="col-md-3">
-            <a href="/work/periodic-table-of-ski-resorts-colorado" class="graphic-frame">
-              <h2 class="graphic-link-heading">
-                Periodic Table of Ski Resorts: Colorado
-              </h2>
-              <h3 class="graphic-link-subheading">
-                Print
-              </h3>
-              <%= image_tag('ski/periodic-ski-v-final.png', :class => 'img-responsive') %>
-            </a>
-          </figure>
-          <figure class="col-md-3">
-            <a href="/work/" class="graphic-frame">
-              <h2 class="graphic-link-heading">
-                New Hampshire<br> 52 With A View Passport
-              </h2>
-              <h3 class="graphic-link-subheading">
-                Journal
-              </h3>
-              <%= image_tag('passport/nh52wav-passport.png', :class => 'img-responsive') %>
-            </a>
-          </figure>
+        <article class="page-section-teaser">
+          <p>
+            <strong>Hi! I'm Steve.</strong> I'm a visual communicator working online and in print. I specialize in responsive UI design and development, but you may know me through one of the printed products I've created. Regardless, if you'd like to collaborate, <a href="/contact">let's talk</a>!
+          </p>
+        </article>
+        <div class="grid-nav-wrapper">
+          <nav class="grid-nav">
+            <span class="grid-nav-filter current" data-filter="*">All</span>
+            <span class="grid-nav-filter" data-filter=".print">Print</span>
+            <span class="grid-nav-filter" data-filter=".digital">Digital</span>
+            <span class="grid-nav-filter" data-filter=".responsive">Responsive</span>
+          </nav>
         </div>
-      </div>
-    </section>
+        <div class="grid">
+          <div class="grid-sizer"></div>
 
-    <section class="page-section">
-      <div class="container">
-        <h1 class="gallery-header-label">
-          Digital Works
-        </h1>
-          <div class="row">
-            <figure class="col-md-3">
-              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-frame') do %>
-                <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
+          <% data.clients.each do |client| %>
+            <figure class="grid-item<%= ' ' + client.tags.join(' ') %>">
+              <% link_to(client.url_external == true ? '/work/#' + client.slug : client.url, :class => 'graphic-frame') do %>
+                <%= image_tag('home/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
               <% end %>
             </figure>
-            <figure class="col-md-3">
-              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-frame') do %>
-                <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
-              <% end %>
-            </figure>
-            <figure class="col-md-3">
-              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-frame') do %>
-                <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
-              <% end %>
-            </figure>
-            <figure class="col-md-3">
-              <% link_to('/work/periodic-table-of-white-mountain-4000-footers', :class => 'graphic-frame') do %>
-                <%= image_tag('periodic/periodic-4000.jpg', :class => 'img-responsive faq-graphic-img') %>
-              <% end %>
-            </figure>
-          </div>
+          <% end %>
+        </div>
       </div>
     </section>
 

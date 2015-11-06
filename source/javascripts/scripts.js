@@ -1,33 +1,33 @@
-//= require "jquery-1.11.1"
-//= require "waypoints"
-
-    $(function() {
-
-      // waypoints
+//= require "jquery-2.1.4"
+//= require "isotope.min"
+//= require "imagesloaded.pkgd.min"
 
 
-      // Telepherique on Home
-      jQuery('.page-section-featured').waypoint(function() {
-        jQuery('.telepherique').toggleClass('animated bounceInLeft');
-      }, { offset: '70%' });
+    $(document).ready( function() {
+      // init Isotope
+      var $grid = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        percentPosition: true,
+        masonry: {
+          columnWidth: '.grid-sizer'
+        }
+      });
+      // layout Isotope after each image loads
+      $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+      });  
 
 
-      // Ornaments on Work Page
-      jQuery('.page-section-work').waypoint(function() {
-        jQuery('.bobbles').toggleClass('animated bounce');
-      }, { offset: '50%' });
+      $('.grid-nav').on( 'click', '.grid-nav-filter', function() {
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({ filter: filterValue });
 
+        $('.grid-nav-filter').removeClass('current');
+        $(this).addClass('current');
+      });
 
-      // Jack on Periodic Page
-      jQuery('.page-section-periodic').waypoint(function() {
-        jQuery('.jack').toggleClass('animated rotateIn');
-      }, { offset: '20%' });
-
-
-      // Travel Tag on Passport Page
-      jQuery('.page-section-passport').waypoint(function() {
-        jQuery('.passport').toggleClass('animated swing');
-      }, { offset: '20%' });
 
     });
+
+
 
