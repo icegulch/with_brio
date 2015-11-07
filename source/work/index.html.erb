@@ -5,7 +5,7 @@
 
 
         <% 
-          data.clients.each.with_index do |client, i|
+          visible_work.each.with_index do |client, i|
         %>
         <section class="page-section page-section-work" id="<%= client.slug %>">
           <div class="container">
@@ -13,30 +13,14 @@
               <div class="col-sm-3 col-md-3 col-lg-2">
                 <dl class="work-info">
                   <dt class="work-info-dt">
-                    Client
+                    Project
                   </dt>
                   <dd class="work-info-dd">
                     <%= client.name %>
                   </dd>
-                  <dt class="work-info-dt">
-                    Project Type
-                  </dt>
-                  <dt class="work-info-dt">
-                    Tasks Performed
-                  </dt>
-                  <dd class="work-info-dd">
-                    <%= client.tags.join(', ') %>
-                  </dd>
-                  <% if client.url %>
-                    <dt class="work-info-dt">
-                      View
-                    </dt>
+                  <% if client.internal_page_url %>
                     <dd class="work-info-dd">
-                      <% if client.url_external == true %>
-                        <%= link_to('» View', client.url, :class => 'link-unadorned', :target => '_blank') %>
-                      <% else %>
-                        <%= link_to('» View', client.url, :class => 'link-unadorned') %>
-                      <% end %>
+                      <%= link_to_if(client.internal_page_url, '» View', client.internal_page_url, :class => 'link-unadorned') %>
                     </dd>
                   <% end %>
                 </dl>
@@ -45,7 +29,7 @@
                 <figure class="faq-graphic">
                   <div class="row">
                     <div class="col-md-8">
-                      <%= image_tag('work/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
+                      <%= image_tag('work/' + client.slug + '.png', :class => 'img-responsive') %>
                     </div>
                     <figcaption class="col-md-4 col-lg-3 col-lg-offset-1">
                       <div class="faq-graphic-caption faq-graphic-caption-noborder">

@@ -19,9 +19,7 @@
 
           <% data.clients.each do |client| %>
             <figure class="grid-item<%= ' ' + client.tags.join(' ') %>">
-              <% link_to(client.url_external == true ? '/work/#' + client.slug : client.url, :class => 'graphic-frame') do %>
-                <%= image_tag('home/' + client.slug + '.' + client.img_type, :class => 'img-responsive') %>
-              <% end %>
+                <%= link_to_if(client.internal_page_url, image_tag('home/' + client.slug + '.png', :class => 'img-responsive'), client.internal_page_url, :class => 'graphic-frame' ) %>
             </figure>
           <% end %>
         </div>

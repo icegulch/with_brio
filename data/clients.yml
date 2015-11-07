@@ -5,9 +5,7 @@
   name: White Mountain 4000-Footers Passport
   tags: 
     - print
-  img_type: png
-  url: '/work/white-mountain-4000-footers-passport'
-  url_external: false
+  internal_page_url: '/work/white-mountain-4000-footers-passport'
   blurb: true
 
 -
@@ -16,9 +14,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: http://www.heavybit.com/library
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -26,9 +22,7 @@
   name: Car Talk Podcast
   tags: 
     - digital
-  img_type: png
-  url: ''
-  url_external: false
+  internal_page_url: 
   blurb: false
 
 -
@@ -37,9 +31,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: http://bbi.org
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -48,8 +40,7 @@
   tags: 
     - digital
   img_type: gif
-  url: ''
-  url_external: false
+  internal_page_url: 
   blurb: false
 
 -
@@ -58,9 +49,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: http://www.collegefootballplayoff.com/
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -68,9 +57,7 @@
   name: New Hampshire 52 With A View Passport
   tags: 
     - print
-  img_type: png
-  url: '/work/white-mountain-4000-footers-passport'
-  url_external: false
+  internal_page_url: 
   blurb: false
 
 -
@@ -78,9 +65,7 @@
   name: "Periodic Table of Ski Resorts: Colorado"
   tags: 
     - print
-  img_type: png
-  url: '/work/periodic-table-of-ski-resorts-colorado'
-  url_external: false
+  internal_page_url: '/work/periodic-table-of-ski-resorts-colorado'
   blurb: false
 
 -
@@ -89,9 +74,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: http://istandupfor.standup2cancer.org/
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -100,9 +83,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: 
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -111,9 +92,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: https://gnip.com
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -122,9 +101,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url:   
-  url_external: true
+  internal_page_url:   
   blurb: true
 
 -
@@ -132,9 +109,7 @@
   name: Fuller's
   tags: 
     - digital
-  img_type: jpg
-  url:   
-  url_external: true
+  internal_page_url:   
   blurb: true
 
 -
@@ -142,9 +117,7 @@
   name: Periodic Table of White Mountain 4000-Footers
   tags: 
     - print
-  img_type: png
-  url: '/work/periodic-table-of-white-mountain-4000-footers'
-  url_external: false
+  internal_page_url: '/work/periodic-table-of-white-mountain-4000-footers'
   blurb: true
 
 -
@@ -152,9 +125,7 @@
   name: Calgary Farmer's Market
   tags: 
     - digital
-  img_type: png
-  url: http://www.calgaryfarmersmarket.ca
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -163,9 +134,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url:   
-  url_external: true
+  internal_page_url:   
   blurb: true
 
 -
@@ -174,9 +143,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: http://orgdev.com
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 -
@@ -185,9 +152,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url:   
-  url_external: true
+  internal_page_url:   
   blurb: true
 
 -
@@ -196,9 +161,7 @@
   tags: 
     - responsive
     - digital
-  img_type: jpg
-  url:   
-  url_external: true
+  internal_page_url:   
   blurb: true
 
 -
@@ -207,9 +170,7 @@
   tags: 
     - responsive
     - digital
-  img_type: png
-  url: https://www.uscyclingmonument.com/
-  url_external: true
+  internal_page_url: 
   blurb: true
 
 
