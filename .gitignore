@@ -19,3 +19,6 @@
 
 # Ignore .bitballoon file with credentials for manual deploys
 .bitballoon
+
+# Ignore robots.txt
+/source/robots.txt
