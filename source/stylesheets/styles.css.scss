@@ -30,7 +30,7 @@ html {
 
 body {
   background-color: $light_gray;
-  font: 400 1.4rem/1.7 "Montserrat", sans-serif;
+  font: 300 1.4rem/1.7 "Montserrat", sans-serif;
 }
 
 b, strong, dt {
@@ -400,7 +400,7 @@ $pages: "index", "work", "blog", "contact";
   @media screen and (max-width: 991px) {
     margin-top: 40px;
     padding: 0;
-    font: 400 1.4rem/1.7 "Montserrat", sans-serif;
+    font: 300 1.4rem/1.7 "Montserrat", sans-serif;
     border-bottom: none;
     border-top: none;
   }  

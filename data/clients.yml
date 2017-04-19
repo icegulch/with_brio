@@ -18,21 +18,28 @@
   blurb: true
 
 -
-  slug: cartalk-podcast
-  name: Car Talk Podcast
+  slug: cartalk-our-show
+  name: Car Talk Our Show Graphic
   tags: 
     - digital
   internal_page_url: 
   blurb: false
 
 -
-  slug: bigboulder
-  name: Big Boulder
+  slug: nh52wav-passport
+  name: New Hampshire 52 With A View Passport
   tags: 
-    - responsive
-    - digital
+    - print
   internal_page_url: 
-  blurb: true
+  blurb: false
+
+-
+  slug: periodic-ski-cali
+  name: "Periodic Table of Ski Resorts: California"
+  tags: 
+    - print
+  internal_page_url: '/work/periodic-table-of-ski-resorts-colorado'
+  blurb: false
 
 -
   slug: css-tables
@@ -53,12 +60,13 @@
   blurb: true
 
 -
-  slug: nh52wav-passport
-  name: New Hampshire 52 With A View Passport
+  slug: bigboulder
+  name: Big Boulder
   tags: 
-    - print
+    - responsive
+    - digital
   internal_page_url: 
-  blurb: false
+  blurb: true
 
 -
   slug: periodic-ski
@@ -67,6 +75,14 @@
     - print
   internal_page_url: '/work/periodic-table-of-ski-resorts-colorado'
   blurb: true
+
+-
+  slug: cartalk-podcast
+  name: Car Talk Podcast
+  tags: 
+    - digital
+  internal_page_url: 
+  blurb: false
 
 -
   slug: su2c-isuf
