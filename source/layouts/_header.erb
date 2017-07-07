@@ -1,6 +1,24 @@
 
-      <div class="container">
-
-        <%= link_to(image_tag('logo-white.svg', :height => '40'), '/') %>
-
+      <div class="container-fluid">
+        <nav class="row align-items-center justify-content-between">
+          <div class="col">
+            <a href="/" class="">
+              <svg class="nav-icon nav-icon--brio">
+                <use xlink:href="#icon-brio"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="col col-sm-auto text-center">
+            <%= link_to('Work', '/work', :class => 'nav nav--work') %>
+            <%= link_to('About', '/about', :class => 'nav nav--about') %>
+            <%= link_to('Blog', '/blog', :class => 'nav nav--blog') %>
+          </div>
+          <div class="col">
+            <a href="/contact" class="">
+              <svg class="nav-icon nav-icon--mail">
+                <use xlink:href="#icon-mail"></use>
+              </svg>
+            </a>
+          </div>
+        </nav>
       </div>

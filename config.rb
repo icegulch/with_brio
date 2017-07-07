@@ -35,13 +35,16 @@
 require 'libs/helpers'
 helpers SiteHelpers
 
+require "active_support/core_ext/array/grouping"
+
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload,
+  host: 'localhost'
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -58,20 +61,17 @@ set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
-  # For example, change the Compass output style for deployment
-  # activate :minify_css
+  # Minify CSS on build
+  activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
-  # Enable cache buster
-  # activate :asset_hash
+  # Minify HTML
+  activate :minify_html, remove_comments: false
 
-  # Use relative URLs
-  # activate :relative_assets
-
-  # Or use a different image path
-  # set :http_prefix, "/Content/images/"
+  #Use relative URLs   
+  activate :relative_assets
 end
 
 activate :directory_indexes

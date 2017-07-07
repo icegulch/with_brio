@@ -1,14 +1,12 @@
-
-@import 
-  "_partials/mixins",
-  "_partials/normalize",
-  "_partials/bootstrap_grid";
+@import "bootstrap";
 
 $orange: #FF723C;
 $red: #F90039;
 $blue: #00A4B5;
 $green: #4BB25C;
-$light_gray: #f1f1f1;
+$light_gray: #dadada;
+$mid_gray: #777;
+$dark_gray: #2E3C40;
 $rule_gray: #ccc;
 
 
@@ -18,85 +16,8 @@ $rule_gray: #ccc;
    Base
    ========================================================================== */
 
-// hide whole site from IE9-
-// there is a warning in layout.erb informing IE9- users to update their browser
-#site-header, #site-footer, #site-main {
-  display: none/9;
-}
-
 html {
-  font-size: 62.5%;
-}
-
-body {
-  background-color: $light_gray;
-  font: 300 1.4rem/1.7 "Montserrat", sans-serif;
-}
-
-b, strong, dt {
-  font-weight: 700;
-}
-
-a {
-  color: $blue;
-  cursor: pointer;
-}
-
-p {
-  margin: 0;
-  + p {
-    margin-top: 18px;
-  }
-}
-
-
-
-
-/* ==========================================================================
-   Grids (in addition to Bootstrap grid)
-   ========================================================================== */
-
-@media screen and (max-width: 767px) {
-  [class^="col-"] {
-    + [class^="col-"] {
-      margin-top: 40px;
-    }
-  }
-}
-
-.table-reset {
-  margin-left: -30px;
-  margin-right: -30px;
-  @media screen and (max-width: 767px) {
-    margin-left: 0;
-    margin-right: 0;
-    .table-row, .table-cell {
-      display: block;
-    }
-  }
-}
-
-.table-row {
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  .table-reset & {
-    border-collapse: separate;
-    border-spacing: 30px 0;
-  }
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.table-cell-top {
-  vertical-align: top;
-}
-
-.table-cell-right {
-  text-align: right;
+  background-color: #fff;
 }
 
 
@@ -106,60 +27,114 @@ p {
    ========================================================================== */
 
 #site-header {
-  padding: 40px 0;
-  background: #666 image-url('topo-texture.png') repeat 0 0;
-  background-size: auto 250px;
-  text-align: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $light_gray;
 }
 
-#site-nav {
-  background-color: #fff;
-  text-align: center;
-}
-
-.site-nav-link {
-  position: relative;
+.nav {
   display: inline-block;
-  padding: 10px 0;
-  font-weight: 500;
-  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 0.7rem;
+  vertical-align: middle;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  color: #999;
+  color: $mid_gray;
   text-decoration: none;
   &:hover, &:focus {
     text-decoration: underline;
+    color: $dark_gray;
+    cursor: pointer;
   }
-  + .site-nav-link {
-    margin-left: 1.5em;
+
+  + .nav {
+    margin-left: 0.85rem;
+    padding-left: 1.5rem;
   }
-}
 
-$pages: "index", "work", "blog", "contact";
-
-@each $page in $pages {
-  .site-nav-link-#{$page} {
-    .#{$page} & {
-      color: $orange;
+  &--work {
+    .work_index & {
+      color: $dark_gray;
+      text-decoration: underline;
       &:hover, &:focus {
-        text-decoration: none;
-      }
-      &:after {
-        content: "";
-        display: block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 10px 10px 0 10px;
-        border-color: #ffffff transparent transparent transparent;
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        z-index: 2;
-        margin-left: -10px;
+        text-decoration: underline;
+        color: $dark_gray;
+        cursor: default;
       }
     }
   }
+  &--about {
+    .about_index & {
+      color: $dark_gray;
+      text-decoration: underline;
+      &:hover, &:focus {
+        text-decoration: underline;
+        color: $dark_gray;
+        cursor: default;
+      }
+    }
+  }
+  &--blog {
+    .blog_index & {
+      color: $dark_gray;
+      text-decoration: underline;
+      &:hover, &:focus {
+        text-decoration: underline;
+        color: $dark_gray;
+        cursor: default;
+      }
+    }
+  }
+
+}
+
+.nav-icon {
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: $dark_gray;
+  &:hover, &:focus {
+    fill: $green;
+    cursor: pointer;
+  }
+  &--brio {
+    display: block;
+    width: 4.8505859375em;
+    height: 1em;
+    max-width: 100px;
+    max-height: auto;
+    line-height: 0.7em;
+    max-height: auto;
+    .logo-link & {
+      .index & {
+        &:hover, &:focus {
+          fill: $dark_gray;
+          cursor: default;
+        }      
+      }
+    }
+  }
+  &--mail {
+    display: block;
+    float: right;
+    width: 1.25em;
+    height: 1.25em;
+    max-width: auto;
+    max-height: auto;
+    line-height: 0.7em;
+    max-height: auto;
+    .mail-link & {
+      .contact & {
+        &:hover, &:focus {
+          fill: $dark_gray;
+          cursor: default;
+        }      
+      }
+    }
+  }
+}
+
+.mt-logos {
+  margin-top: 5rem;
 }
 
 #site-main {
@@ -167,75 +142,39 @@ $pages: "index", "work", "blog", "contact";
 }
 
 #site-footer {
-  padding: 20px 0;
-  font-size: 1.2rem;
-  background-color: #666;
+  border-top: 1px solid $light_gray;
+  padding: 1.5rem 0;
+  font-size: 0.7rem;
   text-align: center;
-  color: #ccc;
+  color: $mid_gray;
 }
 
 .page-section {
   position: relative;
-  padding: 80px 0 40px;
-  + .page-section {
-    &:after {
-      content: "";
-      display: block;
-      height: 1px;
-      border-top: 1px dotted $rule_gray;
-      position: absolute;
-      top: 0;
-      left: 15px;
-      right: 15px;
-      z-index: 2;
-      @media screen and (min-width: 768px) {
-        left: 50%;
-        right: 0;
-      }
-      @media screen and (min-width: 768px) and (max-width: 991px) {
-        width: 720px;
-        margin-left: -360px;
-      }
-      @media screen and (min-width: 992px) and (max-width: 1199px) {
-        width: 940px;
-        margin-left: -470px;
-      }
-      @media screen and (min-width: 1200px) {
-        width: 1140px;
-        margin-left: -570px;
-      }
+  padding: 80px 0;
+  &:last-child {
+    padding-bottom: 150px;
+  }
+  &--unpadded {
+    padding: 0;
+  }
+  &--extratop {
+    margin-top: 80px;
+  }
+  &--teaser {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    color: $dark_gray;
+    @media screen and (min-width: 576px) {
+      font-size: 2.75rem;
+    }
+    @media screen and (min-width: 992px) {
+      margin: 0 50px;
     }
   }
-  @media screen and (min-width: 600px) {
-    padding: 80px 0 120px;
-  }
 }
-
-.page-section-teaser {
-  font: 300 2rem/1.3 "Josefin Slab", serif;
-  text-align: center;
-  padding-bottom: 60px;
-  @media screen and (min-width: 768px) {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    padding-left: 7.5%;
-    padding-right: 7.5%;
-  }
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  @media screen and (min-width: 1200px) {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-  strong {
-    font-weight: 800;
-  }
-}
-
 
 
 
@@ -243,115 +182,70 @@ $pages: "index", "work", "blog", "contact";
    Homepage
    ========================================================================== */
 
-.grid {
-  margin-left: -5px;
-  margin-right: -5px;
-}
-
-.grid-item, .grid-sizer {
+.featured {
   position: relative;
-  width: 100%;
-  @media screen and (min-width: 600px) and (max-width: 991px) {
-    width: 50%;
-  }
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    width: 33.33333333%;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 25%;
-  }
-}
-
-.grid-item-doublewide {
-  width: 100%;
-  @media screen and (min-width: 992px) and (max-width: 1199px) {
-    width: 66.67777777777%;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 50%;
-  }
-}
-
-.grid-item {
-  margin-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.grid-nav-wrapper {
-  text-align: center;
-}
-
-.grid-nav {
-  display: none;
-  @media screen and (min-width: 600px) {
-    display: inline-block;
-    margin-bottom: 40px;
-    padding: 2px 20px 4px;
-    border-top: 3px double $rule_gray;
-    border-bottom: 1px solid $rule_gray;
-  }
-}
-
-.grid-nav-filter {
-  font-weight: 500;
-  font-size: 0.9rem;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  &:hover {
-    cursor: pointer;
-    color: #666;
-  }
-}
-
-.grid-nav-filter {
-  color: #999;
-  + .grid-nav-filter {
-    margin-left: 1.5em;
-  }
-  &.current {
-    font-weight: 700;
-    color: #666;
-  }
-}
-
-.graphic-frame {
   display: block;
-  // border-radius: 5px;
-  // border-bottom-color: darken(#eaeaea, 15%);
-  // padding: 30px;
-  // background-color: #fff;
-  // text-align: center;
-  text-decoration: none;
-  @media screen and (max-width: 767px) {
-    + .graphic-frame {
-      margin-top: 40px;
+  min-height: 320px;
+  background-size: cover;
+  background-position: 50% 50%;
+  &__caption {
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    background-color: rgba(255,255,255, 0.925);
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: transform .5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  &:hover, &:focus {
+    text-decoration: none;
+    .featured__caption {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }
 
-.graphic-link-heading {
-  margin: 0 0 1px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  color: #000;
-}
 
-.graphic-link-subheading {
-  margin: 0 0 15px;
-  font-weight: 500;
-  font-size: 0.9rem;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  color: #999;
-}
+/* ==========================================================================
+   Icons
+   ========================================================================== */
 
+.icon {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 75px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: $dark_gray;
+
+  &--cfp {
+    max-height: 90px;
+  }
+
+  &--gnip {
+    max-height: 60px;
+  }
+
+  &--twitter {
+    max-height: 60px;
+  }
+
+  &--scott-jurek {
+    max-width: 180px;
+  }
+
+}
 
 
 
@@ -442,11 +336,11 @@ $pages: "index", "work", "blog", "contact";
 .form-label {
   display: block;
   margin: 0 0 8px;
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: 0.7rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: #666;
+  letter-spacing: 0.25em;
+  color: #333;
 }
 
 input[type="text"], input[type="email"], textarea {
@@ -455,11 +349,12 @@ input[type="text"], input[type="email"], textarea {
   border: 1px solid #aaa;
   border-radius: 0.3rem;
   padding: 0.9rem;
-  font-size: 1.8rem;
+  font-size: 1rem;
+  color: $mid_gray;
 }
 
 textarea {
-  min-height: 200px;
+  min-height: 300px;
 }
 
 .button-submit {
@@ -469,12 +364,13 @@ textarea {
   background-color: $green;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.3rem;
+  font-weight: 500;
+  font-size: 0.7rem;
   letter-spacing: 0.1em;
   @include transition();
   &:hover, &:focus {
     background-color: darken($green, 7%);
+    cursor: pointer;
   }
 }
 
