@@ -5,11 +5,11 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="description" content="With Brio is a tiny creative studio specializing in design and frontend development for everything from Rails apps to brochure sites.">
-    <title><%= current_page.data.title || "With Brio" %></title>
+    <title><%= !current_page.data.title.blank? ? current_page.data.title + " | With Brio" : "With Brio" %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <%= stylesheet_link_tag "styles" %>
     <%= yield_content :style %>
     <%= favicon_tag 'icons/favicon.ico', rel: 'icon', type: 'image/ico' %>
-    <%= javascript_include_tag 'svgxuse.js' %>
     <meta name="google-site-verification" content="4PckrMMHrmqaUBLFPM1IltvjrqpUTGfSAyyUm07uY4c" />
     <link rel="apple-touch-icon" sizes="57x57" href="<%= asset_path(:images, 'images/icons/apple-icon-57x57.png') %>">
     <link rel="apple-touch-icon" sizes="60x60" href="<%= asset_path(:images, 'images/icons/apple-icon-60x60.png') %>">
@@ -37,7 +37,7 @@
   </head>
   
   <body class="<%= page_classes %>">
-    <%= partial "layouts/svglogo" %>
+    <%= partial "layouts/svgglobal" %>
     <%= partial "layouts/svgsprite" if current_page.url == '/' %>
 
     <header id="site-header">
@@ -52,6 +52,7 @@
       <%= partial "layouts/footer" %>
     </footer>
 
+    <script defer src="//i.icomoon.io/public/temp/e4cce1ef83/UntitledProject/svgxuse.js"></script>
     <%= yield_content :script %>
 
   </body>

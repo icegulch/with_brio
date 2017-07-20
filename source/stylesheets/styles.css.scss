@@ -17,7 +17,7 @@ $rule_gray: #ccc;
    ========================================================================== */
 
 html {
-  background-color: #fff;
+  background-color: $dark_gray;
 }
 
 
@@ -33,83 +33,71 @@ html {
 
 .nav {
   display: inline-block;
+  padding: 0.75rem;
+  padding-left: 0.95rem;
   line-height: 1;
   font-weight: 400;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  color: $mid_gray;
+  letter-spacing: 0.2rem;
+  color: $dark_gray;
   text-decoration: none;
   &:hover, &:focus {
-    text-decoration: underline;
-    color: $dark_gray;
+    text-decoration: none;
+    color: $mid_gray;
     cursor: pointer;
   }
 
   + .nav {
     margin-left: 0.85rem;
-    padding-left: 1.5rem;
   }
 
-  &--work {
-    .work_index & {
-      color: $dark_gray;
-      text-decoration: underline;
-      &:hover, &:focus {
-        text-decoration: underline;
-        color: $dark_gray;
-        cursor: default;
-      }
-    }
-  }
-  &--about {
-    .about_index & {
-      color: $dark_gray;
-      text-decoration: underline;
-      &:hover, &:focus {
-        text-decoration: underline;
-        color: $dark_gray;
-        cursor: default;
-      }
-    }
-  }
-  &--blog {
-    .blog_index & {
-      color: $dark_gray;
-      text-decoration: underline;
-      &:hover, &:focus {
-        text-decoration: underline;
-        color: $dark_gray;
-        cursor: default;
-      }
-    }
-  }
+  // &--work {
+  //   .work_index & {
+  //     color: $mid_gray;
+  //     &:hover, &:focus {
+  //       color: $mid_gray;
+  //       cursor: default;
+  //     }
+  //   }
+  // }
+  // &--about {
+  //   .about_index & {
+  //     color: $mid_gray;
+  //     &:hover, &:focus {
+  //       color: $mid_gray;
+  //       cursor: default;
+  //     }
+  //   }
+  // }
+  // &--blog {
+  //   .blog_index & {
+  //     color: $mid_gray;
+  //     &:hover, &:focus {
+  //       color: $mid_gray;
+  //       cursor: default;
+  //     }
+  //   }
+  // }
 
 }
 
 .nav-icon {
   stroke-width: 0;
   stroke: currentColor;
-  fill: $dark_gray;
-  &:hover, &:focus {
-    fill: $green;
-    cursor: pointer;
-  }
+  fill: currentColor;
+  color: $dark_gray;
   &--brio {
     display: block;
     width: 4.8505859375em;
     height: 1em;
-    max-width: 100px;
-    max-height: auto;
+    font-size: 21px;
     line-height: 0.7em;
-    max-height: auto;
-    .logo-link & {
-      .index & {
-        &:hover, &:focus {
-          fill: $dark_gray;
-          cursor: default;
-        }      
+    &:hover, &:focus {
+      #plus {
+        color: $orange;
+        cursor: pointer;
       }
     }
   }
@@ -122,36 +110,50 @@ html {
     max-height: auto;
     line-height: 0.7em;
     max-height: auto;
-    .mail-link & {
-      .contact & {
-        &:hover, &:focus {
-          fill: $dark_gray;
-          cursor: default;
-        }      
-      }
+    &:hover, &:focus {
+      color: lighten($dark_gray, 10%);
     }
   }
 }
 
-.mt-logos {
-  margin-top: 5rem;
+.nav-brand {
+  order: -1;
+}
+
+.nav-mail {
+  order: 1;
+  @media screen and (min-width: 576px) {
+    order: 2;
+  }
+}
+
+.nav-links {
+  order: 1;
+  @media screen and (max-width: 575px) {
+    order: 2;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $rule_gray;
+  }
 }
 
 #site-main {
-  min-height: 82vh;
+  @media screen and (min-width: 1200px) {
+    min-height: 82vh;
+  }
 }
 
 #site-footer {
-  border-top: 1px solid $light_gray;
   padding: 1.5rem 0;
   font-size: 0.7rem;
   text-align: center;
-  color: $mid_gray;
+  background-color: $dark_gray;
+  color: $light_gray;
 }
 
 .page-section {
   position: relative;
-  padding: 80px 0;
+  padding: 70px 0;
   &:last-child {
     padding-bottom: 150px;
   }
@@ -159,7 +161,7 @@ html {
     padding: 0;
   }
   &--extratop {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   &--teaser {
     text-align: center;
@@ -167,11 +169,8 @@ html {
     font-weight: 100;
     line-height: 1.2;
     color: $dark_gray;
-    @media screen and (min-width: 576px) {
-      font-size: 2.75rem;
-    }
     @media screen and (min-width: 992px) {
-      margin: 0 50px;
+      margin: 0 60px;
     }
   }
 }
@@ -185,7 +184,6 @@ html {
 .featured {
   position: relative;
   display: block;
-  min-height: 320px;
   background-size: cover;
   background-position: 50% 50%;
   &__caption {
@@ -214,6 +212,25 @@ html {
   }
 }
 
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev{
+  display:block;
+}
+
+.article {
+  &__text {
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__figure {
+    margin: 3rem 0;
+  }
+}
+
 
 /* ==========================================================================
    Icons
@@ -221,30 +238,53 @@ html {
 
 .icon {
   display: inline-block;
-  width: 100%;
-  height: auto;
-  max-width: 200px;
-  max-height: 75px;
+  width: 1em;
+  height: 1em;
+  max-width: 100%;
+  max-height: 100px;
   stroke-width: 0;
   stroke: currentColor;
-  fill: $dark_gray;
-
-  &--cfp {
-    max-height: 90px;
-  }
-
-  &--gnip {
-    max-height: 60px;
-  }
+  fill: currentColor;
+  color: $dark_gray;
+  font-size: 100px;
+  line-height: 80px;
 
   &--twitter {
-    max-height: 60px;
+    font-size: 80px;
+  }
+
+  &--eb {
+    font-size: 130px;
+  }
+
+  &--rsv {
+    font-size: 180px;
+  }
+
+  &--bigboulder {
+    font-size: 180px;
+  }
+
+  &--self-made {
+    font-size: 80px;
+  }
+
+  &--heavybit {
+    font-size: 180px;
   }
 
   &--scott-jurek {
-    max-width: 180px;
+    font-size: 150px;
   }
 
+  &--vmp {
+    font-size: 200px;
+  }
+
+}
+
+.mt-logos {
+  margin-top: 45px;
 }
 
 
@@ -268,9 +308,6 @@ html {
   }
   @media screen and (min-width: 992px) {
     margin: 40px 0;
-    .page-section-work & {
-      margin: 0;
-    }
   }
 }
 

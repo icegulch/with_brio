@@ -46,6 +46,15 @@ configure :development do
   host: 'localhost'
 end
 
+activate :sprockets
+
+if defined? RailsAssets
+  RailsAssets.load_paths.each do |path|
+    sprockets.append_path path
+  end
+end
+
+
 # Methods defined in the helpers block are available in templates
 # helpers do
 #   def some_helper
