@@ -20,6 +20,9 @@ html {
   background-color: $dark_gray;
 }
 
+body {
+  padding-top: 64px;
+}
 
 
 /* ==========================================================================
@@ -27,59 +30,74 @@ html {
    ========================================================================== */
 
 #site-header {
-  padding: 1.5rem 0;
-  border-bottom: 1px solid $light_gray;
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 0;
+  background-color: #fff;
 }
 
-.nav {
-  display: inline-block;
-  padding: 0.75rem;
-  padding-left: 0.95rem;
-  line-height: 1;
-  font-weight: 400;
-  font-size: 0.65rem;
+#site-main {
+  min-height: calc(100vh - 127px);
+  body[class^="contact"] & {
+    background-color: #f1f1f1;
+  }
+}
+
+#site-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  background-color: $dark_gray;
+  font: 300 11px 'Open Sans', sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $light_gray;
+}
+
+
+/* ==========================================================================
+   Site Nav
+   ========================================================================== */
+
+.menu-item {
+  font: 100 0.65rem/1 "Open Sans", sans-serif;
   vertical-align: middle;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
-  color: $dark_gray;
+  color: #000;
   text-decoration: none;
   &:hover, &:focus {
     text-decoration: none;
-    color: $mid_gray;
+    color: $orange;
     cursor: pointer;
   }
 
-  + .nav {
-    margin-left: 0.85rem;
+  + .menu-item {
+    margin-left: 1.25rem;
   }
 
-  // &--work {
-  //   .work_index & {
-  //     color: $mid_gray;
-  //     &:hover, &:focus {
-  //       color: $mid_gray;
-  //       cursor: default;
-  //     }
-  //   }
-  // }
-  // &--about {
-  //   .about_index & {
-  //     color: $mid_gray;
-  //     &:hover, &:focus {
-  //       color: $mid_gray;
-  //       cursor: default;
-  //     }
-  //   }
-  // }
-  // &--blog {
-  //   .blog_index & {
-  //     color: $mid_gray;
-  //     &:hover, &:focus {
-  //       color: $mid_gray;
-  //       cursor: default;
-  //     }
-  //   }
-  // }
+  &--work {
+    .work_index & {
+      color: $orange;
+      &:hover, &:focus {
+        color: $orange;
+        cursor: default;
+      }
+    }
+  }
+  &--contact {
+    .contact_index & {
+      color: $mid_gray;
+      &:hover, &:focus {
+        color: $mid_gray;
+        cursor: default;
+      }
+    }
+  }
+
 
 }
 
@@ -87,13 +105,16 @@ html {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
-  color: $dark_gray;
+  color: #000;
   &--brio {
     display: block;
     width: 4.8505859375em;
     height: 1em;
-    font-size: 21px;
+    font-size: 23px;
     line-height: 0.7em;
+    #plus {
+      color: #000;
+    }
     &:hover, &:focus {
       #plus {
         color: $orange;
@@ -101,135 +122,47 @@ html {
       }
     }
   }
-  &--mail {
-    display: block;
-    float: right;
-    width: 1.25em;
-    height: 1.25em;
-    max-width: auto;
-    max-height: auto;
-    line-height: 0.7em;
-    max-height: auto;
-    &:hover, &:focus {
-      color: lighten($dark_gray, 10%);
-    }
-  }
 }
-
-.nav-brand {
-  order: -1;
-}
-
-.nav-mail {
-  order: 1;
-  @media screen and (min-width: 576px) {
-    order: 2;
-  }
-}
-
-.nav-links {
-  order: 1;
-  @media screen and (max-width: 575px) {
-    order: 2;
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid $rule_gray;
-  }
-}
-
-#site-main {
-  @media screen and (min-width: 1200px) {
-    min-height: 82vh;
-  }
-}
-
-#site-footer {
-  padding: 1.5rem 0;
-  font-size: 0.7rem;
-  text-align: center;
-  background-color: $dark_gray;
-  color: $light_gray;
-}
-
-.page-section {
-  position: relative;
-  padding: 70px 0;
-  &:last-child {
-    padding-bottom: 150px;
-  }
-  &--unpadded {
-    padding: 0;
-  }
-  &--extratop {
-    margin-top: 50px;
-  }
-  &--teaser {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: 100;
-    line-height: 1.2;
-    color: $dark_gray;
-    @media screen and (min-width: 992px) {
-      margin: 0 60px;
-    }
-  }
-}
-
 
 
 /* ==========================================================================
-   Homepage
+   Utilities
    ========================================================================== */
 
-.featured {
-  position: relative;
-  display: block;
-  background-size: cover;
-  background-position: 50% 50%;
-  &__caption {
-    position: absolute;
-    top: 1.5rem;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    z-index: 2;
-    background-color: rgba(255,255,255, 0.925);
-    color: #333;
+.page-section {
+
+  padding: 105px 0 145px;
+
+  &--text {
+    font: 400 28px/1.6 'Crimson Text', sans-serif;
+  }
+
+  &--photo {
+    padding: 0;
+    text-align: center;
+    img {
+      max-height: 900px;
+    }
+  }
+
+  &--gray {
+    background-color: #f1f1f1;
+  }
+
+  &__heading {
+    margin: 0 0 25px;
+    font: 300 11px 'Open Sans', sans-serif;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    font-size: 0.7rem;
-    font-weight: 600;
-    transform: scale(0.5);
-    opacity: 0;
-    transition: transform .5s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-  &:hover, &:focus {
-    text-decoration: none;
-    .featured__caption {
-      transform: scale(1);
-      opacity: 1;
+    span {
+      display: inline-block;
+      padding: 0 0.1em 0.5em;
+      border-bottom: 1px solid #000;
     }
   }
+
 }
 
-.carousel-item.active,
-.carousel-item-next,
-.carousel-item-prev{
-  display:block;
-}
-
-.article {
-  &__text {
-    p {
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-  &__figure {
-    margin: 3rem 0;
-  }
-}
 
 
 /* ==========================================================================
@@ -293,66 +226,7 @@ html {
    Work
    ========================================================================== */
 
-.faq-q {
-  margin: 40px 0 5px;
-  font: 800 1.8rem/1.2 "Josefin Slab", serif;
-  &:first-child {
-    margin-top: 0;
-  }
-}
 
-.faq-graphic {
-  margin: 40px 0 0;
-  &:first-of-type {
-    margin-top: 0;
-  }
-  @media screen and (min-width: 992px) {
-    margin: 40px 0;
-  }
-}
-
-.faq-graphic-img {
-  box-shadow: 0 0 1px $rule_gray;
-}
-
-.faq-graphic-caption {
-  margin-bottom: 40px;
-  border-bottom: 1px solid $rule_gray;
-  padding: 10px 0;
-  font: italic 300 1.4rem/1.4 "Josefin Slab", serif;
-  @media screen and (min-width: 992px) {
-    margin: 0;
-    border-bottom: none;
-    border-top: 1px solid $rule_gray;
-  }
-}
-
-.faq-graphic-caption-noborder {
-  @media screen and (max-width: 991px) {
-    margin-top: 40px;
-    padding: 0;
-    font: 300 1.4rem/1.7 "Montserrat", sans-serif;
-    border-bottom: none;
-    border-top: none;
-  }  
-}
-
-.work-info {
-  margin: 0;
-}
-
-.work-info-dt {
-  margin: 0;
-  font-weight: 700;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2rem;
-}
-
-.work-info-dd {
-  margin: 0 0 10px;
-  font: 300 1.4rem/1.4 "Josefin Slab", serif;
-}
 
 
 /* ==========================================================================
@@ -411,22 +285,4 @@ textarea {
   }
 }
 
-
-
-/* ==========================================================================
-   Utilities
-   ========================================================================== */
-
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.link-unadorned {
-  color: #222;
-  &:hover, &:focus {
-    text-decoration: none;
-  }
-}
 

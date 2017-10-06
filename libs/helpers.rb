@@ -1,9 +1,5 @@
 module SiteHelpers
 
-  def visible_work
-    data.clients.select { |client| !client.blurb.blank? }
-  end
-
 # TAKEN FROM RAILS API DOCS
   def link_to_unless(condition, name, options = {}, html_options = {}, &block)
     if condition
