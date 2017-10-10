@@ -428,18 +428,9 @@ a {
   color: #333;
 }
 
-input[type="text"], input[type="email"], textarea {
-  display: block;
-  width: 100%;
-  border: 1px solid #aaa;
-  border-radius: 0.3rem;
+.form-control {
   padding: 0.9rem;
   font-size: 1rem;
-  color: $mid_gray;
-}
-
-textarea {
-  min-height: 300px;
 }
 
 .button-submit {
