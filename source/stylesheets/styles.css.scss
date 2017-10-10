@@ -16,12 +16,20 @@ $rule_gray: #ccc;
    Base
    ========================================================================== */
 
-html {
-  background-color: $dark_gray;
-}
-
 body {
   padding-top: 64px;
+  &.index {
+    padding-top: 0;
+  }
+}
+
+a {
+  color: $blue;
+  text-decoration: underline;
+  &:hover, &:focus {
+    color: $orange;
+    text-decoration: none;
+  }
 }
 
 
@@ -38,12 +46,24 @@ body {
   z-index: 100;
   padding: 20px 0;
   background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  .index & {
+    background-color: transparent;
+    border-color: transparent;
+    transition: all 0.45s ease-in-out;
+  }
+  .index.scrolled & {
+    background-color: #fff;
+    border-color: #ddd;
+  }
 }
 
 #site-main {
-  min-height: calc(100vh - 127px);
-  body[class^="contact"] & {
-    background-color: #f1f1f1;
+  .contact & {
+    min-height: calc(100vh - 123px);
+  }
+  .contact_index & {
+    background-color: #f5f5f5;
   }
 }
 
@@ -51,7 +71,7 @@ body {
   padding: 1.5rem 0;
   text-align: center;
   background-color: $dark_gray;
-  font: 300 11px 'Open Sans', sans-serif;
+  font: 400 11px/1 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: $light_gray;
@@ -63,15 +83,27 @@ body {
    ========================================================================== */
 
 .menu-item {
-  font: 100 0.65rem/1 "Open Sans", sans-serif;
+  font: 400 11px/1 -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   vertical-align: middle;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: #000;
+  letter-spacing: 0.2em;
+  color: $mid_gray;
   text-decoration: none;
+  .index & {
+    color: #fff;
+    &:hover, &:focus {
+      color: $orange;
+    }
+  }
+  .scrolled & {
+    color: $mid_gray;
+    &:hover, &:focus {
+      color: #000;
+    }
+  }
   &:hover, &:focus {
     text-decoration: none;
-    color: $orange;
+    color: #000;
     cursor: pointer;
   }
 
@@ -81,18 +113,18 @@ body {
 
   &--work {
     .work_index & {
-      color: $orange;
+      color: #000;
       &:hover, &:focus {
-        color: $orange;
+        color: #000;
         cursor: default;
       }
     }
   }
   &--contact {
     .contact_index & {
-      color: $mid_gray;
+      color: #000;
       &:hover, &:focus {
-        color: $mid_gray;
+        color: #000;
         cursor: default;
       }
     }
@@ -112,14 +144,15 @@ body {
     height: 1em;
     font-size: 23px;
     line-height: 0.7em;
+    color: #000;
     #plus {
-      color: #000;
+      color: $orange;
     }
-    &:hover, &:focus {
-      #plus {
-        color: $orange;
-        cursor: pointer;
-      }
+    .index & {
+      color: #fff;
+    }
+    .scrolled & {
+      color: #000;
     }
   }
 }
@@ -131,27 +164,35 @@ body {
 
 .page-section {
 
-  padding: 105px 0 145px;
+  padding: 95px 0 125px;
 
   &--text {
-    font: 400 28px/1.6 'Crimson Text', sans-serif;
+    background-color: #fff;
   }
 
   &--photo {
     padding: 0;
-    text-align: center;
-    img {
-      max-height: 900px;
-    }
   }
 
-  &--gray {
-    background-color: #f1f1f1;
+  &--hero {
+    .hero-wrapper {
+      background-color: $dark_gray;
+      @media screen and (min-width: 992px) {
+        margin-top: -80px;
+      }
+      @media screen and (min-width: 1200px) {
+        margin-top: -120px;
+      }
+      @media screen and (min-width: 1600px) {
+        margin: -140px auto 0;
+        max-width: 1600px;
+      }
+    }
   }
 
   &__heading {
     margin: 0 0 25px;
-    font: 300 11px 'Open Sans', sans-serif;
+    font: 400 11px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     span {
@@ -160,6 +201,134 @@ body {
       border-bottom: 1px solid #000;
     }
   }
+
+  &__lead {
+    font: 400 26px/38px Georgia, serif;
+  }
+
+  &--gray {
+    background-color: #f5f5f5;
+  }
+
+}
+
+.product-row {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.product {
+
+  display: block;
+  margin-bottom: 30px;
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+  &--new {
+
+  }
+
+  &--undercast-approaches {
+    height: 270px;
+    background-image: image-url('work/undercast-approaches.jpg');
+    @media screen and (min-width: 420px) {
+      height: 350px;
+    }
+    @media screen and (min-width: 768px) {
+      height: 500px;
+    }
+    @media screen and (min-width: 992px) {
+      height: 740px;
+    }
+  }
+
+  &--periodic-ski-cali {
+    height: 500px;
+    background-image: image-url('work/periodic-ski-cali.jpg');
+    background-position: 50% 65%;
+    @media screen and (min-width: 992px) {
+      height: 300px;
+    }
+    @media screen and (min-width: 1200px) {
+      height: 350px;
+    }
+  }
+
+  &--periodic-ski-co {
+    height: 500px;
+    background-image: image-url('work/periodic-ski-co.jpg');
+    @media screen and (min-width: 992px) {
+      height: 270px;
+    }
+  }
+
+  &--wm-periodic {
+    height: 500px;
+    background-image: image-url('work/periodic-4000.jpg');
+    @media screen and (min-width: 992px) {
+      height: 270px;
+    }
+  }
+
+  &--fingerprints {
+    height: 600px;
+    background-image: image-url('work/fingerprints.jpg');
+    @media screen and (min-width: 768px) {
+      height: 800px;
+    }
+    @media screen and (min-width: 992px) {
+      height: 600px;
+    }
+    @media screen and (min-width: 1200px) {
+      height: 650px;
+    }
+  }
+
+  &--wm48 {
+    height: 500px;
+    background-image: image-url('work/passport-showcase.jpg');
+    @media screen and (min-width: 992px) {
+      height: 500px;
+    }
+  }
+
+  &--nh52 {
+    height: 500px;
+    background-image: image-url('work/nh52-passport.jpg');
+    @media screen and (min-width: 992px) {
+      height: 500px;
+    }
+  }
+
+  // padding-left: 20px;
+  // padding-right: 20px;
+
+  // &:hover, &:focus {
+  //   text-decoration: none;
+  // }
+
+
+  // &__img {
+  //   height: 400px;
+  //   background-repeat: no-repeat;
+  //   background-position: 50% 50%;
+  //   background-size: cover;
+  //   @media screen and (min-width: 576px) and (max-width: 991px) {
+  //     height: 300px;
+  //   }
+  // }
+
+
+  // &__desc {
+  //   margin: 15px 0 20px;
+  //   font: 400 11px/15px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  //   letter-spacing: 0.2em;
+  //   text-transform: uppercase;
+  //   text-align: center;
+  //   color: #444;
+  // }
 
 }
 
@@ -219,6 +388,13 @@ body {
 .mt-logos {
   margin-top: 45px;
 }
+
+
+
+/* ==========================================================================
+   Home 
+   ========================================================================== */
+
 
 
 
