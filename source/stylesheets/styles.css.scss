@@ -59,9 +59,7 @@ a {
 }
 
 #site-main {
-  .contact & {
-    min-height: calc(100vh - 123px);
-  }
+  min-height: calc(100vh - 123px);
   .contact_index & {
     background-color: #f5f5f5;
   }

@@ -32,10 +32,10 @@
 # Helpers
 ###
 
-require 'libs/helpers'
-helpers SiteHelpers
+# require 'libs/helpers'
+# helpers SiteHelpers
 
-require "active_support/core_ext/array/grouping"
+# require "active_support/core_ext/array/grouping"
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
@@ -86,10 +86,6 @@ end
 activate :directory_indexes
 page "/404.html", :directory_index => false
 
-after_build do |builder|
-  src = File.join(config[:source],"_redirects")
-  dst = File.join(config[:build_dir],"_redirects")
-  builder.source_paths << File.dirname(__FILE__)
-  builder.copy_file(src,dst)
-end
+proxy "_redirects", "netlify-redirects", ignore: true
+
 

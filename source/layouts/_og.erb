@@ -20,4 +20,4 @@
     <meta property="og:url" content="https://withbr.io<%= current_page.url %>">
     <meta property="og:title" content="<%= current_page.data.title || "With Brio" %>">
     <meta property="og:description" content="With Brio is a tiny creative studio specializing in design and frontend development for everything from Rails apps to brochure sites.">
-    <meta property="og:image" content="https://withbr.io<%= asset_path(:images, 'icons/withbrio-og-image.png') %>">
+    <meta property="og:image" content="<%= current_page.data.og || 'https://withbr.io/images/icons/withbrio-og-image.png' %>">
