@@ -6,7 +6,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
-            <form class="contact-form" name="contact" action="/contact/thank-you">
+            <form class="contact-form" name="contact" netlify-honeypot="fu" action="/contact/thank-you" netlify>
+              <div hidden>
+                <label>Don’t fill this out: <input name="fu"></label>
+              </div>
               <div class="row form-field">
                 <div class="col-sm-6">
                     <label class="form-label">
