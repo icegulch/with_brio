@@ -45,7 +45,7 @@ a {
   right: 0;
   z-index: 100;
   padding: 20px 0;
-  background-color: #fff;
+  background-color: rgba(255,255,255, 0.99);
   border-bottom: 1px solid #ddd;
   .index & {
     background-color: transparent;
@@ -53,7 +53,7 @@ a {
     transition: all 0.45s ease-in-out;
   }
   .index.scrolled & {
-    background-color: #fff;
+    background-color: rgba(255,255,255, 0.99);
     border-color: #ddd;
   }
 }
