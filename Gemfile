@@ -7,7 +7,7 @@ gem 'middleman-minify-html', '~>3.4.1'
 
 gem "activesupport"
 
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.0.0.beta'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

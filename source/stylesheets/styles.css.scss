@@ -175,14 +175,8 @@ a {
   &--hero {
     .hero-wrapper {
       background-color: $dark_gray;
-      @media screen and (min-width: 992px) {
-        margin-top: -80px;
-      }
-      @media screen and (min-width: 1200px) {
-        margin-top: -120px;
-      }
       @media screen and (min-width: 1600px) {
-        margin: -140px auto 0;
+        margin: 0 auto;
         max-width: 1600px;
       }
     }

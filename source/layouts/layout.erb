@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="description" content="With Brio: sifting through maps and tables in search of compelling stories in data">
     <title><%= !current_page.data.title.blank? ? current_page.data.title + " | With Brio" : "With Brio" %></title>
-    <%= stylesheet_link_tag '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css', :integrity => 'sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M', :crossorigin => 'anonymous' %>
     <%= stylesheet_link_tag 'styles' %>
     <%= yield_content :style %>
     <%= favicon_tag 'icons/favicon.ico', rel: 'icon', type: 'image/ico' %>
@@ -15,7 +14,7 @@
   </head>
   
   <body class="<%= page_classes %>">
-    <%= partial "layouts/svgsprite" if current_page.url == '/work/' %>
+    <%#= partial "layouts/svgsprite" if current_page.url == '/work/' %>
 
     <header id="site-header">
       <%= partial "layouts/header" %>
@@ -29,17 +28,7 @@
       <%= partial "layouts/footer" %>
     </footer>
 
-    <%= javascript_include_tag '//code.jquery.com/jquery-3.2.1.slim.min.js', :integrity => 'sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN', :crossorigin => 'anonymous' %>
-
-    <script>
-      $(window).scroll(function(){
-          if ($(this).scrollTop() > 0) {
-             $('body').addClass('scrolled');
-          } else {
-             $('body').removeClass('scrolled');
-          }
-      });
-    </script>
+    <%= javascript_include_tag 'scripts', :async => true %>
 
     <%= yield_content :script %>
 
