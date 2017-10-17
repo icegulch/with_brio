@@ -1,40 +1,49 @@
 
-<div class="page-section page-section--photo page-section--hero">
+<div class="page-section">
   <div class="container">
-    <figure class="hero-wrapper">
-      <%= image_tag('home/periodic-ski.jpg', :class => 'img-fluid') %>
-  <% if false %>
-      <img srcset="elva-fairy-320w.jpg 320w,
-                   elva-fairy-480w.jpg 480w,
-                   elva-fairy-800w.jpg 800w"
-           sizes="(max-width: 320px) 280px,
-                  (max-width: 480px) 440px,
-                  800px"
-           src="periodic-ski.jpg" alt="Periodic Table of Ski Resorts: California">
-  <% end %>
-    </figure>
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        <p class="page-section__lead text-center">
+          Howdy! I'm Steve. I rummage through familiar data sets in search of compelling stories, which is to say I geek out on things I enjoy and share them with kindred spirits. Like-minded geek or not, thank you for dropping by!
+        </p>
+        <div class="text-center mt-5">
+          <a href="/work/" class="btn btn-outline-dark">
+            View My Products
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="page-section page-section--text">
+
+<div class="page-section page-section--photo">
+  <div class="container">
+    <%= link_to(image_tag('home/periodic-ski.jpg', :class => 'img-fluid'), '/work/') %>
+  </div>
+</div>
+
+
+<div class="page-section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 col-xl-8">
         <h2 class="page-section__heading text-center">
-          <span>Howdy!</span>
+          <span>About Me</span>
         </h2>
-        <p class="page-section__lead">
-          I'm Steve. I rummage through familiar data sets in search of compelling stories, which is to say I geek out on things I enjoy and <a href="/work/">share them</a> with kindred spirits. Like-minded geek or not, thank you for dropping by!
+        <p class="page-section__lead text-center">
+          I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem. The first album I owned was Blondie's <i>Autoamerican</i>. I recently put on two different shoes, walked around an apple orchard, and failed to notice. 
         </p>
       </div>
     </div>
   </div>
 </div>
 
-<div class="page-section page-section--photo text-center">
+
+<div class="page-section page-section--photo">
   <div class="container-fluid" style="max-width: 1600px;">
-    <div class="row">
-      <div class="col align-self-center d-none d-md-block d-lg-block">
+    <div class="row justify-content-center">
+      <div class="col align-self-center d-none d-sm-block d-md-block d-lg-block">
         <%= image_tag('home/home1.jpg', :class => 'img-fluid') %>
       </div>
       <div class="col align-self-start d-none d-lg-block">
@@ -50,17 +59,3 @@
   </div>
 </div>
 
-<div class="page-section page-section--text">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8">
-        <h2 class="page-section__heading text-center">
-          <span>About Me</span>
-        </h2>
-        <p class="page-section__lead">
-          I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem. I trail run, hike, and bike. The first album I owned was Blondie's <i>Autoamerican</i>. This past winter, I just managed to complete a <a href="http://www.48in1winter.com/home.shtml">SSW48</a>. I recently put on two different shoes and walked around an apple orchard for fifteen minutes without noticing. 
-        </p>
-      </div>
-    </div>
-  </div>
-</div>

@@ -18,9 +18,7 @@ $rule_gray: #ccc;
 
 body {
   padding-top: 64px;
-  // &.index {
-  //   padding-top: 0;
-  // }
+  font-size: 18px;
 }
 
 a {
@@ -47,15 +45,6 @@ a {
   padding: 20px 0;
   background-color: rgba(255,255,255, 0.99);
   border-bottom: 1px solid #ddd;
-  // .index & {
-  //   background-color: transparent;
-  //   border-color: transparent;
-  //   transition: all 0.45s ease-in-out;
-  // }
-  // .index.scrolled & {
-  //   background-color: rgba(255,255,255, 0.99);
-  //   border-color: #ddd;
-  // }
 }
 
 #site-main {
@@ -87,18 +76,6 @@ a {
   letter-spacing: 0.2em;
   color: $mid_gray;
   text-decoration: none;
-  // .index & {
-  //   color: #fff;
-  //   &:hover, &:focus {
-  //     color: $orange;
-  //   }
-  // }
-  // .scrolled & {
-  //   color: $mid_gray;
-  //   &:hover, &:focus {
-  //     color: #000;
-  //   }
-  // }
   &:hover, &:focus {
     text-decoration: none;
     color: #000;
@@ -128,7 +105,6 @@ a {
     }
   }
 
-
 }
 
 .nav-icon {
@@ -146,12 +122,6 @@ a {
     #plus {
       color: $orange;
     }
-    // .index & {
-    //   color: #fff;
-    // }
-    // .scrolled & {
-    //   color: #000;
-    // }
   }
 }
 
@@ -162,44 +132,63 @@ a {
 
 .page-section {
 
-  padding: 95px 0 125px;
+  padding: 75px 0;
 
-  &--text {
-    background-color: #fff;
+  @media screen and (min-width: 768px) {
+    padding: 70px 0 35px;
+    &:first-child {
+      padding-top: 90px;
+    }
+    &:last-child {
+      padding-bottom: 90px;
+    }
+    + .page-section {
+      padding-top: 35px;
+    }
+    + .page-section--gray {
+      padding-top: 70px;
+    }
+  }
+
+  &--gray {
+    background-color: #f5f5f5;
   }
 
   &--photo {
     padding: 0;
-  }
-
-  &--hero {
-    .hero-wrapper {
-      background-color: $dark_gray;
-      @media screen and (min-width: 1600px) {
-        margin: 0 auto;
-        max-width: 1600px;
-      }
+    &:last-of-type, {
+      padding-bottom: 90px;
+    }
+    + .page-section {
+      padding-top: 70px;
     }
   }
 
   &__heading {
     margin: 0 0 25px;
-    font: 400 11px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font: 400 11px/25px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     span {
-      display: inline-block;
+      background-position: 0 90%;
+      background-size: 1px 1px;
+      background-image: linear-gradient(#fff 50%, #000 50%);
+      background-repeat: repeat-x;
       padding: 0 0.1em 0.5em;
-      border-bottom: 1px solid #000;
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+      }
     }
   }
 
   &__lead {
-    font: 400 26px/38px Georgia, serif;
-  }
-
-  &--gray {
-    background-color: #f5f5f5;
+    font: 400 21px/1.6 Georgia, serif;
+    @media screen and (min-width: 576px) {
+      font-size: 26px;
+    }
+    p {
+      margin-bottom: 2.35rem;
+    }
   }
 
 }
@@ -222,106 +211,17 @@ a {
 
   }
 
-  &--undercast-approaches {
-    height: 270px;
-    background-image: image-url('work/undercast-approaches.jpg');
-    @media screen and (min-width: 420px) {
-      height: 350px;
-    }
-    @media screen and (min-width: 768px) {
-      height: 500px;
-    }
-    @media screen and (min-width: 992px) {
-      height: 740px;
-    }
+}
+
+.btn {
+  border-radius: 0;
+  text-decoration: none;
+  font: 400 11px/25px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  &:hover, &:focus {
+    text-decoration: none;
   }
-
-  &--periodic-ski-cali {
-    height: 500px;
-    background-image: image-url('work/periodic-ski-cali.jpg');
-    background-position: 50% 65%;
-    @media screen and (min-width: 992px) {
-      height: 300px;
-    }
-    @media screen and (min-width: 1200px) {
-      height: 350px;
-    }
-  }
-
-  &--periodic-ski-co {
-    height: 500px;
-    background-image: image-url('work/periodic-ski-co.jpg');
-    @media screen and (min-width: 992px) {
-      height: 270px;
-    }
-  }
-
-  &--wm-periodic {
-    height: 500px;
-    background-image: image-url('work/periodic-4000.jpg');
-    @media screen and (min-width: 992px) {
-      height: 270px;
-    }
-  }
-
-  &--fingerprints {
-    height: 600px;
-    background-image: image-url('work/fingerprints.jpg');
-    @media screen and (min-width: 768px) {
-      height: 800px;
-    }
-    @media screen and (min-width: 992px) {
-      height: 600px;
-    }
-    @media screen and (min-width: 1200px) {
-      height: 650px;
-    }
-  }
-
-  &--wm48 {
-    height: 500px;
-    background-image: image-url('work/passport-showcase.jpg');
-    @media screen and (min-width: 992px) {
-      height: 500px;
-    }
-  }
-
-  &--nh52 {
-    height: 500px;
-    background-image: image-url('work/nh52-passport.jpg');
-    @media screen and (min-width: 992px) {
-      height: 500px;
-    }
-  }
-
-  // padding-left: 20px;
-  // padding-right: 20px;
-
-  // &:hover, &:focus {
-  //   text-decoration: none;
-  // }
-
-
-  // &__img {
-  //   height: 400px;
-  //   background-repeat: no-repeat;
-  //   background-position: 50% 50%;
-  //   background-size: cover;
-  //   @media screen and (min-width: 576px) and (max-width: 991px) {
-  //     height: 300px;
-  //   }
-  // }
-
-
-  // &__desc {
-  //   margin: 15px 0 20px;
-  //   font: 400 11px/15px -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  //   letter-spacing: 0.2em;
-  //   text-transform: uppercase;
-  //   text-align: center;
-  //   color: #444;
-  // }
-
 }
 
 
