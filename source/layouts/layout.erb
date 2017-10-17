@@ -14,7 +14,6 @@
   </head>
   
   <body class="<%= page_classes %>">
-    <%#= partial "layouts/svgsprite" if current_page.url == '/work/' %>
 
     <header id="site-header">
       <%= partial "layouts/header" %>
@@ -28,7 +27,7 @@
       <%= partial "layouts/footer" %>
     </footer>
 
-    <%= javascript_include_tag 'scripts', :async => true %>
+    <%#= javascript_include_tag 'scripts', :async => true %>
 
     <%= yield_content :script %>
 

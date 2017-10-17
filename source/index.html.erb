@@ -1,17 +1,19 @@
 
 <div class="page-section page-section--photo page-section--hero">
-  <figure class="hero-wrapper">
-    <%= image_tag('home/periodic-ski.jpg', :class => 'img-fluid') %>
-<% if false %>
-    <img srcset="elva-fairy-320w.jpg 320w,
-                 elva-fairy-480w.jpg 480w,
-                 elva-fairy-800w.jpg 800w"
-         sizes="(max-width: 320px) 280px,
-                (max-width: 480px) 440px,
-                800px"
-         src="periodic-ski.jpg" alt="Periodic Table of Ski Resorts: California">
-<% end %>
-  </figure>
+  <div class="container">
+    <figure class="hero-wrapper">
+      <%= image_tag('home/periodic-ski.jpg', :class => 'img-fluid') %>
+  <% if false %>
+      <img srcset="elva-fairy-320w.jpg 320w,
+                   elva-fairy-480w.jpg 480w,
+                   elva-fairy-800w.jpg 800w"
+           sizes="(max-width: 320px) 280px,
+                  (max-width: 480px) 440px,
+                  800px"
+           src="periodic-ski.jpg" alt="Periodic Table of Ski Resorts: California">
+  <% end %>
+    </figure>
+  </div>
 </div>
 
 <div class="page-section page-section--text">
@@ -30,7 +32,22 @@
 </div>
 
 <div class="page-section page-section--photo text-center">
-  <%= image_tag('home/montage.jpg', :class => 'img-fluid') %>
+  <div class="container-fluid" style="max-width: 1600px;">
+    <div class="row">
+      <div class="col align-self-center d-none d-md-block d-lg-block">
+        <%= image_tag('home/home1.jpg', :class => 'img-fluid') %>
+      </div>
+      <div class="col align-self-start d-none d-lg-block">
+        <%= image_tag('home/home2.jpg', :class => 'img-fluid') %>
+      </div>
+      <div class="col align-self-end pt-lg-5">
+        <%= image_tag('home/home3.jpg', :class => 'img-fluid') %>
+      </div>
+      <div class="col align-self-center d-none d-xl-block">
+        <%= image_tag('home/home4.jpg', :class => 'img-fluid') %>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="page-section page-section--text">

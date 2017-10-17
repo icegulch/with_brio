@@ -18,9 +18,9 @@ $rule_gray: #ccc;
 
 body {
   padding-top: 64px;
-  &.index {
-    padding-top: 0;
-  }
+  // &.index {
+  //   padding-top: 0;
+  // }
 }
 
 a {
@@ -47,15 +47,15 @@ a {
   padding: 20px 0;
   background-color: rgba(255,255,255, 0.99);
   border-bottom: 1px solid #ddd;
-  .index & {
-    background-color: transparent;
-    border-color: transparent;
-    transition: all 0.45s ease-in-out;
-  }
-  .index.scrolled & {
-    background-color: rgba(255,255,255, 0.99);
-    border-color: #ddd;
-  }
+  // .index & {
+  //   background-color: transparent;
+  //   border-color: transparent;
+  //   transition: all 0.45s ease-in-out;
+  // }
+  // .index.scrolled & {
+  //   background-color: rgba(255,255,255, 0.99);
+  //   border-color: #ddd;
+  // }
 }
 
 #site-main {
@@ -87,18 +87,18 @@ a {
   letter-spacing: 0.2em;
   color: $mid_gray;
   text-decoration: none;
-  .index & {
-    color: #fff;
-    &:hover, &:focus {
-      color: $orange;
-    }
-  }
-  .scrolled & {
-    color: $mid_gray;
-    &:hover, &:focus {
-      color: #000;
-    }
-  }
+  // .index & {
+  //   color: #fff;
+  //   &:hover, &:focus {
+  //     color: $orange;
+  //   }
+  // }
+  // .scrolled & {
+  //   color: $mid_gray;
+  //   &:hover, &:focus {
+  //     color: #000;
+  //   }
+  // }
   &:hover, &:focus {
     text-decoration: none;
     color: #000;
@@ -146,12 +146,12 @@ a {
     #plus {
       color: $orange;
     }
-    .index & {
-      color: #fff;
-    }
-    .scrolled & {
-      color: #000;
-    }
+    // .index & {
+    //   color: #fff;
+    // }
+    // .scrolled & {
+    //   color: #000;
+    // }
   }
 }
 
