@@ -183,6 +183,7 @@ a {
 
   &__lead {
     font: 400 21px/1.6 Georgia, serif;
+    text-shadow: 0 1px 0 #fff;
     @media screen and (min-width: 576px) {
       font-size: 26px;
     }
