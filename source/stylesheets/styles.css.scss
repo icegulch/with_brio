@@ -104,6 +104,15 @@ a {
       }
     }
   }
+  &--products {
+    .products_index & {
+      color: #000;
+      &:hover, &:focus {
+        color: #000;
+        cursor: default;
+      }
+    }
+  }
 
 }
 
@@ -141,9 +150,6 @@ a {
     }
     &:last-child {
       padding-bottom: 90px;
-    }
-    + .page-section {
-      padding-top: 35px;
     }
     + .page-section--gray {
       padding-top: 70px;
