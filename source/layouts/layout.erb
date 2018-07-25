@@ -8,6 +8,7 @@
     <title><%= !current_page.data.title.blank? ? current_page.data.title + " | With Brio" : "With Brio" %></title>
     <%= stylesheet_link_tag 'styles' %>
     <%= yield_content :style %>
+    <%= javascript_include_tag '//code.jquery.com/jquery-3.2.1.slim.min.js', 'bootstrap' %>
     <%= favicon_tag 'icons/favicon.ico', rel: 'icon', type: 'image/ico' %>
     <meta name="google-site-verification" content="4PckrMMHrmqaUBLFPM1IltvjrqpUTGfSAyyUm07uY4c" />
     <%= partial 'layouts/og' %>
@@ -18,6 +19,13 @@
     <header id="site-header">
       <%= partial "layouts/header" %>
     </header>
+
+    <div class="collapse" id="mainmenu">
+      <%= link_to('Products', '/products', :class => 'd-flex-item p-3 menu-item menu-item--products') %>
+      <%= link_to('Work', '/work', :class => 'd-flex-item p-3 menu-item menu-item--work') %>
+      <%= link_to('Contact', '/contact', :class => 'd-flex-item p-3 menu-item menu-item--contact') %>
+      <%#= link_to('Adventures', '/adventures', :class => 'd-flex-item p-3 menu-item menu-item--adventures') %>
+    </div>
 
     <main id="site-main">
       <%= yield %>

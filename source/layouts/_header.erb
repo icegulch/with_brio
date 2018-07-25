@@ -1,15 +1,9 @@
 
-      <div class="container">
-        <nav class="row align-items-center justify-content-between">
-          <div class="col-5">
-            <a href="/" class="d-flex-item">
-              <%= image_tag('logo.svg', :height => '24') %>
-            </a>
-          </div>
-          <div class="col-7 text-right">
-            <%= link_to('Products', '/products', :class => 'd-flex-item menu-item menu-item--products') %>
-            <%= link_to('Work', '/work', :class => 'd-flex-item menu-item menu-item--work') %>
-            <%= link_to('Contact', '/contact', :class => 'd-flex-item menu-item menu-item--contact') %>
-          </div>
-        </nav>
-      </div>
+      <nav class="d-flex px-3">
+        <a class="mr-auto" href="/">
+          <%= image_tag('logo.svg', :height => '24') %>
+        </a>
+        <a href="#mainmenu" role="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle menu">
+          <span class="menu-toggler"></span>
+        </a>
+      </nav>
