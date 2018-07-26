@@ -1,9 +1,17 @@
 
-      <nav class="d-flex px-3">
-        <a class="mr-auto" href="/">
-          <%= image_tag('logo.svg', :height => '24') %>
-        </a>
-        <a href="#mainmenu" role="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle menu">
-          <span class="menu-toggler"></span>
-        </a>
-      </nav>
+    <nav class="site-header__menu d-flex px-3 py-3">
+      <a class="mr-auto" href="/">
+        <%= image_tag('logo.svg', :height => '24') %>
+      </a>
+      <a href="#mainmenu" role="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle menu">
+        <span class="menu-toggler"></span>
+      </a>
+    </nav>
+
+    <div class="collapse" id="mainmenu">
+      <%= link_to('Products', '/products', :class => 'd-flex-item p-3 menu-item menu-item--products') %>
+      <%= link_to('Work', '/work', :class => 'd-flex-item p-3 menu-item menu-item--work') %>
+      <%= link_to('About', '/about', :class => 'd-flex-item p-3 menu-item menu-item--about') %>
+      <%= link_to('Adventures', '/adventures', :class => 'd-flex-item p-3 menu-item menu-item--adventures') %>
+      <%= link_to('Contact', '/contact', :class => 'd-flex-item p-3 menu-item menu-item--contact') %>
+    </div>
