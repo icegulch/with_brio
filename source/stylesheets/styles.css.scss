@@ -165,8 +165,11 @@ a {
 
 .page-section {
 
-  padding: 95px 0;
+  padding: 95px 0 35px;
   background-color: #fff;
+  &:first-child {
+    padding-top: 110px;
+  }
 
   @media screen and (min-width: 768px) {
     padding: 70px 0 35px;
