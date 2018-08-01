@@ -30,6 +30,15 @@
     <% end %>
 
     <%= javascript_include_tag '//code.jquery.com/jquery-3.2.1.slim.min.js', 'bootstrap' %>
+    <script>
+      document.body.classList.add('js-loading');
+
+      window.addEventListener("load", showPage);
+
+      function showPage() {
+        document.body.classList.remove('js-loading');
+      }
+    </script>
     <%= yield_content :script %>
 
   </body>

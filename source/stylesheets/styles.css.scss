@@ -243,9 +243,10 @@ a {
   left: 0;
   right: 0;
   z-index: 0;
-  transform: scale(1.1);
+  transform: scale(1.05);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-position: 50% 0%;
+  background-position: 50% 100%;
   background-size: cover;
   -webkit-animation: scaleup 3s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: scaleup 3s; /* Firefox < 16 */
@@ -444,31 +445,37 @@ a {
 
 @keyframes scaleup {
     from { transform: scale(1); }
-    to   { transform: scale(1.1); }
+    to   { transform: scale(1.05); }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes scaleup {
     from { transform: scale(1); }
-    to   { transform: scale(1.1); }
+    to   { transform: scale(1.05); }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes scaleup {
     from { transform: scale(1); }
-    to   { transform: scale(1.1); }
+    to   { transform: scale(1.05); }
 }
 
 /* Internet Explorer */
 @-ms-keyframes scaleup {
     from { transform: scale(1); }
-    to   { transform: scale(1.1); }
+    to   { transform: scale(1.05); }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes scaleup {
     from { transform: scale(1); }
-    to   { transform: scale(1.1); }
+    to   { transform: scale(1.05); }
+}
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
 }
 
 
