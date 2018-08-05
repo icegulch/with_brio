@@ -15,12 +15,12 @@
   
   <body class="<%= page_classes %>">
 
-    <header class="site-header">
+    <header class="site-header<%= ' site-header--home' if current_page.url == '/' %>">
       <%= partial "layouts/header" %>
     </header>
 
     <% if current_page.data.page_hero %>
-      <figure class="hero">
+      <figure class="hero<%= ' hero--product' if current_page.path.include?('products') %>">
         <%= image_tag('products/' + current_page.data.page_hero.to_s + '/' + current_page.data.page_hero.to_s + '-hero.jpg' , :class => 'hero__img') %>
       </figure>
     <% end %>
