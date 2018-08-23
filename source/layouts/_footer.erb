@@ -1,4 +1,10 @@
 
-      <div class="container">
-        &copy; <%= Time.now.strftime('%Y') %> With Brio LLC
-      </div>
+<% 
+    pages = ['products', 'work', 'contact'] 
+%>
+
+    <div class="text-center">
+      <% pages.each do |link| %>
+        <%= link_to link.to_s.capitalize, '/' + link.to_s, :class => 'd-flex-item p-3 menu-item' %>
+      <% end %>
+    </div>

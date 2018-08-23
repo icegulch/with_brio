@@ -2,61 +2,82 @@
   title: Work
 ---
 
-<div class="page-section">
+<% content_for :script do %>
+    <script>
+      $('.showcase-block').each(function(){
+          var self = $(this);
+          $(this).waypoint({
+               offset: '50%',
+               handler: function(){
+                   self.addClass('viewed');
+               },
+          });
+      })
+    </script>
+<% end %>
+
+<section class="page-section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 col-xl-8">
-        <h2 class="page-section__heading text-center">
+        <p class="text-center">
+          When not creating products or maintaining trails, I partner with talented people and teams to build things. 
+        </p>
+      </div>
+    </div>
+    <div class="showcase-block">
+          <%= image_tag('work/vmp-store-desktop.png', :class => 'img-fluid vmp-store-desktop') %>
+          <%= image_tag('work/vmp-store-mobile.png', :class => 'vmp-store-mobile') %>
+          <%= image_tag('work/vmp-checkout-mobile.png', :class => 'vmp-checkout-mobile') %>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-3">
+        <h2 class="page-section__heading text-left mb-3">
           <span>User Interfaces</span>
         </h2>
-        <p class="page-section__lead text-center">
-          When not making passports or posters or trails, I can often be found designing user interfaces. 
+        <p>
+          I relish the challenge of designing for screens&mdash;what other artistic endeavor entails a shape-shifting canvas?!
         </p>
       </div>
-    </div>
-    <div class="text-center">
-      <%= image_tag('work/heavybit-program.png', :class => 'img-fluid mt-5') %>
-      <%= image_tag('work/rxcbd-mood-board.png', :class => 'img-fluid mt-5') %>
-      <%= image_tag('work/bbc-site.png', :class => 'img-fluid my-5') %>
-    </div>
-  </div>
-</div>
-
-<div class="page-section page-section--gray">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8">
-        <h2 class="page-section__heading text-center">
-          <span>Creative Direction</span>
-        </h2>
-        <p class="page-section__lead text-center">
-          I've had the pleasure of working with some incredibly talented designers while directing various creative projects.
-        </p>
+      <div class="col-lg-8 order-lg-1">
+        <div class="showcase-block">
+          <%= image_tag('work/lumen-dashboard-mobile.png', :class => 'img-fluid lumen-dashboard-mobile') %>
+          <%= image_tag('work/lumen-profile-mobile.png', :class => 'lumen-profile-mobile') %>
+          <%= image_tag('work/lumen-search-results-mobile.png', :class => 'lumen-search-results-mobile') %>
+        </div>
       </div>
     </div>
-    <div class="text-center">
-      <%= image_tag('work/bbc-whiskey.png', :class => 'img-fluid mt-5') %>
-      <%= image_tag('work/bbc-swag.jpg', :class => 'img-fluid mt-5') %>
-      <%= image_tag('work/cfa-logos.png', :class => 'img-fluid mt-5') %>
-      <%= image_tag('work/cfa-apply.png', :class => 'img-fluid my-5') %>
-    </div>
   </div>
-</div>
+</section>
 
-
-
-<div class="page-section">
+<section class="page-section">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8">
-        <h2 class="page-section__heading text-center">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-lg-3 order-lg-12">
+        <h2 class="page-section__heading text-left mb-3">
           <span>Visuals</span>
         </h2>
-        <p class="page-section__lead text-center">
+        <p>
           In addition to UIs, I've created vector logos, maps, illustrations, infographics, email mocks, and ads.
         </p>
       </div>
+      <div class="col-lg-8 order-lg-1">
+        <div class="showcase-block showcase-block--visuals text-center">
+          <%= image_tag('work/rta-map.png', :class => 'showcase-block__img rta') %>
+          <%= image_tag('work/ct2.png', :class => 'showcase-block__img cartalk') %>
+          <%= image_tag('work/colorado-trail-patch-concept.png', :class => 'showcase-block__img colorado-trail') %>
+        </div>
+      </div>
     </div>
+  </div>
+</section>
+
+<% if false %>
     <div class="text-center">
       <%= image_tag('work/4000-footer-playing-cards.png', :class => 'img-fluid my-5') %>
     </div>
@@ -83,8 +104,34 @@
     <div class="text-center">
       <%= image_tag('work/cars-then-now.png', :class => 'img-fluid my-5') %>
     </div>
-  </div>
-</div>
+<% end %>
 
 
+    <section class="page-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-8">
+            <h2 class="page-section__heading">
+              <span>Skills at a Glance</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-around align-items-start">
+          <% data.skills.each do |skillset| %>
+            <div class="col-12 col-sm-6 col-md-auto col mb-5 text-center text-sm-left">
+              <dl class="px-2">
+                  <dt>
+                    <%= skillset.name %>
+                  </dt>
+                  <% skillset.skills.each do |skill| %>
+                    <dd>
+                      <%= skill %>
+                    </dd>
+                  <% end %>
+              </dl>
+            </div>
+          <% end -%>
+        </div>
+      </div>
+    </section>
 

@@ -1,0 +1,40 @@
+
+-
+  title: "White Mountain 4000-Footers Passport"
+  slug: wm48
+  uri: "white-mountain-4000-footers-passport"
+  desc: "Designed to complement the Periodic Table of the White Mountain 4000-Footers poster, this pocket-size passport is tailor-made for keeping track of your 4000-footer climbs."
+
+-
+  title: "New Hampshire 52 With A View Passport"
+  slug: nh52
+  uri: "new-hampshire-52-with-a-view-passport"
+  desc: "This pocket-size passport-style booklet is ideal for keeping track of your climbs of the increasingly popular <q>New Hampshire 52 With a View</q> list."
+
+-
+  title: "Periodic Table of White Mountain 4000-Footers Poster"
+  slug: periodic-4000
+  uri: "periodic-table-of-white-mountain-4000-footers"
+  desc: "An 18&#8243; x 24&#8243; print that presents a wealth of data on the 48 New Hampshire 4000-foot peaks in a format similar to the Periodic Table of Elements you might remember from high school chemistry class."
+
+-
+  title: "Periodic Table of Ski Resorts"
+  slug: ski
+  uri: "periodic-table-of-ski-resorts"
+  desc: "The Periodic Table of Ski Resorts brings a data-oriented approach to different ski regions by packing incredible and extensive detail about each ski resort into a beautifully designed 24&#8243; x 18&#8243; poster."
+  series:
+    - "California"
+    - "Colorado"
+
+-
+  title: "Topographic Fingerprints of the Four-Thousand Footers"
+  slug: fingerprints
+  uri: "topographic-fingerprints-of-the-four-thousand-footers"
+  desc: "Reminiscent of vintage scientific identification posters, this elegant print challenges you to become familiar with the topographic <q>fingerprints</q> of all of New Hampshire's 4000-Footers. 16&#8243; x 20&#8243;"
+
+-
+  title: "Undercast Approaches to the White Isles of New Hampshire"
+  slug: undercast
+  uri: "undercast-approaches-to-the-white-islands-of-new-hampshire"
+  desc: "On those magical days when clouds settle in valleys and summits peek out above, you might find the landscape more nautical than orographic. This 18&#8243; x 12&#8243; letterpressed, foil-stamped print runs with that concept."
+

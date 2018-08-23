@@ -2,94 +2,65 @@
   title: Products
 ---
 
-    <div class="page-section">
-      <div class="container">
+<% content_for :script do %>
+    <script>
+      $('.showcase-block').each(function(){
+          var self = $(this);
+          $(this).waypoint({
+               offset: '50%',
+               handler: function(){
+                   self.addClass('viewed');
+               },
+          });
+      })
+    </script>
+<% end %>
 
-        <div class="row justify-content-center mb-5">
+    <section class="page-section">
+      <div class="container">
+        <div class="row justify-content-center">
           <div class="col-lg-10 col-xl-8">
-            <h2 class="page-section__heading text-center">
-              <span>Products</span>
-            </h2>
-            <p class="page-section__lead text-center">
-              During the past few years, I've sifted through maps and tables looking for compelling stories in data. Below are a few examples of what I've found.
+            <p class="text-center">
+              During the past few years, I've sifted through maps and tables looking for compelling stories in data.
             </p>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <a href="/products/periodic-table-of-ski-resorts-california" class="product product--periodic-ski-cali">
-              <%= image_tag('products/ski-cali/periodic-ski-cali-showcase.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  Periodic Table of Ski Resorts: California
-                </p>
-              </div>
-            </a>
-            <a href="/products/periodic-table-of-ski-resorts-colorado" class="product product--periodic-ski-co">
-              <%= image_tag('products/ski-co/periodic-ski-co-showcase.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  Periodic Table of Ski Resorts: Colorado
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <a href="/products/topographic-fingerprints-of-the-four-thousand-footers" class="product product--new product--fingerprints">
-              <%= image_tag('products/fingerprints/fingerprints-showcase.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  Topographic Fingerprints of the Four-Thousand Footers
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <a href="/products/white-mountain-4000-footers-passport" class="product product--wm48">
-              <%= image_tag('products/wm48/passport-showcase.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  White Mountain 4000-Footers Passport
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <a href="/products/new-hampshire-52-with-a-view-passport" class="product product--nh52">
-              <%= image_tag('products/nh52/nh52-passport-showcase.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  New Hampshire 52 With A View Passport
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6">
-            <a href="/products/undercast-approaches-to-the-white-islands-of-new-hampshire" class="product product--new product--undercast-approaches">
-              <%= image_tag('products/undercast/undercast-approaches-showcase.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  Undercast Approaches to the White Isles of New Hampshire
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <a href="/products/periodic-table-of-white-mountain-4000-footers" class="product product--wm-periodic">
-              <%= image_tag('products/periodic/poster-pic-bottom.jpg', :class => 'product__img') %>
-              <div class="d-flex align-items-center justify-content-center product__info p-5">
-                <p class="p-2">
-                  Periodic Table of White Mountain 4000-Footers
-                </p>
-              </div>
-            </a>
-          </div>
+        <div class="showcase-block text-center">
+          <% data.products.each do |product| %>
+            <%= image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'showcase-block__img ' + product.slug) %>
+          <% end -%>
         </div>
       </div>
-    </div>
+    </section>
 
+    <section class="page-section page-section--gray">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-8">
+            <h2 class="page-section__heading">
+              <span>Products</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-around align-items-start">
+          <% data.products.each do |product| %>
+            <div class="col-md-6 mb-5">
+              <div class="card product">
+                <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid product__img'), '/products/' +  product.uri, :class => 'product__link rounded-top') %>
+                <div class="card-body p-4 p-lg-5">
+                  <h5 class="card-title mb-4">
+                    <%= product.title %>
+                  </h5>
+                  <p class="card-text">
+                    <%= product.desc.blank? ? lorem.words(15) : product.desc %>
+                  </p>
+                  <p class="m-0 mt-3">
+                    <%= link_to('View', '/products/' +  product.uri, :class => 'btn btn-sm btn-outline-dark px-4') %>
+                  </p>
+                </div>
+              </div>
+            </div>
+          <% end -%>
+        </div>
+      </div>
+    </section>

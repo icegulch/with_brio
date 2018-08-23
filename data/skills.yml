@@ -1,0 +1,57 @@
+
+-
+  name: Software
+  skills:
+    - "Adobe CS (Id, Ai, Ps)"
+    - "Captivate, Screenflow, Camtasia"
+    - Sketch
+    - "Balsamiq, Zeplin"
+    - Google Analytics
+    - Google Webmaster Tools
+    - "MS Office, G Suite"
+
+-
+  name: "CMS Theme'ing"
+  skills:
+    - Rails
+    - Shopify
+    - WordPress
+    - Drupal
+    - Discourse
+    - "Middleman, Jekyll, etc."
+    - "MailChimp, Emma, etc."
+
+-
+  name: Coding
+  skills:
+    - Responsive Web Design
+    - HTML
+    - CSS
+    - Sass
+    - JQuery
+    - Git
+    - "Yaml, SQL"
+    - "Liquid, ERB, PHP"
+
+-
+  name: Branding
+  skills:
+    - Style guides
+    - Swag
+    - Logos
+    - Brochures
+    - Passports
+    - Patches
+    - Stickers
+    - Presentations
+    - Events
+
+-
+  name: Other
+  skills:
+    - Creative direction
+    - Project management
+    - Production management
+    - Technical writing
+    - Copywriting
+    - Instructional design
