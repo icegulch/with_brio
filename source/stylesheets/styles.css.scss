@@ -335,6 +335,19 @@ a {
    Work
    ========================================================================== */
 
+.icon {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  fill: #2e3c40;
+  &--cartalk, &--eb, &--gnip, &--cfp, &--twitter, &--self-made, &--su2c {
+    height: 100px;
+  }
+  &--heavybit, &--vmp, &--scott-jurek, &--bigboulder {
+    height: 200px;
+  }
+}
+
 .showcase-block {
   position: relative;
   overflow: hidden;
@@ -418,34 +431,45 @@ a {
       @include riseup('periodic-4000', 10%, 5%, 1.6s); // ($name, $from, $to, $speed, $delay)
     }
   }
-  &.rta {
+  &.four-thousand-playing-cards {
     position: relative;
     width: 80%;
     height: auto;
     z-index: 1;
     transform: translateY(40%);
     .viewed & {
-      @include riseup('rta', 40%, 5%, 1.2s); // ($name, $from, $to, $speed, $delay)
+      @include riseup('four-thousand-playing-cards', 40%, 0, 1.2s); // ($name, $from, $to, $speed, $delay)
     }
   }
   &.colorado-trail {
-    width: 30%;
-    top: 0;
+    width: auto;
+    width: 20%;
     left: 0;
     z-index: 2;
     transform: translateY(300%);
     .viewed & {
-      @include riseup('colorado-trail', 300%, 10%, 0.3s); // ($name, $from, $to, $speed, $delay)
+      @include riseup('colorado-trail', 300%, -170%, 0.3s); // ($name, $from, $to, $speed, $delay)
     }
   }
   &.cartalk {
     width: 40%;
     top: 0;
-    right: 0;
+    right: 50%;
+    margin-right: -20%;
     z-index: 2;
     transform: translateY(300%);
     .viewed & {
       @include riseup('cartalk', 300%, 0%, 0.7s); // ($name, $from, $to, $speed, $delay)
+    }
+  }
+  &.mac {
+    width: auto;
+    width: 20%;
+    right: 0;
+    z-index: 2;
+    transform: translateY(300%);
+    .viewed & {
+      @include riseup('mac', 300%, -140%, 1.3s); // ($name, $from, $to, $speed, $delay)
     }
   }
 }

@@ -16,6 +16,8 @@
     </script>
 <% end %>
 
+<%= partial 'layouts/svgsprite' %>
+
 <section class="page-section">
   <div class="container">
     <div class="row justify-content-center">
@@ -68,9 +70,10 @@
       </div>
       <div class="col-lg-8 order-lg-1">
         <div class="showcase-block showcase-block--visuals text-center">
-          <%= image_tag('work/rta-map.png', :class => 'showcase-block__img rta') %>
+          <%= image_tag('work/4000-footer-playing-cards.png', :class => 'showcase-block__img four-thousand-playing-cards') %>
           <%= image_tag('work/ct2.png', :class => 'showcase-block__img cartalk') %>
           <%= image_tag('work/colorado-trail-patch-concept.png', :class => 'showcase-block__img colorado-trail') %>
+          <%= image_tag('work/mount-adams-challenge-logo.png', :class => 'showcase-block__img mac') %>
         </div>
       </div>
     </div>
@@ -105,6 +108,30 @@
       <%= image_tag('work/cars-then-now.png', :class => 'img-fluid my-5') %>
     </div>
 <% end %>
+
+    <section class="page-section page-section--gray">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-8">
+            <h2 class="page-section__heading mb-5 mb-sm-0 mb-md-0 mb-lg-0 mb-xl-0">
+              <span>Clients</span>
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-center">
+          <%
+              clients = ['cartalk', 'BigBoulder', 'eb', 'gnip', 'Heavybit', 'cfp', 'rsv', 'twitter', 'self-made', 'scott-jurek', 'su2c', 'vmp']
+              clients.each do |client|
+          %>
+            <div class="col-4 col-md-3 col-lg-2">
+              <svg viewBox="0 0 100 100" class="icon icon--<%= client.downcase %>">
+                <use xlink:href="#icon-<%= client.downcase %>"></use>
+              </svg>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </section>
 
 
     <section class="page-section">
