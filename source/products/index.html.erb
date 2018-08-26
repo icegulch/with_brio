@@ -2,38 +2,7 @@
   title: Products
 ---
 
-<% content_for :script do %>
-    <script>
-      $('.showcase-block').each(function(){
-          var self = $(this);
-          $(this).waypoint({
-               offset: '50%',
-               handler: function(){
-                   self.addClass('viewed');
-               },
-          });
-      })
-    </script>
-<% end %>
-
     <section class="page-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 col-xl-8">
-            <p class="text-center">
-              During the past few years, I've sifted through maps and tables looking for compelling stories in data.
-            </p>
-          </div>
-        </div>
-        <div class="showcase-block text-center">
-          <% data.products.each do |product| %>
-            <%= image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'showcase-block__img ' + product.slug) %>
-          <% end -%>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section page-section--gray">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-10 col-xl-8">

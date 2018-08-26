@@ -37,12 +37,10 @@
   name: Branding
   skills:
     - Style guides
+    - Pattern libraries
     - Swag
     - Logos
     - Brochures
-    - Passports
-    - Patches
-    - Stickers
     - Presentations
     - Events
 
@@ -55,3 +53,4 @@
     - Technical writing
     - Copywriting
     - Instructional design
+    - Data visualization

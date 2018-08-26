@@ -1,23 +1,56 @@
 
+<% content_for :script do %>
+    <script>
+      $('.showcase-block').each(function(){
+          var self = $(this);
+          $(this).waypoint({
+               offset: '50%',
+               handler: function(){
+                   self.addClass('viewed');
+               },
+          });
+      })
+    </script>
+<% end %>
 
 <section class="page-section">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-10 col-xl-8">
         <p class="text-center">
-          Howdy! I'm Steve. I rummage through familiar data sets in search of compelling stories, which is to say I geek out on things I enjoy and share them with kindred spirits. Like-minded geek or not, thank you for dropping by!
+          Hi! I'm Steve. I sift through maps and tables looking for compelling stories in data.
         </p>
-        <div class="text-center mt-5">
-          <a href="/products/" class="btn btn-outline-dark">
-            View My Products
-          </a>
-        </div>
       </div>
+    </div>
+    <div class="text-center mt-2 mb-5">
+      <a href="/products/" class="btn btn-outline-dark">
+        View My Products
+      </a>
+    </div>
+    <div class="showcase-block text-center">
+      <a href="/products/" class="d-block">
+        <% data.products.each do |product| %>
+          <%= image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'showcase-block__img ' + product.slug) %>
+        <% end -%>
+      </a>
     </div>
   </div>
 </section>
 
+
 <section class="page-section">
+  <div class="container mb-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        <h2 class="page-section__heading">
+          <span>About Me</span>
+        </h2>
+        <p class="text-center">
+          I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem. I work <a href="/products/">in print</a> and <a href="/web/">on the web</a>.
+        </p>
+      </div>
+    </div>
+  </div>
   <div class="container-fluid container-fluid--maxwidth">
     <div class="row justify-content-center">
       <div class="col align-self-center d-none d-sm-block d-md-block d-lg-block">
@@ -31,22 +64,6 @@
       </div>
       <div class="col align-self-center d-none d-xl-block">
         <%= image_tag('about/about4.jpg', :class => 'img-fluid') %>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="page-section">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8">
-        <h2 class="page-section__heading">
-          <span>About Me</span>
-        </h2>
-        <p class="text-center">
-          I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem. The first album I owned was Blondie's <i>Autoamerican</i>. I recently put on two different shoes, walked around an apple orchard, and failed to notice. 
-        </p>
       </div>
     </div>
   </div>
