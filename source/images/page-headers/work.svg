@@ -5,7 +5,7 @@
 	 height="643.572px" viewBox="0 0 1548 643.572" enable-background="new 0 0 1548 643.572" xml:space="preserve">
 <g id="Layer_3" display="none">
 	<g display="inline">
-		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="774.0005" y1="662.4395" x2="774.0005" y2="-16.0086">
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="774.0005" y1="662.4404" x2="774.0005" y2="-16.0097">
 			<stop  offset="0" style="stop-color:#EFDBEB"/>
 			<stop  offset="0.5" style="stop-color:#E3B9D7"/>
 			<stop  offset="1" style="stop-color:#DFAED1"/>
@@ -74,33 +74,33 @@
 		</g>
 	</g>
 	<g>
-		<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="1360.4443" y1="530" x2="1360.4443" y2="333.9844">
+		<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="1360.4443" y1="560" x2="1360.4443" y2="363.9844">
 			<stop  offset="0" style="stop-color:#A4ACC3;stop-opacity:0"/>
 			<stop  offset="1" style="stop-color:#231F20"/>
 		</linearGradient>
-		<polygon opacity="0.25" fill="url(#SVGID_10_)" points="1360.445,333.984 1319.567,530 1401.321,530 		"/>
+		<polygon opacity="0.25" fill="url(#SVGID_10_)" points="1360.445,363.984 1319.567,560 1401.321,560 		"/>
 		<g opacity="0.25">
-			<polygon points="1359.536,512 1360.536,378.615 1361.536,512 			"/>
+			<polygon points="1359.536,542 1360.536,408.615 1361.536,542 			"/>
 		</g>
 	</g>
 	<g>
-		<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="1420.6299" y1="555" x2="1420.6299" y2="409.8789">
+		<linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="1420.6299" y1="588" x2="1420.6299" y2="442.8789">
 			<stop  offset="0" style="stop-color:#A4ACC3;stop-opacity:0"/>
 			<stop  offset="1" style="stop-color:#231F20"/>
 		</linearGradient>
-		<polygon opacity="0.25" fill="url(#SVGID_11_)" points="1420.629,409.879 1390.366,555 1450.894,555 		"/>
+		<polygon opacity="0.25" fill="url(#SVGID_11_)" points="1420.629,442.879 1390.366,588 1450.894,588 		"/>
 		<g opacity="0.25">
-			<polygon points="1419.469,554 1420.469,455.248 1421.469,554 			"/>
+			<polygon points="1419.469,587 1420.469,488.248 1421.469,587 			"/>
 		</g>
 	</g>
 	<g>
-		<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="1469.6299" y1="591" x2="1469.6299" y2="410.1113">
+		<linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="1469.6299" y1="622" x2="1469.6299" y2="441.1113">
 			<stop  offset="0" style="stop-color:#A4ACC3;stop-opacity:0"/>
 			<stop  offset="1" style="stop-color:#231F20"/>
 		</linearGradient>
-		<polygon opacity="0.25" fill="url(#SVGID_12_)" points="1469.629,410.111 1431.907,591 1507.353,591 		"/>
+		<polygon opacity="0.25" fill="url(#SVGID_12_)" points="1469.629,441.111 1431.907,622 1507.353,622 		"/>
 		<g opacity="0.25">
-			<polygon points="1468.43,572 1469.43,448.91 1470.43,572 			"/>
+			<polygon points="1468.43,603 1469.43,479.91 1470.43,603 			"/>
 		</g>
 	</g>
 	<g>
@@ -193,13 +193,13 @@
 			<polygon points="183.449,591 184.449,479.578 185.449,591 			"/>
 		</g>
 	</g>
-	<linearGradient id="SVGID_22_" gradientUnits="userSpaceOnUse" x1="773.9995" y1="271.606" x2="773.9995" y2="618.0005">
+	<linearGradient id="SVGID_22_" gradientUnits="userSpaceOnUse" x1="773.9995" y1="294.1675" x2="773.9995" y2="596.0005">
 		<stop  offset="0" style="stop-color:#231F20"/>
 		<stop  offset="1" style="stop-color:#231F20;stop-opacity:0"/>
 	</linearGradient>
-	<path opacity="0.25" fill="url(#SVGID_22_)" d="M375.5,440.508c0,0,81.711,27.299,109,21.996
-		C569.602,445.968,774,271.606,774,271.606S854.352,468.5,1083.5,468.5C1404.366,468.5,1548,618,1548,618l0,0c0,0-1468.93,0-1548,0
-		C111.971,598.667,375.5,440.508,375.5,440.508z"/>
+	<path opacity="0.25" fill="url(#SVGID_22_)" d="M427.267,441.314c0,0,71.097,23.629,94.841,19.015
+		C596.154,445.941,774,294.167,774,294.167s69.913,171.535,269.295,171.535c279.184,0,404.159,130.298,404.159,130.298l0,0
+		c0,0-1278.109,0-1346.908,0C197.971,579,427.267,441.314,427.267,441.314z"/>
 	<g>
 		<linearGradient id="SVGID_23_" gradientUnits="userSpaceOnUse" x1="1233.584" y1="570.5" x2="1385.084" y2="570.5">
 			<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.25"/>
@@ -239,8 +239,8 @@
 			<polygon points="1186.4,555 1187.4,414.397 1188.4,555 			"/>
 		</g>
 	</g>
-	<path fill="#FFFFFF" d="M667.528,365.89c0,0,111.927-129.188,142.629-113.557c-34.21,27.035,4.386,81.713,9.649,85.953
-		c1.695,1.366-40.246,27.604-40.246,27.604l-47.368-27.328C732.192,338.562,667.527,365.89,667.528,365.89z"/>
+	<path fill="#FFFFFF" d="M683.478,368.862c0,0,88.488-102.135,112.761-89.776c-27.046,21.374,3.468,64.601,7.629,67.953
+		c1.34,1.08-31.818,21.823-31.818,21.823l-37.449-21.605L683.478,368.862z"/>
 </g>
 <g id="Layer_2">
 </g>
