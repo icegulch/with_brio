@@ -89,3 +89,17 @@ page "/404.html", :directory_index => false
 proxy "_redirects", "netlify-redirects", ignore: true
 
 
+
+data.products.each do |product|
+  proxy "/products/#{product.uri}/index.html", "/products/product-page-template.html", :locals => { :product => product }, :ignore => true
+end
+
+# PRODUCT PAGES
+#
+
+  # data.products.each do |product|
+  #   proxy "/products/#{product.slug}/index.html", "/products/product-page-template.html", :locals => { :product => product }, :ignore => true
+  # end
+
+
+

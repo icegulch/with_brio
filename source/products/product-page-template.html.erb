@@ -1,0 +1,44 @@
+<% content_for :title, product.title %>
+<% content_for :og_desc, product.desc %>
+<% content_for :og_img, 'https://withbr.io/images/og/' + product.slug + '.png' %>
+
+
+    <header class="page-header">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row">
+          <div class="col col-lg-12 col-xl-8">
+            <div class="page-header__title">
+                <%= product.title %>
+            </div>
+            <div class="page-header__lede">
+                <%= product.desc %>
+            </div>
+            <div class="page-header__blurb">
+                <%= product.blurb ? product.blurb : lorem.words(120) %>
+            </div>
+          </div>
+        </div>
+        <% if false #product.retailers %>
+          <dl>
+            <dt>Available at the following retailers:</dt>
+            <% product.retailers.each do |retailer| %>
+              <dd>
+                <%= retailer.url ? link_to(retailer.name, retailer.url, :target => '_blank') : retailer.name %>
+              </dd>
+            <% end %>
+          </dl>
+        <% end %>
+      </div>
+    </header>
+
+    <section class="page-section page-section--compact-top">
+      <div class="container-fluid container-fluid--maxwidth">
+        <%= image_tag('products/' + product.slug + '/' + product.slug + "-hero.jpg", :class => 'img-fluid mb-4') %>
+        <div class="card-columns">
+          <% 6.times.each_with_index do |i, pic| %>
+            <% random_height = rand(250...600).to_s %>
+            <%= content_tag(:div, image_tag(lorem.image('600x'+random_height), :class => 'img-fluid'), :class => 'card') %>
+          <% end %>
+        </div>
+      </div>
+    </section>

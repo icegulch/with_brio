@@ -5,8 +5,15 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta name="description" content="With Brio: sifting through maps and tables in search of compelling stories in data">
-    <title><%= !current_page.data.title.blank? ? current_page.data.title + " | With Brio" : "With Brio" %></title>
-    <%= stylesheet_link_tag 'styles' %>
+    <%=
+      content_tag(:title,
+        case yield_content(:title) || current_page.data.title
+        when nil then 'With Brio'
+        else (yield_content(:title) || current_page.data.title) + ' | With Brio'
+        end
+        )
+    %>
+    <%= stylesheet_link_tag '//fonts.googleapis.com/css?family=Cormorant+Upright|Work+Sans:regular,italic,bold,black', 'styles' %>
     <%= yield_content :style %>
     <%= favicon_tag 'icons/favicon.ico', rel: 'icon', type: 'image/ico' %>
     <meta name="google-site-verification" content="4PckrMMHrmqaUBLFPM1IltvjrqpUTGfSAyyUm07uY4c" />
@@ -19,19 +26,15 @@
       <%= partial "layouts/header" %>
     </header>
 
-    <header class="site-subheader d-flex justify-content-center align-items-end">
-      <%= image_tag('/images/page-headers/work.svg', :class => 'img-fluid') %>
-    </header>
-
     <main class="site-main">
       <%= yield %>
     </main>
-      
+
     <footer class="site-footer">
       <%= partial "layouts/footer" %>
     </footer>
 
-    <%= javascript_include_tag '//code.jquery.com/jquery-3.2.1.slim.min.js', 'bootstrap', 'jquery.waypoints.min' %>
+    <%= javascript_include_tag '//code.jquery.com/jquery-3.2.1.slim.min.js', 'jquery.waypoints.min' %>
     <%= yield_content :script %>
 
   </body>

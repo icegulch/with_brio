@@ -1,0 +1,81 @@
+---
+  title: Work
+---
+
+<% content_for :script do %>
+    <script>
+      // $('.page-section--showcase').waypoint(function() {
+      //   $("body").toggleClass('dimthelights');
+      // });
+      $('.showcase__content').each(function(){
+          var self = $(this);
+          $(this).waypoint({
+               offset: '50%',
+               handler: function(){
+                  self.addClass('viewed');
+               },
+          });
+      });
+    </script>
+<% end %>
+
+    <header class="page-header">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row">
+          <div class="col col-lg-12 col-xl-8">
+            <div class="page-header__title">
+                Web Work
+            </div>
+            <div class="page-header__lede">
+                <%= lorem.words(19) %>
+            </div>
+            <div class="page-header__blurb">
+                <%= lorem.words(120) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-section page-section--compact-top">
+      <div class="container-fluid container-fluid--maxwidth container-fluid--plump">
+        <div class="row justify-content-center">
+          <% data.clients.each do |client| %>
+            <div class="col-lg-6 col-xl-4 d-flex flex-column showcase">
+              <article class="showcase__content d-flex flex-column flex-grow-1">
+                <div class="showcase__details d-flex flex-column flex-grow-1">
+                  <%= image_tag('work/client-logos/' + client.slug + '.svg', :class => 'img-fluid') %>
+                  <div class="showcase__teaser d-flex flex-grow-1">
+                    <%= (lorem.words(40)) %>
+                  </div>
+                </div>
+                <footer class="showcase__img">
+                  <%= image_tag('work/' + client.slug + '-showcase.png', :class => 'img-fluid') %>
+                </footer>
+              </article>
+            </div>
+          <% end %>
+        </div>
+
+<% if false %>
+        <div class="row d-flex flex-wrap justify-content-between">
+          <% data.skills.each do |skillset| %>
+            <div class="col-12 col-md-6 col-xl-3 d-flex flex-column">
+              <article class="showcase showcase--skill d-flex flex-column flex-grow-1">
+                <dl class="skills-list">
+                  <dt class="skills-list__title">
+                    <%= skillset.name %>
+                  </dt>
+                  <% skillset.skills.each do |skill| %>
+                    <dd class="skills-list__item"><%= skill %></dd>
+                  <% end %>
+                </dl>
+              </article>
+            </div>
+          <% end -%>
+        </div>
+<% end %>
+
+      </div>
+    </section>
+

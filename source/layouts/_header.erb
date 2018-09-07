@@ -1,23 +1,23 @@
 
 <% 
-    pages = ['products', 'web', 'contact'] 
+    pages = ['products', 'work', 'contact'] 
 %>
 
-    <div class="collapse text-center" id="mainmenu">
-      <% pages.each do |link| %>
-        <a href="/<%= link.to_s %>" class="d-flex-item p-3 menu-item<%= current_page.path.include?(link.to_s) ? ' active' : '' %>">
-          <%= link.to_s.capitalize %>
-        </a>
-      <% end %>
-    </div>
-
-    <div class="container">
-      <nav class="site-header__menu d-flex py-3">
-        <a class="mr-auto" href="/">
-          <%= image_tag('logo.svg', :height => '24') %>
-        </a>
-        <a href="#mainmenu" role="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle menu">
-          <span class="menu-toggler"></span>
-        </a>
+    <div class="container-fluid container-fluid--maxwidth">
+      <nav class="row justify-content-between">
+        <div class="col-12 col-sm-auto text-center text-sm-left">
+          <a class="brand d-block" href="/">
+            <%= image_tag('logo-home.svg', :height => '24') %>
+          </a>
+        </div>
+        <div class="col-12 col-sm-auto text-center text-sm-left align-self-center pt-4 pt-sm-0">
+            <% pages.each do |link| %>
+                <a href="/<%= link.to_s %>" class="d-flex-item menu-item<%= current_page.path.include?(link.to_s) ? ' active' : '' %>">
+                  <%= link.to_s.capitalize %>
+                </a>
+            <% end %>
+        </div>
       </nav>
     </div>
+
+

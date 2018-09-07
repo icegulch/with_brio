@@ -13,11 +13,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<%= asset_path(:images, 'images/icons/favicon-16x16.png') %>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@designwithbrio">
-    <meta name="twitter:title" content="<%= current_page.data.title || "With Brio" %>">
-    <meta name="twitter:description" content="<%= current_page.data.og_desc || 'With Brio extracts compelling stories from familiar data sets and shares them via data visualizations.' %>">
-    <meta name="twitter:image:src" content="<%= current_page.data.og_img || 'https://withbr.io/images/icons/withbrio-og-image.png' %>">
+    <meta name="twitter:title" content="<%= current_page.data.title || yield_content(:title) || "With Brio" %>">
+    <meta name="twitter:description" content="<%= current_page.data.og_desc || yield_content(:og_desc) || 'With Brio extracts compelling stories from familiar data sets and shares them via data visualizations.' %>">
+    <meta name="twitter:image:src" content="<%= current_page.data.og_img || yield_content(:og_img) || 'https://withbr.io/images/icons/withbrio-og-image.png' %>">
     <meta property="og:site_name" content="With Brio">
     <meta property="og:url" content="https://withbr.io<%= current_page.url %>">
-    <meta property="og:title" content="<%= current_page.data.title || "With Brio" %>">
-    <meta property="og:description" content="<%= current_page.data.og_desc || 'With Brio extracts compelling stories from familiar data sets and shares them via data visualizations.' %>">
-    <meta property="og:image" content="<%= current_page.data.og_img || 'https://withbr.io/images/icons/withbrio-og-image.png' %>">
+    <meta property="og:title" content="<%= current_page.data.title || yield_content(:title) || "With Brio" %>">
+    <meta property="og:description" content="<%= current_page.data.og_desc || yield_content(:og_desc) || 'With Brio extracts compelling stories from familiar data sets and shares them via data visualizations.' %>">
+    <meta property="og:image" content="<%= current_page.data.og_img || yield_content(:og_img) || 'https://withbr.io/images/icons/withbrio-og-image.png' %>">

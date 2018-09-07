@@ -1,8 +1,21 @@
 
+# -
+#   name: Skills
+#   skills:
+#     - Responsive web design
+#     - Information design
+#     - Graphic design
+#     - Creative direction
+#     - Project management
+#     - Production management
+#     - Technical writing
+#     - Instructional design
+#     - Data visualization
+
 -
   name: Software
   skills:
-    - "Adobe CS (Id, Ai, Ps)"
+    - "Adobe CS (Ai, Ps, Id)"
     - "Captivate, Screenflow, Camtasia"
     - Sketch
     - "Balsamiq, Zeplin"
@@ -11,20 +24,19 @@
     - "MS Office, G Suite"
 
 -
-  name: "CMS Theme'ing"
+  name: Frameworks
   skills:
     - Rails
     - Shopify
+    - "Middleman, Jekyll, etc."
+    - "MailChimp, Emma, etc."
     - WordPress
     - Drupal
     - Discourse
-    - "Middleman, Jekyll, etc."
-    - "MailChimp, Emma, etc."
 
 -
   name: Coding
   skills:
-    - Responsive Web Design
     - HTML
     - CSS
     - Sass
@@ -44,13 +56,3 @@
     - Presentations
     - Events
 
--
-  name: Other
-  skills:
-    - Creative direction
-    - Project management
-    - Production management
-    - Technical writing
-    - Copywriting
-    - Instructional design
-    - Data visualization

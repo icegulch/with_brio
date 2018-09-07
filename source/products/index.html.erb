@@ -2,34 +2,67 @@
   title: Products
 ---
 
-    <section class="page-section">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10 col-xl-8">
-            <h2 class="page-section__heading">
-              <span>Products</span>
-            </h2>
+    <header class="page-header">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row">
+          <div class="col col-lg-12 col-xl-8">
+            <div class="page-header__title">
+                Products
+            </div>
+            <div class="page-header__lede">
+                <%= lorem.words(19) %>
+            </div>
+            <div class="page-header__blurb">
+                <%= lorem.words(120) %>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-around align-items-start">
+      </div>
+    </header>
+
+
+    <section class="page-section page-section--compact-top">
+      <div class="container-fluid container-fluid--maxwidth container-fluid--plump">
+        <div class="row justify-content-center">
+
           <% data.products.each do |product| %>
-            <div class="col-md-6 mb-5">
-              <div class="card product">
-                <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid product__img'), '/products/' +  product.uri, :class => 'product__link rounded-top') %>
-                <div class="card-body p-4 p-lg-5">
-                  <h5 class="card-title mb-4">
+            <article class="col-12 col-lg-6 col-xl-4 d-flex flex-column product">
+              <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid product__img'), '/products/' +  product.uri + '/', :class => 'product__link') %>
+              <div class="d-flex flex-column flex-grow-1 product__content">
+                <h5 class="product__title mb-4">
+                  <%= product.title %>
+                </h5>
+                <div class="product__text d-flex flex-grow-1">
+                  <%= product.desc.blank? ? lorem.words(15) : product.desc %>
+                </div>
+                <%= link_to('Full Description', '/products/' +  product.uri, :class => 'product__readmore') %>
+              </div>
+            </article>
+          <% end -%>
+
+
+
+          <% if false #data.products.each do |product| %>
+            <div class="col-lg-6 col-xl-4 d-flex flex-column showcase">
+              <a href="/products/<%= product.uri %>/" class="showcase__content d-flex flex-column flex-grow-1">
+                <div class="showcase__details d-flex flex-column flex-grow-1 p-5 pb-0">
+                  <h5 class="showcase__title">
                     <%= product.title %>
                   </h5>
-                  <p class="card-text">
-                    <%= product.desc.blank? ? lorem.words(15) : product.desc %>
-                  </p>
-                  <p class="m-0 mt-3">
-                    <%= link_to('View', '/products/' +  product.uri, :class => 'btn btn-sm btn-outline-dark px-4') %>
-                  </p>
+                  <div class="showcase__teaser d-flex flex-grow-1">
+                    <%#= product.desc.blank? ? lorem.words(15) : product.desc %>
+                  </div>
                 </div>
-              </div>
+                <footer class="showcase__img">
+                  <%= image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'img-fluid') %>
+                </footer>
+              </a>
             </div>
-          <% end -%>
+          <% end %>
+
+
         </div>
       </div>
     </section>
+
+
