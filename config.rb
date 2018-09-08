@@ -1,11 +1,3 @@
-###
-# Compass
-###
-
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -32,10 +24,9 @@
 # Helpers
 ###
 
-# require 'libs/helpers'
-# helpers SiteHelpers
+require 'libs/helpers'
+helpers SiteHelpers
 
-# require "active_support/core_ext/array/grouping"
 
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
@@ -55,12 +46,6 @@ if defined? RailsAssets
 end
 
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 
 set :css_dir, 'stylesheets'
 
@@ -90,16 +75,40 @@ proxy "_redirects", "netlify-redirects", ignore: true
 
 
 
+# HELPERS
+#
+
+helpers do
+
+# TAKEN FROM RAILS API DOCS
+  def link_to_unless(condition, name, options = {}, html_options = {}, &block)
+    if condition
+      if block_given?
+        block.arity <= 1 ? capture(name, &block) : capture(name, options, html_options, &block)
+      else
+        name
+      end
+    else
+      link_to(name, options, html_options)
+    end
+  end
+
+  def link_to_if(condition, name, options = {}, html_options = {}, &block)
+    link_to_unless !condition, name, options, html_options, &block
+  end
+
+end
+
+
+# DYNAMIC PAGES
+#
+
 data.products.each do |product|
   proxy "/products/#{product.uri}/index.html", "/products/product-page-template.html", :locals => { :product => product }, :ignore => true
 end
 
-# PRODUCT PAGES
-#
-
-  # data.products.each do |product|
-  #   proxy "/products/#{product.slug}/index.html", "/products/product-page-template.html", :locals => { :product => product }, :ignore => true
-  # end
-
+data.clients.select { |client| client.gallery == true }.each do |client|
+  proxy "/work/#{client.slug}/index.html", "/work/client-page-template.html", :locals => { :client => client }, :ignore => true
+end
 
 

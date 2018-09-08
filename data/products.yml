@@ -6,7 +6,7 @@
   desc: "A complement to the Periodic Table of the White Mountain 4000-Footers poster, this pocket-size passport is tailor-made for tracking of your 4000-footer climbs."
   retailers:
     - name: The Mountain Wanderer
-      url: "http://www.mountainwanderer.com/"
+      url: "http://www.mountainwanderer.com/proddetail.php?prod=NHH4000"
     - name: Bondcliff Books
       url: http://www.bondcliffbooks.com/proddetail.php?prod=BRIO08182015-1
     - name: Appalachian Mountain Club
@@ -14,6 +14,20 @@
     - name: "Gus &amp; Ruby Letterpress"
       url: https://gusandruby.com/
     - name: "And other regional stores"
+  blurb: |
+        Bound with a handsome dark blue leatherette cover, it includes a page for each of the 48 peaks on which to log date, companions and hike notes.
+
+        Included are two sets of small peel-off stamps for each peak&mdash;one to place on the individual peak page, and another to place on the two-page centerspread to track your overall progress in climbing the &quot;48&quot;.
+
+        The stamps are referenced to a peak abbreviation key on the back page of the passport, using the same format as the poster. 52 pp., 3.5&#8243; X 5&#8243;.
+  images:
+    - ext: '.jpg'
+    - ext: '.jpg'
+    - ext: '.jpg'
+    - ext: '.jpg'
+    - ext: '.jpg'
+    - ext: '.gif'
+
 
 -
   title: "New Hampshire 52 With A View Passport"
@@ -22,11 +36,17 @@
   desc: "This pocket-size passport is ideal for keeping track of your climbs of the increasingly popular &quot;New Hampshire 52 With a View&quot; list."
   retailers:
     - name: The Mountain Wanderer
-      url: "http://www.mountainwanderer.com/"
+      url: "http://www.mountainwanderer.com/proddetail.php?prod=NHH52"
     - name: Bondcliff Books
-      url: http://www.bondcliffbooks.com/proddetail.php?prod=BRIO08182015-1
+      url: "https://www.bondcliffbooks.com/"
     - name: Appalachian Mountain Club
-      url: https://amcstore.outdoors.org/white-mountain-4000-footers-passport
+      url: "https://amcstore.outdoors.org/new-hampshire-52-with-a-view-passport-055169"
+  blurb: |
+    Created by the Over the Hill Hikers of Sandwich, NH, this list features Granite State mountains below 4000 feet in elevation that offer good views. Bound with a handsome dark green leatherette cover, it includes a page for each of the 52 peaks on which to log date, companions and hike notes.
+
+    Included are two sets of small peel-off stamps for each peak - one to place on the individual peak page, and another to place on the two-page centerspread to track your overall progress in climbing the &quot;52&quot;. The stamps are referenced to a peak abbreviation key on the back page of the passport. 56 pp., 3.5&#8243; x 5&#8243;.
+  images:
+    -  ext: '.jpg'
 
 -
   title: "Periodic Table of White Mountain 4000-Footers"
@@ -41,30 +61,32 @@
     - name: Appalachian Mountain Club
       url: https://amcstore.outdoors.org/white-mountain-4000-footers-passport
     - name: "And other regional stores"
+  blurb: |
+    Given for each summit is a difficulty rating, elevation, elevation rank, # of trails at summit, view type, summit type, Federal designation, county location, land manager, region within the Whites, and more!
 
--
-  title: "Periodic Table of Ski Resorts Series"
-  slug: ski
-  uri: "periodic-table-of-ski-resorts"
-  desc: "The Periodic Table of Ski Resorts brings a data-oriented approach to different ski regions by packing extensive detail about each resort into a 18&#8243; x 24&#8243; poster."
-  series:
-    - "California"
-    - "Colorado"
-  retailers:
-    - name: Circle Square Diamond
-      url: "https://www.circlesquarediamond.com/collections/periodic-table-of-ski-resorts/products/periodic-table-ski-resorts-colorado"
+    Offset-printed on 80lb paper with an endurance gloss cover.
+  images:
+    - ext: '.jpg'
+    - ext: '.jpg'
+    - ext: '.jpg'
+    - ext: '.jpg'
 
 -
   title: "Topographic Fingerprints of the Four-Thousand Footers"
   slug: fingerprints
   uri: "topographic-fingerprints-of-the-four-thousand-footers"
-  desc: "Reminiscent of vintage scientific identification posters, this foil-stamped, 16&#8243; x 20&#8243; print challenges you to become familiar with the topographic &quot;fingerprints&quot; of all of New Hampshire's 4000-Footers."
+  desc: "Reminiscent of vintage scientific identification posters, this foil-stamped, 16&#8243; x 20&#8243; print challenges you to become familiar with the topographic &quot;fingerprints&quot; of all of New Hampshire&#x27;s 4000-Footers."
   retailers:
     - name: The Mountain Wanderer
       url: "http://www.mountainwanderer.com/"
     - name: "Gus &amp; Ruby Letterpress"
       url: https://gusandruby.com/
+  blurb: |
+    Adapted from the USGS &quot;US Topo&quot; series contour lines, the fingerprints are foil stamped in silver matte on a 16&#8243; x 20&#8243; sheet of 100# Neenah Classic Crest "patriot blue" paper.
 
+    Since summits vary greatly in size, creative license was invoked in fitting each peak into a grid. Indeed, many summit shapes were reduced in size, with contour lines pruned in as systematic a way as possible. In two cases (Lincoln and Wildcat B), contours were added to give a better sense of those two summits&#x27; shapes.
+  images:
+    -  ext: '.jpg'
 
 -
   title: "Undercast Approaches to the White Isles of New Hampshire"
@@ -74,4 +96,36 @@
   retailers:
     - name: The Mountain Wanderer
       url: "http://www.mountainwanderer.com/"
+  blurb: |
+    This elegantly crafted map runs with that concept, revealing New Hampshire&#x27;s land above 4000&#8242; in a novel, elegant way. Lofty landforms become islands, rocks, and skerries, while other familiar landmarks transform into coves, harbors, and bays.
+
+    Those new to hiking in the Whites will find their sea legs in places like "Tuckerman Harbor" and the &quot;Grand Kancamagus Banks&quot;. Seasoned trampers will delight in far-flung places such as &quot;Port Above Nubble&quot; and &quot;Barebooters Bight&quot;. The map&#x27;s novelty doesn't stop at the conceptual level, though. 
+
+    Incorporating production methods normally reserved for wedding invitations, the 18&#8243; x 12&#8243; print is letterpressed and foil stamped using tonal ink in conjunction with gold and silver matte foil on 100# Neenah Classic Crest &quot;chambray blue&quot; paper.
+  images:
+    -  ext: '.jpg'
+    -  ext: '.png'
+    -  ext: '.jpg'
+
+-
+  title: "Periodic Table of Ski Resorts Series"
+  slug: ski
+  uri: "periodic-table-of-ski-resorts"
+  desc: "The Periodic Table of Ski Resorts brings a data-oriented approach to different ski regions by packing extensive detail about each resort into a 18&#8243; x 24&#8243; poster."
+  retailers:
+    - name: Circle Square Diamond
+      url: "https://www.circlesquarediamond.com/collections/periodic-table-of-ski-resorts"
+  blurb: |
+    Each individual box contains information on a particular ski resort’s vertical rise, base and summit elevations, average amount of snowfall, trail difficulty, number of runs, number of lifts, and available indicators for night skiing, artificial snowmaking, terrain parks and Nordic (XC) skiing.
+
+    The California print uses data from the 2015-2016 season and features all major and minor resorts in California including: Mammoth Mountain, Squaw Valley, Kirkwood, Donner Ski Ranch, China Peak, Bear Mountain and Sugar Bowl.
+
+     The Colorado print uses data from the 2014-2015 season and features all major and minor resorts in Colorado including: Vail, Beaver Creek, Aspen, Telluride and Arapahoe Basin.
+  images:
+    -  ext: '.jpg'
+    -  ext: '.jpg'
+    -  ext: '.jpg'
+    -  ext: '.jpg'
+    -  ext: '.jpg'
+    -  ext: '.jpg'
 

@@ -10,11 +10,13 @@
                 Products
             </div>
             <div class="page-header__lede">
-                <%= lorem.words(19) %>
+              &ldquo;We have advanced by leaps to the Pacific, and left many a lesser Oregon and California unexplored behind us.&rdquo; &ndash; Henry David Thoreau, <cite>The Maine Woods</cite>
             </div>
+<% #if false %>
             <div class="page-header__blurb">
-                <%= lorem.words(120) %>
+              In early 2015, while living near the Pacific in Seattle, I decided to give form to an idea that had long been simmering: a "periodic table" of New Hampshire's four-thousand footers. It was as much an exercise in information design as a love letter to my favorite place on earth&mdash;I missed the mountains of my home state. I figured one or two friends of mine <i>might</i> appreciate the idea. But, said friends prodded me to make them available to a broader audience. Three years and as many print runs later, I'm continually humbled by the reception. I've gone on to make other products, buoyed by others' enthusiasm for White Mountain geekery and guided by the simple principle of making things for my son that I would've loved to have as a young hiker.
             </div>
+<% #end %>
           </div>
         </div>
       </div>
@@ -40,8 +42,6 @@
             </article>
           <% end -%>
 
-
-
           <% if false #data.products.each do |product| %>
             <div class="col-lg-6 col-xl-4 d-flex flex-column showcase">
               <a href="/products/<%= product.uri %>/" class="showcase__content d-flex flex-column flex-grow-1">
@@ -59,7 +59,6 @@
               </a>
             </div>
           <% end %>
-
 
         </div>
       </div>

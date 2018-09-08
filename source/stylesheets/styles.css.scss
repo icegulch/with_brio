@@ -15,10 +15,10 @@ $dark_gray: #2E3C40;
 $rule_gray: #ccc;
 
 // rainbow
-$gradient1: #23D5AB; // turquoise - 4th listed
-$gradient2: #23A6D5; // blue - 3rd listed
-$gradient3: #E73C7E; // pink - 2nd listed
-$gradient4: #EE7752; // peach - 1st listed
+$gradient1: transparentize(#23D5AB, 0.2); // turquoise - 4th listed
+$gradient2: transparentize(#23A6D5, 0.2); // blue - 3rd listed
+$gradient3: transparentize(#E73C7E, 0.2); // pink - 2nd listed
+$gradient4: transparentize(#EE7752, 0.2); // peach - 1st listed
 
 
 
@@ -59,7 +59,6 @@ a {
     left: 0;
     right: 0;
     z-index: 1;
-    max-width: 2000px;
     height: 7px;
     margin: 0 auto;
     background-size: 100% 100%;
@@ -235,8 +234,8 @@ a {
   }
   &__blurb {
     @media screen and (min-width: 768px) {
-     column-count: 2;
-     column-gap: 50px;
+     // column-count: 2;
+     // column-gap: 50px;
    }
   }
 }
@@ -377,6 +376,10 @@ a {
    Product - Standalone Pages
    ========================================================================== */
 
+.product {
+  margin-bottom: 50px;
+}
+
 .card {
   position: relative;
   display: flex;
@@ -411,80 +414,60 @@ a {
 
 .showcase {
   margin: 0 0 50px;
-  &__content {
-    color: #fff;
-    text-align: center;
-    transition: background-color 0.5s ease-in-out;
-    background-size: 200% 200%;
-    background-position: 0% 50%;
-    text-decoration: none;
-    &.viewed {
-      -webkit-animation: Gradient 3s ease 1;
-      -moz-animation: Gradient 3s ease 1;
-      animation: Gradient 3s ease 1;
-    }
-    &:hover, &:focus {
-      color: #fff;
-      text-decoration: none;
-      -webkit-animation: Gradient 3s ease 1;
-      -moz-animation: Gradient 3s ease 1;
-      animation: Gradient 3s ease 1;
-    }
-  }
-  &__details {
-    padding: 40px 40px 20px;
-  }
   &__title {
     font-weight: 700;
     font-size: 2.15rem;
     line-height: 1.1;
   }
+  &__img {
+    color: #fff;
+    text-align: center;
+    background-color: #fff;
+    background-size: 400% 400%;
+    background-position: 0 50%;
+    text-decoration: none;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+      background-size: 200% 200%;
+    }
+  }
+  // every sixth, starting with the first
   &:nth-child(6n-11) {
-    .showcase__content {
-      background-color: $gradient1;
-    // 321 turquoise-blue, 432 purple-pink, 143 peach-green, 
-    // 123 purple-blue, 234 peach-pink, 341 green-peach
-    background-image: linear-gradient(-45deg, $gradient3, $gradient2, $gradient1);
+    .showcase__img {
+      background-image: linear-gradient(-45deg, $gradient3, $gradient2, $gradient1);
     }
   }
+  // every sixth, starting with the second
   &:nth-child(6n-10) {
-    .showcase__content {
-      background-color: $gradient2;
-    // 321 turquoise-blue, 432 purple-pink, 143 peach-green, 
-    // 123 purple-blue, 234 peach-pink, 341 green-peach
-    background-image: linear-gradient(-45deg, $gradient4, $gradient3, $gradient2);
+    .showcase__img {
+      background-image: linear-gradient(-45deg, $gradient4, $gradient3, $gradient2);
     }
   }
+  // every sixth, starting with the third
   &:nth-child(6n-9) {
-    .showcase__content {
-      background-color: $gradient4;
-    // 321 turquoise-blue, 432 purple-pink, 143 peach-green, 
-    // 123 purple-blue, 234 peach-pink, 341 green-peach
-    background-image: linear-gradient(-45deg, $gradient1, $gradient4, $gradient3);
+    .showcase__img {
+      background-image: linear-gradient(-45deg, $gradient1, $gradient4, $gradient3);
     }
   }
+  // every sixth, starting with the fourth
   &:nth-child(6n-8) {
-    .showcase__content {
-      background-color: $gradient1;
-    // 321 turquoise-blue, 432 purple-pink, 143 peach-green, 
-    // 123 purple-blue, 234 peach-pink, 341 green-peach
-    background-image: linear-gradient(135deg, $gradient1, $gradient4, $gradient3);
+    .showcase__img {
+      background-position: 100% 75%;
+      background-image: linear-gradient(-45deg, $gradient3, $gradient4, $gradient2);
     }
   }
+  // every sixth, starting with the fifth
   &:nth-child(6n-7) {
-    .showcase__content {
-      background-color: $gradient1;
-    // 321 turquoise-blue, 432 purple-pink, 143 peach-green, 
-    // 123 purple-blue, 234 peach-pink, 341 green-peach
-    background-image: linear-gradient(135deg, $gradient4, $gradient3, $gradient2);
+    .showcase__img {
+      background-position: 50% 75%;
+      background-image: linear-gradient(-45deg, $gradient2, $gradient3, $gradient4);
     }
   }
+  // every sixth, starting with the sixth
   &:nth-child(6n) {
-    .showcase__content {
-      background-color: $gradient2;
-    // 321 turquoise-blue, 432 purple-pink, 143 peach-green, 
-    // 123 purple-blue, 234 peach-pink, 341 green-peach
-    background-image: linear-gradient(135deg, $gradient3, $gradient2, $gradient1);
+    .showcase__img {
+      background-position: 50% 25%;
+      background-image: linear-gradient(-45deg, $gradient1, $gradient2, $gradient3);
     }
   }
 }

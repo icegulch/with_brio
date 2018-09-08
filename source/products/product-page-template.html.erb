@@ -14,20 +14,10 @@
                 <%= product.desc %>
             </div>
             <div class="page-header__blurb">
-                <%= product.blurb ? product.blurb : lorem.words(120) %>
+                <%= !product.blurb.blank? ? product.blurb : lorem.words(120) %>
             </div>
           </div>
         </div>
-        <% if false #product.retailers %>
-          <dl>
-            <dt>Available at the following retailers:</dt>
-            <% product.retailers.each do |retailer| %>
-              <dd>
-                <%= retailer.url ? link_to(retailer.name, retailer.url, :target => '_blank') : retailer.name %>
-              </dd>
-            <% end %>
-          </dl>
-        <% end %>
       </div>
     </header>
 
@@ -35,10 +25,27 @@
       <div class="container-fluid container-fluid--maxwidth">
         <%= image_tag('products/' + product.slug + '/' + product.slug + "-hero.jpg", :class => 'img-fluid mb-4') %>
         <div class="card-columns">
-          <% 6.times.each_with_index do |i, pic| %>
-            <% random_height = rand(250...600).to_s %>
-            <%= content_tag(:div, image_tag(lorem.image('600x'+random_height), :class => 'img-fluid'), :class => 'card') %>
+          <% 
+            slug = product.slug
+            product.images.each_with_index do |pic, i| %>
+              <figure class="card">
+                <%= image_tag('products/' + slug + '/pic' + (i+1).to_s + pic.ext, :class => 'img-fluid') %>
+              </figure>
           <% end %>
         </div>
       </div>
     </section>
+
+    <% if false %>
+          <div class="col-12 col-xl-4">
+              <dl>
+                <dt>Available at the following retailers:</dt>
+                <% product.retailers.each do |retailer| %>
+                  <dd>
+                    <%= retailer.url ? link_to(retailer.name, retailer.url, :target => '_blank') : retailer.name %>
+                  </dd>
+                <% end %>
+              </dl>
+          </div>
+
+    <% end %>
