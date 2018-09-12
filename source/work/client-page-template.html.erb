@@ -6,15 +6,26 @@
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col col-lg-12 col-xl-8">
-            <div class="page-header__title">
-                <%= client.name %>
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                    <%= client.name %>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <ul class="page-header__specs">
+                  <li>UI/UX Design</li>
+                  <li>LX Design</li>
+                  <li>Graphic Design</li>
+                  <li>Creative Direction</li>
+                </ul>
+              </div>
             </div>
-            <div class="page-header__lede">
-                <%= !client.desc.blank? ? product.blurb : lorem.words(19) %>
-            </div>
+          </div>
+          <div class="col-lg-6">
             <div class="page-header__blurb">
-                <%= !client.blurb.blank? ? client.blurb : lorem.words(120) %>
+              <%= !client.desc.blank? ? product.blurb : lorem.words(80) %>
             </div>
           </div>
         </div>
@@ -23,17 +34,28 @@
 
     <section class="page-section page-section--compact-top">
       <div class="container-fluid container-fluid--maxwidth">
-        <div class="card-columns">
-          <% 6.times.each_with_index do |i, pic| %>
-            <% random_height = rand(250...600).to_s %>
-            <figure class="card">
-              <%= image_tag(lorem.image('600x'+random_height), :class => 'img-fluid') %>
-              <figcaption>
-                <%= lorem.words(3) %>
-              </figcaption>
-            </figure>
+          <% if !client.images.blank? %>
+            <% 
+              slug = client.slug
+              client.images.each_with_index do |pic,i| %>
+                <figure>
+                  <%= image_tag('work/' + slug + (i+1).to_s + pic.ext, :class => 'img-fluid') %>
+                  <figcaption>
+                    <%= lorem.words(3) %>
+                  </figcaption>
+                </figure>
+            <% end %>
+          <% else %>
+            <% 6.times.each do |pic| %>
+              <% random_height = rand(900...1500).to_s %>
+              <figure>
+                <%= image_tag(lorem.image('1200x'+random_height), :class => 'img-fluid') %>
+                <figcaption>
+                  <%= lorem.words(3) %>
+                </figcaption>
+              </figure>
+            <% end %>
           <% end %>
-        </div>
       </div>
     </section>
 

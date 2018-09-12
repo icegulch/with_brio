@@ -19,44 +19,52 @@
     </script>
 <% end %>
 
+
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col col-lg-12 col-xl-8">
-            <div class="page-header__title">
-                Work
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                  Featured
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <ul class="page-header__specs">
+                  <li>UI/UX Design</li>
+                  <li>LX Design</li>
+                  <li>Graphic Design</li>
+                  <li>Creative Direction</li>
+                </ul>
+              </div>
             </div>
-            <div class="page-header__lede">
-                <%= lorem.words(19) %>
+          </div>
+          <div class="col-lg-6">
+            <div class="page-header__blurb">
+              <%= lorem.words(60) %>
             </div>
           </div>
         </div>
       </div>
     </header>
 
+
     <section class="page-section page-section--compact-top">
-      <div class="container-fluid container-fluid--maxwidth container-fluid--plump">
+      <div class="container-fluid container-fluid--maxwidth">
         <div class="row justify-content-center">
           <% data.clients.each_with_index do |client| %>
-              <article class="col-lg-6 col-xl-4 showcase">
+              <article class="col-md-6 showcase">
                 <figure class="showcase__img">
-                  <%= image_tag('work/' + client.slug + '-showcase.png', :class => 'img-fluid') %>
+                  <%= link_to_if(!client.images.blank?, image_tag('work/' + client.slug + '-showcase.png', :class => 'img-fluid'), '/work/' + client.slug, :class => 'showcase__link') %>
                 </figure>
-                <div class="">
-                  <h5 class="product__title">
-                    <%= client.name %>
-                  </h5>
-                  <div class="showcase__teaser">
-                    <% 3.times.with_index do |i| %>
-                      <%= lorem.words(rand(1..3)) %><%= ', ' unless i == 2 %>
-                    <% end %>
-                    <%= link_to('Gallery', '/work/' + client.slug) if client.gallery == true %>
-                  </div>
-                </div>
+<% if false %>
+                <%= content_tag(:h5, client.name, :class => 'showcase__title') %>
+                <%= simple_format(lorem.words(rand(18..30)), :class => 'showcase__teaser') %>
+<% end %>
               </article>
           <% end %>
         </div>
-
       </div>
     </section>
 

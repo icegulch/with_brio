@@ -24,8 +24,8 @@
 # Helpers
 ###
 
-require 'libs/helpers'
-helpers SiteHelpers
+# require 'libs/helpers'
+# helpers SiteHelpers
 
 
 # Automatic image dimensions on image_tag helper
@@ -107,7 +107,7 @@ data.products.each do |product|
   proxy "/products/#{product.uri}/index.html", "/products/product-page-template.html", :locals => { :product => product }, :ignore => true
 end
 
-data.clients.select { |client| client.gallery == true }.each do |client|
+data.clients.select { |client| !client.images.blank? }.each do |client|
   proxy "/work/#{client.slug}/index.html", "/work/client-page-template.html", :locals => { :client => client }, :ignore => true
 end
 

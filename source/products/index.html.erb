@@ -2,66 +2,68 @@
   title: Products
 ---
 
+
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col col-lg-12 col-xl-8">
-            <div class="page-header__title">
-                Products
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                    Products
+                </div>
+              </div>
+              <div class="col-lg-3" style="font-weight:500;">
+                <ul class="page-header__specs">
+                  <li>Passports</li>
+                  <li>Posters</li>
+                  <li>Prints</li>
+                </ul>
+              </div>
             </div>
-            <div class="page-header__lede">
-              &ldquo;We have advanced by leaps to the Pacific, and left many a lesser Oregon and California unexplored behind us.&rdquo; &ndash; Henry David Thoreau, <cite>The Maine Woods</cite>
-            </div>
-<% #if false %>
+          </div>
+          <div class="col-lg-6">
             <div class="page-header__blurb">
-              In early 2015, while living near the Pacific in Seattle, I decided to give form to an idea that had long been simmering: a "periodic table" of New Hampshire's four-thousand footers. It was as much an exercise in information design as a love letter to my favorite place on earth&mdash;I missed the mountains of my home state. I figured one or two friends of mine <i>might</i> appreciate the idea. But, said friends prodded me to make them available to a broader audience. Three years and as many print runs later, I'm continually humbled by the reception. I've gone on to make other products, buoyed by others' enthusiasm for White Mountain geekery and guided by the simple principle of making things for my son that I would've loved to have as a young hiker.
+              In early 2015, I decided to give form to an idea that had long been simmering: a "periodic table" of New Hampshire's 4000&#8242; mountains. It was intended to be a gift for one or two hiking friends. Three years and as many print runs later, I'm still humbled by the positive reception. Buoyed by others' passion for the White Mountains, I continue to dream up products that abide by one simple principle: make things I would've enjoyed as a young hiker.
             </div>
-<% #end %>
           </div>
         </div>
       </div>
     </header>
 
-
     <section class="page-section page-section--compact-top">
-      <div class="container-fluid container-fluid--maxwidth container-fluid--plump">
+      <div class="container-fluid container-fluid--maxwidth">
         <div class="row justify-content-center">
-
           <% data.products.each do |product| %>
-            <article class="col-12 col-lg-6 col-xl-4 d-flex flex-column product">
-              <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid product__img'), '/products/' +  product.uri + '/', :class => 'product__link') %>
-              <div class="d-flex flex-column flex-grow-1 product__content">
-                <h5 class="product__title mb-4">
-                  <%= product.title %>
-                </h5>
-                <div class="product__text d-flex flex-grow-1">
-                  <%= product.desc.blank? ? lorem.words(15) : product.desc %>
-                </div>
-                <%= link_to('Full Description', '/products/' +  product.uri, :class => 'product__readmore') %>
+            <article class="col-md-6 showcase">
+              <figure class="showcase__img">
+                <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid'), '/products/' +  product.uri, :class => 'showcase__link') %>
+              </figure>
+<% if false %>
+              <h5 class="showcase__title mb-4">
+                <%= product.title %>
+              </h5>
+              <div class="product__text d-flex flex-grow-1">
+                <%= product.desc.blank? ? lorem.words(15) : product.desc %>
               </div>
+              <%= link_to('Details', '/products/' +  product.uri, :class => 'product__readmore') %>
+<% end %>
             </article>
           <% end -%>
-
-          <% if false #data.products.each do |product| %>
-            <div class="col-lg-6 col-xl-4 d-flex flex-column showcase">
-              <a href="/products/<%= product.uri %>/" class="showcase__content d-flex flex-column flex-grow-1">
-                <div class="showcase__details d-flex flex-column flex-grow-1 p-5 pb-0">
-                  <h5 class="showcase__title">
-                    <%= product.title %>
-                  </h5>
-                  <div class="showcase__teaser d-flex flex-grow-1">
-                    <%#= product.desc.blank? ? lorem.words(15) : product.desc %>
-                  </div>
-                </div>
-                <footer class="showcase__img">
-                  <%= image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'img-fluid') %>
-                </footer>
-              </a>
-            </div>
-          <% end %>
-
         </div>
       </div>
     </section>
 
+    <section class="page-section page-section--compact-top">
+      <div class="container">
+        <blockquote class="blockquote">
+          <div class="blockquote__quote">
+            &ldquo;We have advanced by leaps to the Pacific, and left many a lesser Oregon and California unexplored behind us.&rdquo; 
+          </div>
+          <footer class="blockquote__footer">
+            &ndash; Henry David Thoreau, <cite>The Maine Woods</cite>
+          </footer>
+        </blockquote>
+      </div>
+    </section>
 

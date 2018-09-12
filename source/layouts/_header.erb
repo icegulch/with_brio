@@ -4,15 +4,16 @@
 %>
 
     <div class="container-fluid container-fluid--maxwidth">
-      <nav class="row justify-content-between">
+      <nav class="row justify-content-between align-items-center">
         <div class="col-12 col-sm-auto text-center text-sm-left">
-          <a class="brand d-block" href="/">
-            <%= image_tag('logo-home.svg', :height => '24') %>
+          <a class="brand" href="/">
+            +brio
+            <%#= image_tag('logo-home.svg', :height => '20') %>
           </a>
         </div>
         <div class="col-12 col-sm-auto text-center text-sm-left align-self-center pt-4 pt-sm-0">
             <% pages.each do |link| %>
-                <a href="/<%= link.to_s %>" class="d-flex-item menu-item<%= current_page.path.include?(link.to_s) ? ' active' : '' %>">
+                <a href="/<%= link.to_s %>" class="menu-item menu-item--header<%= page_classes.include?(link.to_s + '_index') ? ' active' : '' %>">
                   <%= link.to_s.capitalize %>
                 </a>
             <% end %>

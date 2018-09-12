@@ -2,32 +2,36 @@
   title: Contact
 ---
 
+
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col col-lg-12 col-xl-8">
-            <div class="page-header__title">
-                Contact
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                    Contact
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <ul class="page-header__specs">
+                  <li>info@withbr.io</li>
+                </ul>
+              </div>
             </div>
-            <div class="page-header__lede">
-                <%= lorem.words(16) %>
-            </div>
+          </div>
+          <div class="col-lg-6">
             <div class="page-header__blurb">
-                <%= lorem.words(50) %>
+              <%= lorem.words(60) %>
             </div>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="page-section page-section--gray">
-      <div class="container">
-        <h2 class="page-section__heading">
-          <span>Contact Form</span>
-        </h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-10 col-xl-8">
-            <form class="contact-form" name="contact" netlify-honeypot="fu" action="/contact/thank-you" netlify>
+    <section class="page-section">
+      <div class="container-fluid container-fluid--maxwidth">
+        <form class="contact-form" name="contact" netlify-honeypot="fu" action="/contact/thank-you" netlify>
               <div hidden>
                 <label>Don’t fill this out: <input name="fu"></label>
               </div>
@@ -62,8 +66,6 @@
                   Send
                 </button>
               </div>
-            </form>
-          </div>
-        </div>
+        </form>
       </div>
     </section>

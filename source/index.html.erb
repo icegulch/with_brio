@@ -1,35 +1,64 @@
 
 <% content_for :script do %>
     <script>
-      $('.showcase-block').each(function(){
-          var self = $(this);
-          $(this).waypoint({
-               offset: '80%',
-               handler: function(){
-                   self.addClass('viewed');
-               },
-          });
-      });
+      // $('.showcase-block').each(function(){
+      //     var self = $(this);
+      //     $(this).waypoint({
+      //          offset: '80%',
+      //          handler: function(){
+      //              self.addClass('viewed');
+      //          },
+      //     });
+      // });
     </script>
 <% end %>
 
-<header class="page-header">
-  <div class="container-fluid container-fluid--maxwidth">
-    <div class="row">
-      <div class="col col-lg-12 col-xl-8">
-        <div class="page-header__title mb-3">
-            Hi, I'm Steve!
-        </div>
-        <div class="page-header__lede">
-            I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem.
-        </div>
-        <div class="page-header__blurb">
-            <%= lorem.words(120) %>
+
+    <header class="page-header">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                  About
+                </div>
+              </div>
+              <div class="col-lg-3" style="font-weight:500;">
+                <ul class="page-header__specs">
+                  <li><a href="/products/">Products</a></li>
+                  <li><a href="/work/">Work</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="page-header__blurb">
+              Hi! I'm Steve. I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem. I work in print and on the web. I sift through maps and tables looking for compelling stories in data. I maintain the Hurricane Trail and the Asquam Ridge Trail on Mount Moosilauke. In 2018, I hiked the Colorado Trail.
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</header>
+    </header>
+
+    <section class="page-section page-section--compact-top">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row justify-content-center">
+          <% data.clients.each_with_index do |client| %>
+              <article class="col-md-6 showcase">
+                <figure class="showcase__img">
+                  <%= link_to_if(!client.images.blank?, image_tag('work/' + client.slug + '-showcase.png', :class => 'img-fluid'), '/work/' + client.slug, :class => 'showcase__link') %>
+                </figure>
+<% if false %>
+                <%= content_tag(:h5, client.name, :class => 'showcase__title') %>
+                <%= simple_format(lorem.words(rand(18..30)), :class => 'showcase__teaser') %>
+<% end %>
+              </article>
+          <% end %>
+        </div>
+      </div>
+    </section>
+
 
 <% if false %>
   <section class="page-section">

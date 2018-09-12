@@ -2,64 +2,59 @@
 -
   name: "Greenpeace"
   slug: greenpeace
-  gallery: false
   blurb: |
     Lorem ipsum dolores et veritas dut
 
 -
   name: "Vinyl Me, Please"
   slug: vmp
-  gallery: false
   blurb: |
     Lorem ipsum dolores et veritas dut
 
 -
   name: "Big Boulder Conference"
   slug: bbc
-  gallery: true
   blurb: |
     Lorem ipsum dolores et veritas dut
+  images:
+    -  ext: '.png'
+    -  ext: '.jpg'
+    -  ext: '.png'
 
 -
   name: "Becoming Self Made"
   slug: self-made
-  gallery: false
   blurb: |
     Lorem ipsum dolores et veritas dut
 
 -
   name: "Heavybit Industries"
   slug: heavybit
-  gallery: false
   blurb: |
     Lorem ipsum dolores et veritas dut
 
 -
   name: "Car Talk Radio"
   slug: cartalk
-  gallery: false
   blurb: |
     Lorem ipsum dolores et veritas dut
 
 # -
 #   name: "Stand Up To Cancer"
 #   slug: su2c
-#   gallery: false
-#   blurb: |
+# #   blurb: |
 #     Lorem ipsum dolores et veritas dut
 
 # -
 #   name: "Stand Up To Cancer"
 #   slug: su2c
-#   gallery: false
-#   blurb: |
+# #   blurb: |
 #     Lorem ipsum dolores et veritas dut
 
 # -
 #   name: "Stand Up To Cancer"
 #   slug: su2c
-#   gallery: false
-#   blurb: |
+# #   blurb: |
 #     Lorem ipsum dolores et veritas dut
 
 

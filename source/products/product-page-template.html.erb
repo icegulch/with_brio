@@ -3,18 +3,29 @@
 <% content_for :og_img, 'https://withbr.io/images/og/' + product.slug + '.png' %>
 
 
+
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col col-lg-12 col-xl-8">
-            <div class="page-header__title">
-                <%= product.title %>
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title pl-1">
+                    <%= product.title %>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <ul class="page-header__specs">
+                  <% product.specs.each do |spec| %>
+                    <li><%= spec %></li>
+                  <% end %>
+                </ul>
+              </div>
             </div>
-            <div class="page-header__lede">
-                <%= product.desc %>
-            </div>
+          </div>
+          <div class="col-lg-6">
             <div class="page-header__blurb">
-                <%= !product.blurb.blank? ? product.blurb : lorem.words(120) %>
+              <%= product.blurb %>
             </div>
           </div>
         </div>
@@ -23,29 +34,53 @@
 
     <section class="page-section page-section--compact-top">
       <div class="container-fluid container-fluid--maxwidth">
-        <%= image_tag('products/' + product.slug + '/' + product.slug + "-hero.jpg", :class => 'img-fluid mb-4') %>
-        <div class="card-columns">
-          <% 
-            slug = product.slug
-            product.images.each_with_index do |pic, i| %>
-              <figure class="card">
-                <%= image_tag('products/' + slug + '/pic' + (i+1).to_s + pic.ext, :class => 'img-fluid') %>
-              </figure>
-          <% end %>
-        </div>
+        <%= image_tag('products/' + product.slug + '/' + product.slug + "-page-hero.jpg", :class => 'img-fluid') %>
       </div>
     </section>
 
-    <% if false %>
-          <div class="col-12 col-xl-4">
-              <dl>
-                <dt>Available at the following retailers:</dt>
-                <% product.retailers.each do |retailer| %>
-                  <dd>
-                    <%= retailer.url ? link_to(retailer.name, retailer.url, :target => '_blank') : retailer.name %>
-                  </dd>
-                <% end %>
-              </dl>
-          </div>
+    <section class="page-section page-section--compact-top">
+      <div class="container text-center">
+        <% 
+          slug = product.slug
+          count = product.images.length
+          product.images.each_with_index do |pic, i| %>
+            <%= image_tag('products/' + slug + '/pic' + (i+1).to_s + pic.ext, :class => (i+1) == count ? 'img-fluid' : 'img-fluid mb-5') %>
+        <% end %>
+      </div>
+    </section>
 
-    <% end %>
+    <section class="page-section page-section--compact-top">
+      <div class="container">
+            <dl class="available_at text-center">
+              <dt>Available at:</dt>
+              <% product.retailers.each do |retailer| %>
+                  <dd><%= retailer.url ? link_to(retailer.name, retailer.url, :target => '_blank') : retailer.name %></dd>
+              <% end %>
+            </dl>
+      </div>
+    </section>
+
+<% if false %>
+        <h2 class="text-center mb-5" style="font-size:1.3rem;font-weight:900">
+          More Products
+        </h2>
+        <div class="row justify-content-center">
+          <%
+              current_page = product.slug
+              leftovers = data.products.select{|item| item.slug != current_page}
+              leftovers.each do |product|
+          %>
+            <article class="col col-md-6 showcase">
+              <figure class="showcase__img">
+                <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'img-fluid'), '/products/' +  product.uri, :class => 'showcase__link') %>
+              </figure>
+              <h5 class="showcase__title mb-4">
+                <%= product.title %>
+              </h5>
+              <div class="product__text d-flex flex-grow-1">
+                <%= product.desc.blank? ? lorem.words(15) : product.desc %>
+              </div>
+            </article>
+          <% end %>
+        </div>
+<% end %>
