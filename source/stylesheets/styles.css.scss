@@ -41,12 +41,6 @@ img {
   vertical-align: middle;
 }
 
-::selection {
-    background: #13161b;
-    color: #fff;
-    text-shadow: none;
-}
-
 a {
   color: #13161b;
   font-weight: 500;
@@ -68,14 +62,19 @@ i, em, cite {
   font-style: italic;
 }
 
+::selection {
+    background: #13161b;
+    color: #fff;
+    text-shadow: none;
+}
+
 
 /* ==========================================================================
    Site Structure
    ========================================================================== */
 
 .site-header {
-  // padding: 2rem 0;
-  // background-color: #13161b;
+  padding-top: 7px;
   position: relative;
   &:after {
     content: "";
@@ -99,18 +98,6 @@ i, em, cite {
   background-color: #13161b;
 }
 
-// .aurora {
-//   position: relative;
-//   min-width: 100%;
-//   min-height: 200px;
-//   background: linear-gradient(-45deg, $gradient4, $gradient3, $gradient2, $gradient1);
-//   background-size: 400% 400%;
-//   background-position: 0% 50%;
-//   -webkit-animation: Gradient 4s ease 1;
-//   -moz-animation: Gradient 4s ease 1;
-//   animation: Gradient 4s ease 1;
-// }
-
 
 /* ==========================================================================
    Site Nav
@@ -124,7 +111,14 @@ i, em, cite {
   font-size: 1.55rem;
   font-weight: 900;
   text-decoration: none;
-  // text-transform: uppercase;
+  color: #fff !important;
+  &:hover, &:focus {
+    text-decoration: none;
+    color: #fff !important;
+    &::first-letter {
+      color: #EE7752;
+    }
+  }
   &:after {
     content: "";
     display: block;
@@ -137,16 +131,9 @@ i, em, cite {
     background-color: #13161b;
     transform: skew(-10deg);
   }
-  img {
+  span {
     position: relative;
     z-index: 3;
-  }
-  &:hover, &:focus {
-    text-decoration: none;
-    color: #13161b;
-    &::first-letter {
-      color: #EE7752;
-    }
   }
 }
 
@@ -332,128 +319,12 @@ i, em, cite {
   }
 }
 
-// .skills-list {
-//   line-height: 1;
-//   &__title {
-//     margin-bottom: 0.15em;
-//     font-weight: 400;
-//     font-size: 24px;
-//     line-height: 1.4;
-//   }
-//   &__item {
-//     display: inline;
-//     font-weight: 400;
-//     font-size: 0.9375em;
-//     color: #777;
-//     &::after {
-//       content: ", ";
-//       margin: 0;
-//       padding: 0;
-//       display: inline;
-//     }
-//     &:last-of-type::after {
-//       content: "";
-//       display: none;
-//     }
-//   }
-// }
-
-// .blockquote-footer {
-//   font-weight: 300;
-//   font-size: 17px;
-//   line-height: 1.5;
-//   color: #777;
-// }
-
 
 /* ==========================================================================
    Home 
    ========================================================================== */
 
-// .showcase-block {
-//   position: relative;
-//   overflow: hidden;
-//   &--visuals {
-//     padding-top: 100px;
-//   }
-//   &:after {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-//     right: 0;
-//     z-index: 10;
-//     height: 1px;
-//     background: #7db9e8; /* Old browsers */
-//     background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, #ccc 30%, #ccc 70%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
-//     background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #ccc 30%, #ccc 70%, rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
-//     background: linear-gradient(to right, rgba(255,255,255,0) 0%, #ccc 30%, #ccc 70%, rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 */
-//   }
-// }
 
-// .showcase-block__img {
-//   position: absolute;
-//   bottom: 0;
-//   width: 15%;
-//   &.undercast {
-//     position: relative;
-//     width: 80%;
-//     height: auto;
-//     z-index: 1;
-//     transform: translateY(40%);
-//     .viewed & {
-//       @include riseup('undercast', 40%, 5%, 0.7s); // ($name, $from, $to, $speed, $delay)
-//     }
-//   }
-//   &.wm48 {
-//     top: 0;
-//     left: 5%;
-//     z-index: 5;
-//     transform: translateY(200%);
-//     .viewed & {
-//       @include riseup('wm48', 200%, 80%, 1.2s); // ($name, $from, $to, $speed, $delay)
-//     }
-//   }
-//   &.nh52 {
-//     top: 0;
-//     right: 5%;
-//     z-index: 5;
-//     transform: translateY(200%);
-//     .viewed & {
-//       @include riseup('nh52', 200%, 60%, 1s); // ($name, $from, $to, $speed, $delay)
-//     }
-//   }
-//   &.fingerprints {
-//     width: 25%;
-//     right: 15%;
-//     z-index: 2;
-//     transform: translateY(10%);
-//     .viewed & {
-//       @include riseup('fingerprints', 10%, 5%, 1.9s); // ($name, $from, $to, $speed, $delay)
-//     }
-//   }
-//   &.ski {
-//     width: 35%;
-//     left: 50%;
-//     z-index: 2;
-//     margin-left: -17.5%;
-//     transform: translateY(70%);
-//     .viewed & {
-//       @include riseup('ski', 70%, 5%, 1.5s); // ($name, $from, $to, $speed, $delay)
-//     }
-//   }
-//   &.periodic-4000 {
-//     width: 25%;
-//     left: 15%;
-//     z-index: 2;
-//     transform: translateY(10%);
-//     .viewed & {
-//       @include riseup('periodic-4000', 10%, 5%, 1.6s); // ($name, $from, $to, $speed, $delay)
-//     }
-//   }
-// }
 
 
 /* ==========================================================================
@@ -498,20 +369,7 @@ i, em, cite {
   margin-top: 1rem;
   font-size: 0.9rem;
   dt, dd {
-    // display: inline;
     font-weight: 500;
-  }
-  dd {
-    // &:after {
-    //   content: ', ';
-    //   display: inline-block;
-    // }
-    // &:last-child {
-    //   &:after {
-    //     content: '';
-    //     display: none;
-    //   }
-    // }
   }
 }
 
@@ -716,9 +574,9 @@ i, em, cite {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,.15);
-  border-radius: .25rem;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -764,6 +622,11 @@ i, em, cite {
   color: #6c757d;
   opacity: 1;
 }
+
+textarea.form-control {
+  height: auto;
+}
+
 
 
 /* ==========================================================================
