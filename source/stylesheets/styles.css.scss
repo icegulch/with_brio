@@ -365,32 +365,15 @@ i, em, cite {
   }
 }
 
-.available_at {
+.list-more {
   margin-top: 1rem;
   font-size: 0.9rem;
   dt, dd {
     font-weight: 500;
   }
-}
-
-.leftovers-list {
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-  font-size: 1.3rem;
-  &__item {
-    margin-bottom: 1rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    a {
-      color: #13161b;
-      font-weight: 900;
-      text-decoration: none;
-      &:hover, &:focus {
-        color: $blue;
-      }
-    }
+  dt {
+    font-weight: 900;
+    font-size: 1.2rem;
   }
 }
 

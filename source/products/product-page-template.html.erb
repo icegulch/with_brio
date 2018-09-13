@@ -51,36 +51,35 @@
 
     <section class="page-section page-section--compact-top">
       <div class="container">
-            <dl class="available_at text-center">
+        <div class="row justify-content-md-between mb-5">
+          <div class="col-12 col-lg-6">
+            <dl class="list-more text-lg-right">
               <dt>Available at:</dt>
               <% product.retailers.each do |retailer| %>
                   <dd><%= retailer.url ? link_to(retailer.name, retailer.url, :target => '_blank') : retailer.name %></dd>
               <% end %>
             </dl>
+          </div>
+        </div>
+
+        <div class="row justify-content-md-between">
+          <div class="col-12 col-lg-6 ml-lg-auto">
+            <dl class="list-more">
+              <dt>
+                More Products
+              </dt>
+              <%
+                  current_page = product.slug
+                  leftovers = data.products.select{|item| item.slug != current_page}
+                  leftovers.each do |product|
+              %>
+                <dd>
+                  <%= link_to(product.title, '/products/' +  product.uri, :class => 'showcase__link') %>
+                </dd>
+              <% end %>
+            </dl>
+          </div>
+        </div>
+
       </div>
     </section>
-
-<% if false %>
-        <h2 class="text-center mb-5" style="font-size:1.3rem;font-weight:900">
-          More Products
-        </h2>
-        <div class="row justify-content-center">
-          <%
-              current_page = product.slug
-              leftovers = data.products.select{|item| item.slug != current_page}
-              leftovers.each do |product|
-          %>
-            <article class="col col-md-6 showcase">
-              <figure class="showcase__img">
-                <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'img-fluid'), '/products/' +  product.uri, :class => 'showcase__link') %>
-              </figure>
-              <h5 class="showcase__title mb-4">
-                <%= product.title %>
-              </h5>
-              <div class="product__text d-flex flex-grow-1">
-                <%= product.desc.blank? ? lorem.words(15) : product.desc %>
-              </div>
-            </article>
-          <% end %>
-        </div>
-<% end %>
