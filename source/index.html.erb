@@ -27,7 +27,7 @@
               <div class="col-lg-3" style="font-weight:500;">
                 <ul class="page-header__specs">
                   <li><a href="/products/">Products</a></li>
-                  <li><a href="/work/">Work</a></li>
+                  <li><a href="/portfolio/">Portfolio</a></li>
                 </ul>
               </div>
             </div>
@@ -43,34 +43,24 @@
 
     <section class="page-section page-section--compact-top">
       <div class="container-fluid container-fluid--maxwidth">
-        <div class="row justify-content-center">
-          <% data.clients.each_with_index do |client| %>
+        <div class="row justify-content-start">
+          <% 
+              features = data.products|data.portfolio
+              sorted_features = features.sort_by { |feature| feature.home_order }
+          %>
+          <% sorted_features.each do |feature| %>
               <article class="col-md-6 showcase">
                 <figure class="showcase__img">
-                  <%= link_to_if(!client.images.blank?, image_tag('work/' + client.slug + '-showcase.png', :class => 'img-fluid'), '/work/' + client.slug, :class => 'showcase__link') %>
+                  <% if !feature.retailers.blank? #products %>
+                    <%= link_to(image_tag('products/' + feature.slug + '/' + feature.slug + '-showcase.png', :class => 'img-fluid'), '/products/' + feature.uri, :class => 'showcase__link') %>
+                  <% else #portfolio pieces %>
+                    <%= link_to(image_tag('portfolio/' + feature.slug + '/'  + feature.slug + '-showcase.png', :class => 'img-fluid'), '/portfolio/' + feature.slug, :class => 'showcase__link') %>
+                  <% end %>
                 </figure>
-<% if false %>
-                <%= content_tag(:h5, client.name, :class => 'showcase__title') %>
-                <%= simple_format(lorem.words(rand(18..30)), :class => 'showcase__teaser') %>
-<% end %>
               </article>
           <% end %>
         </div>
       </div>
     </section>
 
-
-<% if false %>
-  <section class="page-section">
-    <div class="container">
-      <div class="showcase-block text-center">
-        <a href="/products/" class="d-block">
-          <% data.products.each do |product| %>
-            <%= image_tag('products/' + product.slug + '/' + product.slug + '-showcase.png', :class => 'showcase-block__img ' + product.slug) %>
-          <% end -%>
-        </a>
-      </div>
-    </div>
-  </section>
-<% end %>
 

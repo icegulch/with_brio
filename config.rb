@@ -66,6 +66,36 @@ configure :build do
 
   #Use relative URLs   
   activate :relative_assets
+
+  activate :imageoptim do |options|
+    # Use a build manifest to prevent re-compressing images between builds
+    options.manifest = true
+
+    # Silence problematic image_optim workers
+    options.skip_missing_workers = true
+
+    # Cause image_optim to be in shouty-mode
+    options.verbose = false
+
+    # Setting these to true or nil will let options determine them (recommended)
+    options.nice = true
+    options.threads = true
+
+    # Image extensions to attempt to compress
+    options.image_extensions = %w(.png .jpg .gif .svg)
+
+    # Compressor worker options, individual optimisers can be disabled by passing
+    # false instead of a hash
+    options.advpng    = { :level => 4 }
+    options.gifsicle  = { :interlace => false }
+    options.jpegoptim = { :strip => ['all'], :max_quality => 100 }
+    options.jpegtran  = { :copy_chunks => false, :progressive => true, :jpegrescan => true }
+    options.optipng   = { :level => 6, :interlace => false }
+    options.pngcrush  = { :chunks => ['alla'], :fix => false, :brute => false }
+    options.pngout    = { :copy_chunks => false, :strategy => 0 }
+    options.svgo      = {}
+  end
+
 end
 
 activate :directory_indexes
@@ -107,8 +137,8 @@ data.products.each do |product|
   proxy "/products/#{product.uri}/index.html", "/products/product-page-template.html", :locals => { :product => product }, :ignore => true
 end
 
-data.clients.select { |client| !client.images.blank? }.each do |client|
-  proxy "/work/#{client.slug}/index.html", "/work/client-page-template.html", :locals => { :client => client }, :ignore => true
+data.portfolio.each do |skill|
+  proxy "/portfolio/#{skill.slug}/index.html", "/portfolio/skill-page-template.html", :locals => { :skill => skill }, :ignore => true
 end
 
 

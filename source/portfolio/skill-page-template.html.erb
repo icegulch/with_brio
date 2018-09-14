@@ -1,0 +1,60 @@
+<% content_for :title, skill.title %>
+<% content_for :og_desc, skill.blurb %>
+<% content_for :og_img, 'https://withbr.io/images/og/' + skill.slug + '.png' %>
+
+
+    <header class="page-header">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                    <%= skill.title %>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <ul class="page-header__specs">
+                  <% skill.specs.each do |spec| %>
+                    <li><%= spec %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="page-header__blurb">
+              <%= !skill.desc.blank? ? product.blurb : lorem.words(80) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-section page-section--compact-top">
+      <div class="container-fluid container-fluid--maxwidth">
+        <%= !skill.images.blank? ? image_tag('portfolio/' + skill.slug + '/page-hero.jpg', :class => 'img-fluid') : image_tag(lorem.image('2000x1100'), :class => 'img-fluid') %>
+      </div>
+    </section>
+
+    <section class="page-section page-section--compact-top">
+      <div class="container text-center">
+          <% if !skill.images.blank? %>
+            <% 
+              slug = skill.slug
+              count = skill.images.length
+              skill.images.each_with_index do |pic,i| %>
+                <figure>
+                  <%= image_tag('portfolio/' + slug + '/pic' + (i+1).to_s + pic.ext, :class => (i+1) == count ? 'img-fluid' : 'img-fluid mb-5') %>
+                </figure>
+            <% end %>
+          <% else %>
+            <% 5.times.each_with_index do |pic, i| %>
+              <figure>
+                <%= image_tag(lorem.image('1200x900'), :class => i == 4 ? 'img-fluid' : 'img-fluid mb-5') %>
+              </figure>
+            <% end %>
+          <% end %>
+      </div>
+    </section>
+

@@ -1,0 +1,67 @@
+
+-
+  title: UI/UX
+  slug: ui-ux
+  home_order: 1
+  desc: ""
+  specs: 
+    - foo
+    - blah
+  blurb: "foo"
+  images:
+    # - ext: '.png'
+
+
+-
+  title: Frontend Dev
+  slug: frontend
+  home_order: 8
+  desc: ""
+  specs: 
+    - foo
+    - blah
+  blurb: "foo"
+  images:
+
+
+-
+  title: Design
+  slug: design
+  home_order: 9
+  desc: ""
+  specs: 
+    - foo
+    - blah
+  blurb: "foo"
+  images:
+
+
+-
+  title: Creative Direction
+  slug: creative-direction
+  home_order: 10
+  desc: ""
+  specs: 
+    - foo
+    - blah
+  blurb: "foo"
+  images:
+    - ext: '.png'
+    - ext: '.jpg'
+    - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
+
+
+-
+  title: LX / Tech Writing
+  slug: lx-tech-writing
+  home_order: 11
+  desc: ""
+  specs: 
+    - foo
+    - blah
+  blurb: "foo"
+  images:
+
+

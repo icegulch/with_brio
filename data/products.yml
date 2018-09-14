@@ -3,6 +3,8 @@
   title: "White Mountain 4000-Footers Passport"
   slug: wm48
   uri: "white-mountain-4000-footers-passport"
+  home_order: 4
+  landing_order: 
   desc: "A complement to the Periodic Table of the White Mountain 4000-Footers poster, this pocket-size passport is tailor-made for tracking of your 4000-footer climbs."
   specs:
     - "3.5&#8243; x 5&#8243;"
@@ -30,6 +32,8 @@
   title: "New Hampshire 52 With A View Passport"
   slug: nh52
   uri: "new-hampshire-52-with-a-view-passport"
+  home_order: 3
+  landing_order: 
   desc: "This pocket-size passport is ideal for keeping track of your climbs of the increasingly popular &quot;New Hampshire 52 With a View&quot; list."
   specs:
     - "3.5&#8243; x 5&#8243;"
@@ -54,6 +58,8 @@
   title: "Periodic Table of White Mountain 4000-Footers"
   slug: periodic-4000
   uri: "periodic-table-of-white-mountain-4000-footers"
+  home_order: 5
+  landing_order: 
   desc: "An 18&#8243; x 24&#8243; print that presents a wealth of data on the 48 New Hampshire 4000-foot peaks in a format similar to the Periodic Table of Elements."
   specs:
     - "18&#8243; x 24&#8243;"
@@ -78,6 +84,8 @@
   title: "Periodic Table of Ski Resorts"
   slug: ski
   uri: "periodic-table-of-ski-resorts"
+  home_order: 2
+  landing_order: 
   desc: "The Periodic Table of Ski Resorts brings a data-oriented approach to different ski regions by packing extensive detail about each resort into a 18&#8243; x 24&#8243; poster."
   specs:
     - "18&#8243; x 24&#8243;"
@@ -97,6 +105,8 @@
   title: "Topographic Fingerprints of the Four-Thousand Footers"
   slug: fingerprints
   uri: "topographic-fingerprints-of-the-four-thousand-footers"
+  home_order: 6
+  landing_order: 
   desc: "Reminiscent of vintage scientific identification posters, this foil-stamped, 16&#8243; x 20&#8243; print challenges you to become familiar with the topographic &quot;fingerprints&quot; of all of New Hampshire&#x27;s 4000-Footers."
   specs:
     - "16&#8243; x 20&#8243;"
@@ -118,6 +128,8 @@
   title: "Undercast Approaches to the White Isles of New Hampshire"
   slug: undercast
   uri: "undercast-approaches-to-the-white-islands-of-new-hampshire"
+  home_order: 7
+  landing_order: 
   desc: "On those magical &quot;undercast&quot; days, when clouds settle in valleys and summits peek out above, you might find the landscape more nautical than orographic. This print runs with that concept, assuming clouds have nestled at precisely 4000&#8242;."
   specs:
     - "18&#8243; x 12&#8243;"
@@ -134,4 +146,5 @@
   retailers:
     - name: The Mountain Wanderer
       url: "http://www.mountainwanderer.com/"
+
 

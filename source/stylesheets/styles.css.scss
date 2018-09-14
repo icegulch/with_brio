@@ -411,39 +411,26 @@ i, em, cite {
     font-size: 1rem !important;
   }
   // every sixth, starting with the first
-  &:nth-child(6n-11) {
+  &:nth-child(4n-7) {
     .showcase__img {
       background-image: linear-gradient(-45deg, $gradient3, $gradient2, $gradient1);
     }
   }
   // every sixth, starting with the second
-  &:nth-child(6n-10) {
+  &:nth-child(4n-6) {
     .showcase__img {
       background-image: linear-gradient(-45deg, $gradient4, $gradient3, $gradient2);
     }
   }
   // every sixth, starting with the third
-  &:nth-child(6n-9) {
-    .showcase__img {
-      background-image: linear-gradient(-45deg, $gradient1, $gradient4, $gradient3);
-    }
-  }
-  // every sixth, starting with the fourth
-  &:nth-child(6n-8) {
-    .showcase__img {
-      background-position: 100% 75%;
-      background-image: linear-gradient(-45deg, $gradient3, $gradient4, $gradient2);
-    }
-  }
-  // every sixth, starting with the fifth
-  &:nth-child(6n-7) {
+  &:nth-child(4n-5) {
     .showcase__img {
       background-position: 50% 75%;
       background-image: linear-gradient(-45deg, $gradient2, $gradient3, $gradient4);
     }
   }
-  // every sixth, starting with the sixth
-  &:nth-child(6n) {
+  // every sixth, starting with the fourth
+  &:nth-child(4n) {
     .showcase__img {
       background-position: 50% 25%;
       background-image: linear-gradient(-45deg, $gradient1, $gradient2, $gradient3);

@@ -1,0 +1,66 @@
+---
+  title: Portfolio
+---
+
+<% if false #content_for :script do %>
+    <script>
+      // $('.page-section--compact-top').waypoint(function() {
+      //   $("body").toggleClass('dimthelights');
+      // });
+      // $('.showcase').each(function(){
+      //     var self = $(this);
+      //     $(this).waypoint({
+      //          offset: '70%',
+      //          handler: function(){
+      //             self.addClass('viewed');
+      //          },
+      //     });
+      // });
+    </script>
+<% end %>
+
+
+    <header class="page-header">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row justify-content-between">
+              <div class="col-lg-8">
+                <div class="page-header__title">
+                  Portfolio
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <ul class="page-header__specs">
+                  <% data.portfolio.each do |skill| %>
+                    <li><%= link_to(skill.title, '/portfolio/' + skill.slug) %></li>
+                  <% end %>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="page-header__blurb">
+              <%= lorem.words(60) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="page-section page-section--compact-top">
+      <div class="container-fluid container-fluid--maxwidth">
+        <div class="row justify-content-start">
+          <% data.portfolio.each do |skill| %>
+              <article class="col-md-6 showcase">
+                <figure class="showcase__img">
+                    <%= link_to(image_tag('portfolio/' + skill.slug + '/' + skill.slug + '-showcase.png', :class => 'img-fluid'), '/portfolio/' + skill.slug, :class => 'showcase__link') %>
+                </figure>
+              </article>
+          <% end %>
+        </div>
+      </div>
+    </section>
+
+
