@@ -7,14 +7,14 @@
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-xl-6">
             <div class="row justify-content-between">
-              <div class="col-lg-8">
-                <div class="page-header__title pl-1">
+              <div class="col-xl-8">
+                <div class="page-header__title pr-xl-2">
                     <%= product.title %>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-xl-3">
                 <ul class="page-header__specs">
                   <% product.specs.each do |spec| %>
                     <li><%= spec %></li>
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-xl-6">
             <div class="page-header__blurb">
               <%= product.blurb %>
             </div>

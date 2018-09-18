@@ -23,14 +23,14 @@
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-xl-6">
             <div class="row justify-content-between">
-              <div class="col-lg-8">
+              <div class="col-xl-8">
                 <div class="page-header__title">
                   Portfolio
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-xl-3">
                 <ul class="page-header__specs">
                   <% data.portfolio.each do |skill| %>
                     <li><%= link_to(skill.title, '/portfolio/' + skill.slug) %></li>
@@ -39,9 +39,9 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-xl-6">
             <div class="page-header__blurb">
-              <%= lorem.words(60) %>
+              From a design perspective, interfaces represent a cagey canvas&mdash;never standard in size, always shape-shifting. The technology behind them is equally duplicitous, changing on a near monthly basis. People, on the other hand, whether clients or teammates, are much easier to work with, and I've been fortunate to collaborate with some terrific ones! Below are a few examples of such collaborations. If you'd like to hear more about specific projects or the problems they sought to solve, please don't hesitate to <a href="/contact/">contact me</a>.
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@
           <% data.portfolio.each do |skill| %>
               <article class="col-md-6 showcase">
                 <figure class="showcase__img">
-                    <%= link_to(image_tag('portfolio/' + skill.slug + '/' + skill.slug + '-showcase.png', :class => 'img-fluid'), '/portfolio/' + skill.slug, :class => 'showcase__link') %>
+                    <%= link_to(image_tag('portfolio/' + skill.slug + '/' + skill.slug + '-showcase.png', :class => 'img-fluid'), '/portfolio/' + skill.slug, :class => 'showcase__link', :title => skill.title) %>
                 </figure>
               </article>
           <% end %>

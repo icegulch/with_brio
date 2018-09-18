@@ -2,66 +2,89 @@
 -
   title: UI/UX
   slug: ui-ux
-  home_order: 1
-  desc: ""
+  desc: "I've designed for a wide variety of screens, from web apps to websites, HTML emails to Chrome extensions. I've skinned mature Rails apps, redesigned existing sites, and concepted entire event experiences via mood boards. No matter the circumstances, I relish the challenge of translating strategies into compelling stories that embrace the constraints of their desired medium but don't break under the weight of said constraints."
   specs: 
-    - foo
-    - blah
-  blurb: "foo"
+    - Data Modeling
+    - Lo-Fi Mocks
+    - Hi-Fi Mocks
+    - Browser Mocks
+    - Style Guides
   images:
-    # - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
+    - ext: '.png'
 
 
 -
-  title: Frontend Dev
+  title: Frontend
   slug: frontend
-  home_order: 8
   desc: ""
   specs: 
-    - foo
-    - blah
-  blurb: "foo"
+    - Responsive Design
+    - "HTML, CSS, Sass, JS"
+    - "ERB, Liquid, PHP"
+    - "MailChimp, Emma, etc"
+    - Git
   images:
+    - ext: ".png"
+    - ext: ".png"
 
 
 -
   title: Design
   slug: design
-  home_order: 9
   desc: ""
   specs: 
-    - foo
-    - blah
-  blurb: "foo"
+    - Illustrator
+    - Photoshop
+    - InDesign
+    - Presentation Pgms
+    - Production Mgmt
   images:
+    - ext: ".gif"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+    - ext: ".png"
+
+
+-
+  title: LX / Writing
+  slug: lx-tech-writing
+  desc: ""
+  specs: 
+    - Tech Writing
+    - Screencasting
+    - Learning Theory
+    - LMSes
+  images:
+    - ext: ".gif"
 
 
 -
   title: Creative Direction
   slug: creative-direction
-  home_order: 10
   desc: ""
   specs: 
-    - foo
-    - blah
-  blurb: "foo"
+    - Creative Briefs
+    - Art Direction
+    - Production Mgmt
+    - Contractor Mgmt
+    - Project Mgmt
   images:
     - ext: '.png'
     - ext: '.jpg'
     - ext: '.png'
     - ext: '.png'
     - ext: '.png'
-
-
--
-  title: LX / Tech Writing
-  slug: lx-tech-writing
-  home_order: 11
-  desc: ""
-  specs: 
-    - foo
-    - blah
-  blurb: "foo"
-  images:
 
 

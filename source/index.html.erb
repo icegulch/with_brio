@@ -17,14 +17,14 @@
     <header class="page-header">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-xl-6">
             <div class="row justify-content-between">
-              <div class="col-lg-8">
+              <div class="col-xl-8">
                 <div class="page-header__title">
                   About
                 </div>
               </div>
-              <div class="col-lg-3" style="font-weight:500;">
+              <div class="col-xl-3" style="font-weight:500;">
                 <ul class="page-header__specs">
                   <li><a href="/products/">Products</a></li>
                   <li><a href="/portfolio/">Portfolio</a></li>
@@ -32,7 +32,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-xl-6">
             <div class="page-header__blurb">
               Hi! I'm Steve. I'm a dad. I'm a husband. I'm a New Hampshire native with a Colorado problem. I work in print and on the web. I sift through maps and tables looking for compelling stories in data. I maintain the Hurricane Trail and the Asquam Ridge Trail on Mount Moosilauke. In 2018, I hiked the Colorado Trail.
             </div>
@@ -44,21 +44,16 @@
     <section class="page-section page-section--compact-top">
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row justify-content-start">
-          <% 
-              features = data.products|data.portfolio
-              sorted_features = features.sort_by { |feature| feature.home_order }
-          %>
-          <% sorted_features.each do |feature| %>
-              <article class="col-md-6 showcase">
-                <figure class="showcase__img">
-                  <% if !feature.retailers.blank? #products %>
-                    <%= link_to(image_tag('products/' + feature.slug + '/' + feature.slug + '-showcase.png', :class => 'img-fluid'), '/products/' + feature.uri, :class => 'showcase__link') %>
-                  <% else #portfolio pieces %>
-                    <%= link_to(image_tag('portfolio/' + feature.slug + '/'  + feature.slug + '-showcase.png', :class => 'img-fluid'), '/portfolio/' + feature.slug, :class => 'showcase__link') %>
-                  <% end %>
-                </figure>
-              </article>
-          <% end %>
+          <article class="col-md-6 showcase">
+            <figure class="showcase__img">
+                <%= link_to(image_tag('portfolio/ui-ux/ui-ux-showcase.png', :class => 'img-fluid'), '/portfolio/', :class => 'showcase__link') %>
+            </figure>
+          </article>
+          <article class="col-md-6 showcase">
+            <figure class="showcase__img">
+                <%= link_to(image_tag('products/ski/ski-showcase.png', :class => 'img-fluid'), '/products/', :class => 'showcase__link') %>
+            </figure>
+          </article>
         </div>
       </div>
     </section>

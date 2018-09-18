@@ -106,7 +106,7 @@ i, em, cite {
 .brand {
   display: inline-block;
   position: relative;
-  padding: 1rem 2rem;
+  padding: 0.75rem 2rem;
   font-family: "Work Sans", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 1.55rem;
   font-weight: 900;
@@ -123,13 +123,30 @@ i, em, cite {
     content: "";
     display: block;
     position: absolute;
-    top: 0;
-    bottom: 0;
+    top: -1px;
+    bottom: -3px;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     background-color: #13161b;
-    transform: skew(-10deg);
+    @media screen and (min-width: 576px) {
+      top: -8px;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -8px;
+    left: -6px;
+    right: 6px;
+    z-index: 2;
+    background-color: transparentize(#13161b, 0.1);   
+    height: 7px; 
+    transform: skew(60deg);
+    @media screen and (min-width: 576px) {
+      top: -15px;
+    }
   }
   span {
     position: relative;
@@ -139,6 +156,7 @@ i, em, cite {
 
 .menu-item {
   display: inline-block;
+  padding: 1.75rem 0;
   margin-right: 3rem;
   font-size: 0.9rem;
   text-decoration: none;
@@ -183,12 +201,10 @@ i, em, cite {
 /* ==========================================================================
    Utilities
    ========================================================================== */
-.container, .container-fluid {
-  padding-left: 30px;
-  padding-right: 30px;
-}
 
 .container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
   &--maxwidth {
     @media screen and (min-width: 1200px) {
       max-width: 1600px;
@@ -247,14 +263,14 @@ i, em, cite {
 .page-header {
   padding: 55px 0;
   @media screen and (min-width: 768px) {
-    padding: 4.5% 0;
+    padding: 4.5% 0 50px;
   }
   &__title {
     margin-bottom: 0.75rem;
     font-weight: 900;
     font-size: 3rem;
     line-height: 1.1;
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       margin-bottom: 0;
     }
   }
@@ -263,7 +279,7 @@ i, em, cite {
     list-style: none;
     font-weight: 500;
     font-size: 0.9rem;
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1200px) {
       margin-bottom: 0;
     }
     li {
@@ -275,7 +291,7 @@ i, em, cite {
         content: "";
         display: none;
       }
-      @media screen and (min-width: 992px) {
+      @media screen and (min-width: 1200px) {
         display: block;
         &:after {
           display: none;
@@ -398,42 +414,41 @@ i, em, cite {
     color: #fff;
     text-align: center;
     background-color: #fff;
-    background-size: 400% 400%;
     background-position: 0 50%;
+    background-size: 110% 100%;
     text-decoration: none;
     overflow: hidden;
     @media screen and (min-width: 768px) {
-      background-size: 200% 200%;
+      // background-size: 200% 200%;
     }
   }
   &__teaser {
     margin-bottom: 0 !important;
     font-size: 1rem !important;
   }
-  // every sixth, starting with the first
-  &:nth-child(4n-7) {
+  &:nth-child(5n-9) {
     .showcase__img {
       background-image: linear-gradient(-45deg, $gradient3, $gradient2, $gradient1);
     }
   }
-  // every sixth, starting with the second
-  &:nth-child(4n-6) {
+  &:nth-child(5n-8) {
     .showcase__img {
       background-image: linear-gradient(-45deg, $gradient4, $gradient3, $gradient2);
     }
   }
-  // every sixth, starting with the third
-  &:nth-child(4n-5) {
+  &:nth-child(5n-7) {
     .showcase__img {
-      background-position: 50% 75%;
-      background-image: linear-gradient(-45deg, $gradient2, $gradient3, $gradient4);
+      background-image: linear-gradient(-45deg, $gradient2, $gradient4, $gradient3);
     }
   }
-  // every sixth, starting with the fourth
-  &:nth-child(4n) {
+  &:nth-child(5n-6) {
     .showcase__img {
-      background-position: 50% 25%;
-      background-image: linear-gradient(-45deg, $gradient1, $gradient2, $gradient3);
+      background-image: linear-gradient(-45deg, $gradient1, $gradient2, $gradient4);
+    }
+  }
+  &:nth-child(5n) {
+    .showcase__img {
+      background-image: linear-gradient(-45deg, $gradient3, $gradient1, $gradient2);
     }
   }
 }
@@ -472,7 +487,7 @@ i, em, cite {
   display: inline-block;
   border: none;
   padding: 12px 20px;
-  background-color: $orange;
+  background-color: #E73C7E;
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
@@ -480,7 +495,7 @@ i, em, cite {
   letter-spacing: 0.1em;
   transition: background-color 0.5s ease-in-out;
   &:hover, &:focus {
-    background-color: darken($orange, 7%);
+    background-color: #EE7752;
     cursor: pointer;
   }
 }
@@ -490,6 +505,59 @@ i, em, cite {
 /* ==========================================================================
    Bootstrapy
    ========================================================================== */
+
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+
+  &::before {
+    display: block;
+    content: "";
+  }
+
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+.embed-responsive-21by9 {
+  &::before {
+    padding-top: percentage(9 / 21);
+  }
+}
+
+.embed-responsive-16by9 {
+  &::before {
+    padding-top: percentage(9 / 16);
+  }
+}
+
+.embed-responsive-4by3 {
+  &::before {
+    padding-top: percentage(3 / 4);
+  }
+}
+
+.embed-responsive-1by1 {
+  &::before {
+    padding-top: percentage(1 / 1);
+  }
+}
 
 .img-fluid {
   max-width: 100%;
