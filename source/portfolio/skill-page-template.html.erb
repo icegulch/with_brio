@@ -33,26 +33,20 @@
     </header>
 
     <section class="page-section page-section--compact-top">
-      <div class="container-fluid container-fluid--maxwidth">
-        <% if skill.slug == 'lx-tech-writing' %>
-          <div class="embed-responsive embed-responsive-16by9">
+      <div class="container-fluid container-fluid--maxwidth mb-5">
+        <%= image_tag('portfolio/' + skill.slug + '/page-hero.png', :class => 'img-fluid') %>
+      </div>
+      <div class="container text-center">
+        <% if skill.slug == 'lx-writing' %>
+          <div class="embed-responsive embed-responsive-16by9 mb-5">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/94Jk6w3iO_Q" allowfullscreen></iframe>
           </div>
-        <% else %>
-          <%= !skill.images.blank? ? image_tag('portfolio/' + skill.slug + '/page-hero.png', :class => 'img-fluid') : image_tag(lorem.image('2000x1100'), :class => 'img-fluid') %>
-        <% end %>
-      </div>
-    </section>
-
-    <section class="page-section page-section--compact-top">
-      <div class="container text-center">
-
-        <% if skill.slug == 'lx-tech-writing' %>
           <div class="embed-responsive embed-responsive-16by9 mb-5">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VN4V4cEDtP8" allowfullscreen></iframe>
           </div>
         <% end %>
 
+        <% unless skill.slug == 'lx-writing' %>
           <% 
             slug = skill.slug
             count = skill.images.length
@@ -61,6 +55,7 @@
                 <%= image_tag('portfolio/' + slug + '/pic' + (i+1).to_s + pic.ext, :class => (i+1) == count ? 'img-fluid' : 'img-fluid mb-5') %>
               </figure>
           <% end %>
+        <% end %>
 
       </div>
     </section>

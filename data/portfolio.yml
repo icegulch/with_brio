@@ -15,14 +15,12 @@
     - ext: '.png'
     - ext: '.png'
     - ext: '.png'
-    - ext: '.png'
-    - ext: '.png'
 
 
 -
   title: Frontend
   slug: frontend
-  desc: ""
+  desc: "Having cut my teeth on table-based layouts, I've seen screen-based development go through an incredible growth spurt in recent times. APIs and frontend frameworks have accelerated the development process, while prototyping tools and design-sharing sites have helped take the &quot;minimum&quot; out of <i>Minimum Viable Product</i>. It's an exciting time to be a developer!"
   specs: 
     - Responsive Design
     - "HTML, CSS, Sass, JS"
@@ -37,7 +35,7 @@
 -
   title: Design
   slug: design
-  desc: ""
+  desc: "Ever since I was a kid poring over maps during road trips, I've been fascinated with information density&mdash;specifically, how design aspires to tame information density. I still love the challenge, but of late, I find myself equally drawn to the truly terrifying blank canvas."
   specs: 
     - Illustrator
     - Photoshop
@@ -45,10 +43,6 @@
     - Presentation Pgms
     - Production Mgmt
   images:
-    - ext: ".gif"
-    - ext: ".png"
-    - ext: ".png"
-    - ext: ".png"
     - ext: ".png"
     - ext: ".png"
     - ext: ".png"
@@ -59,31 +53,30 @@
 
 -
   title: LX / Writing
-  slug: lx-tech-writing
-  desc: ""
+  slug: lx-writing
+  desc: "While an academic technologist at the University of Colorado Boulder, I supported nearly 300 faculty in the Arts and Humanities. Since it was impossible to meet with each one of them face-to-face, I developed a series of written tutorials and screencasts to answer FAQs and promote promising teaching technologies. While the transition from academia to the world of web dev diminished my output, it didn't extinguish the enjoyment I get from sharing knowledge with others."
   specs: 
     - Tech Writing
     - Screencasting
     - Learning Theory
     - LMSes
   images:
-    - ext: ".gif"
+    - ext: ""
 
 
 -
   title: Creative Direction
   slug: creative-direction
-  desc: ""
+  desc: "I've had the good fortune of working with some incredibly talented designers. Whether working alongside them or managing projects with them, my own work is always the better for such collaborations. At the risk of sounding clichéd, I have so much to learn!"
   specs: 
-    - Creative Briefs
-    - Art Direction
+    - Style Guides
     - Production Mgmt
     - Contractor Mgmt
     - Project Mgmt
+    - Art Direction
   images:
     - ext: '.png'
     - ext: '.jpg'
-    - ext: '.png'
     - ext: '.png'
     - ext: '.png'
 
