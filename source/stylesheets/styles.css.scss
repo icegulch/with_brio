@@ -7,12 +7,16 @@
   "text";
 
 $dark: #13161b;
+$turquoise: #23D5AB;
+$blue: #23A6D5;
+$pink: #E73C7E;
+$peach: #EE7752;
 
 // rainbow
-$gradient1: transparentize(#23D5AB, 0.2); // turquoise - 4th listed
-$gradient2: transparentize(#23A6D5, 0.2); // blue - 3rd listed
-$gradient3: transparentize(#E73C7E, 0.2); // pink - 2nd listed
-$gradient4: transparentize(#EE7752, 0.2); // peach - 1st listed
+$gradient1: transparentize($turquoise, 0.2);
+$gradient2: transparentize($blue, 0.2);
+$gradient3: transparentize($pink, 0.2);
+$gradient4: transparentize($peach, 0.2);
 
 
 /* ==========================================================================
@@ -110,7 +114,7 @@ i, em, cite {
     text-decoration: none;
     color: #fff !important;
     &::first-letter {
-      color: #EE7752;
+      color: $pink;
     }
   }
   &:after {
@@ -401,7 +405,7 @@ i, em, cite {
   display: inline-block;
   border: none;
   padding: 12px 20px;
-  background-color: #E73C7E;
+  background-color: $pink;
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
@@ -409,7 +413,7 @@ i, em, cite {
   letter-spacing: 0.1em;
   transition: background-color 0.5s ease-in-out;
   &:hover, &:focus {
-    background-color: #EE7752;
+    background-color: $peach;
     cursor: pointer;
   }
 }
