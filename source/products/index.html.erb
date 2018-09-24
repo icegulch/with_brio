@@ -35,11 +35,11 @@
       <div class="container-fluid container-fluid--maxwidth">
         <div class="row justify-content-center">
           <% data.products.each do |product| %>
-            <article class="col-md-6 showcase">
+            <div class="col-md-6 showcase">
               <figure class="showcase__img">
                 <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid'), '/products/' +  product.uri, :class => 'showcase__link') %>
               </figure>
-            </article>
+            </div>
           <% end -%>
         </div>
       </div>
