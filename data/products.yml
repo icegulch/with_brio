@@ -24,6 +24,8 @@
       url: https://amcstore.outdoors.org/white-mountain-4000-footers-passport
     - name: "Gus &amp; Ruby Letterpress"
       url: https://gusandruby.com/
+    - name: "Main Street Makery"
+      url: https://www.mainstreetmakery.com/
     - name: "and other regional stores"
 
 
@@ -50,6 +52,9 @@
       url: "https://www.bondcliffbooks.com/"
     - name: Appalachian Mountain Club
       url: "https://amcstore.outdoors.org/new-hampshire-52-with-a-view-passport-055169"
+    - name: "Main Street Makery"
+      url: https://www.mainstreetmakery.com/
+    - name: "and other regional stores"
 
 
 -
@@ -74,6 +79,8 @@
       url: https://www.bondcliffbooks.com/proddetail.php?prod=BRIO08182015-02
     - name: Appalachian Mountain Club
       url: https://amcstore.outdoors.org/periodic-table-of-white-mountain-4000-footers-poster
+    - name: "Main Street Makery"
+      url: https://www.mainstreetmakery.com/
     - name: "and other regional stores"
 
 
@@ -117,6 +124,8 @@
       url: "http://www.mountainwanderer.com/"
     - name: "Gus &amp; Ruby Letterpress"
       url: https://gusandruby.com/
+    - name: "Main Street Makery"
+      url: https://www.mainstreetmakery.com/
 
 
 -
@@ -140,5 +149,7 @@
   retailers:
     - name: The Mountain Wanderer
       url: "http://www.mountainwanderer.com/"
+    - name: "Main Street Makery"
+      url: https://www.mainstreetmakery.com/
 
 
