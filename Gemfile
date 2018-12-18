@@ -14,6 +14,3 @@ source 'https://rails-assets.org' do
 end
 
 gem 'middleman-sprockets', '4.0.0.rc.3'
-
-gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
-
