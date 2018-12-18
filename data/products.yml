@@ -101,6 +101,7 @@
     -  ext: '.jpg'
     -  ext: '.jpg'
     -  ext: '.jpg'
+    -  ext: '.jpg'
   retailers:
     - name: Circle Square Diamond
       url: "https://www.circlesquarediamond.com/collections/periodic-table-of-ski-resorts"
