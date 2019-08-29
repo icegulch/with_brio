@@ -32,18 +32,18 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload,
-  host: 'localhost'
-end
+# configure :development do
+#   activate :livereload,
+#   host: 'localhost'
+# end
 
-activate :sprockets
+# activate :sprockets
 
-if defined? RailsAssets
-  RailsAssets.load_paths.each do |path|
-    sprockets.append_path path
-  end
-end
+# if defined? RailsAssets
+#   RailsAssets.load_paths.each do |path|
+#     sprockets.append_path path
+#   end
+# end
 
 
 
