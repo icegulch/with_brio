@@ -101,7 +101,7 @@
     - ext: '.jpg'
   retailers:
     - name: The Mountain Wanderer
-      url: "http://www.mountainwanderer.com/"
+      url: "http://mountainwanderer.com/proddetail.php?prod=POS46"
     - name: Outdoor Gear Exchange
       url: "https://www.gearx.com/"
     - name: Fifty Home
