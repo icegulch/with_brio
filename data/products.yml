@@ -152,9 +152,13 @@
     - name: The Mountain Wanderer
       url: "http://www.mountainwanderer.com/"
     - name: "Gus &amp; Ruby Letterpress"
-      url: https://gusandruby.com/
+      url: https://store.gusandruby.com/wbpr-topographic-fingerprints-of-the-4000-footers.html
+    - name: "Fifty Home"
+      url: https://www.fiftyhome.com/
     - name: "Main Street Makery"
       url: https://www.mainstreetmakery.com/
+    - name: "Simply Sunflowers"
+      url: https://www.simplysunflowersnh.com/
 
 
 -
