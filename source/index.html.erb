@@ -6,13 +6,14 @@
             <div class="row justify-content-between">
               <div class="col-xl-8">
                 <div class="page-header__title">
-                  About
+                    About
                 </div>
               </div>
               <div class="col-xl-3" style="font-weight:500;">
                 <ul class="page-header__specs">
-                  <li><a href="/products/">Products</a></li>
-                  <li><a href="/portfolio/">Portfolio</a></li>
+                  <li>Passports</li>
+                  <li>Posters</li>
+                  <li>Prints</li>
                 </ul>
               </div>
             </div>
@@ -28,18 +29,28 @@
 
     <div class="page-section page-section--compact-top">
       <div class="container-fluid container-fluid--maxwidth">
-        <div class="row justify-content-start">
-          <div class="col-md-6 showcase">
-            <figure class="showcase__img">
-                <%= link_to(image_tag('portfolio/ui-ux/ui-ux-showcase.png', :class => 'img-fluid'), '/portfolio/', :class => 'showcase__link') %>
-            </figure>
-          </div>
-          <div class="col-md-6 showcase">
-            <figure class="showcase__img">
-                <%= link_to(image_tag('products/ski/ski-showcase.png', :class => 'img-fluid'), '/products/', :class => 'showcase__link') %>
-            </figure>
-          </div>
+        <div class="row justify-content-center">
+          <% data.products.each do |product| %>
+            <div class="col-md-6 showcase">
+              <figure class="showcase__img">
+                <%= link_to(image_tag('products/' + product.slug + '/' + product.slug + '-hero.jpg', :class => 'img-fluid'), '/products/' +  product.uri, :class => 'showcase__link') %>
+              </figure>
+            </div>
+          <% end -%>
         </div>
+      </div>
+    </div>
+
+    <div class="page-section page-section--compact-top">
+      <div class="container">
+        <blockquote class="blockquote">
+          <div class="blockquote__quote">
+            &ldquo;We have advanced by leaps to the Pacific, and left many a lesser Oregon and California unexplored behind us.&rdquo;
+          </div>
+          <footer class="blockquote__footer">
+            &ndash; Henry David Thoreau, <cite>The Maine Woods</cite>
+          </footer>
+        </blockquote>
       </div>
     </div>
 
